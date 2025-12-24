@@ -122,3 +122,24 @@ def test_F35_F48_texture(single_peak_spectrum, constant_spectrum):
     features = extractor.extract_texture_features(single_peak_spectrum)
     assert len(features) == 14
     assert all(np.isfinite(f) for f in features)
+def test_F63_F74_ridge_energy(chirp_spectrum, constant_spectrum, zero_spectrum):
+    """F63-F74 ridge + energiatérkép jellemzők."""
+    
+    # Chirp: legyen nem nulla ridge hossz és energiasűrűség
+    ridge_len = extractor.F63_ridge_length(chirp_spectrum)
+    ridge_energy = extractor.F67_ridge_energy_density(chirp_spectrum)
+    assert ridge_len >= 0.0, f"Ridge length: {ridge_len}"
+    assert 0.0 <= ridge_energy <= 1.0, f"Ridge energy density: {ridge_energy}"
+    
+    # Konstans spektrum: véges energiatérkép-jellemzők
+    centroid = extractor.F68_energy_centroid_2d(constant_spectrum)
+    spread = extractor.F69_energy_spread_2d(constant_spectrum)
+    entropy = extractor.F72_energy_entropy(constant_spectrum)
+    assert np.isfinite(centroid)
+    assert np.isfinite(spread)
+    assert np.isfinite(entropy)
+    
+    # Nulla spektrum: fallback miatt itt is véges értékek
+    features_zero = extractor.extract_ridge_energy_features(zero_spectrum)
+    assert len(features_zero) == 12
+    assert all(np.isfinite(f) for f in features_zero)
