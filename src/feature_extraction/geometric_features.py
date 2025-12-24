@@ -176,3 +176,122 @@ class GeometricFeatureExtractor:
     def extract_all_features(self, spec, freq_axis=None):
         """F1–F14 összes jellemzője – főmetódus a disszertáció szerint."""
         return self.extract_basic_features(spec) + self.extract_frequency_features(spec, freq_axis)
+# ============================================================
+    # III. KATEGÓRIA (F15–F22) – IDŐTARTOMÁNY JELLEMZŐK [file:363]
+    # ============================================================
+
+    def _compute_temporal_spectrum(self, spec: np.ndarray, time_axis: np.ndarray | None = None) -> tuple[np.ndarray, np.ndarray]:
+        """Q(t) = Σ_f S(f,t) – időtengely spektrum: időbeli energia eloszlás."""
+        self._validate_spectrogram(spec)
+        S = spec.astype(np.float64)
+        S = S - np.min(S)  # non-negative
+        
+        n_time = S.shape[1]
+        if time_axis is None:
+            times = np.arange(n_time, dtype=np.float64)
+        else:
+            times = np.asarray(time_axis, dtype=np.float64)
+            if len(times) != n_time:
+                raise ValueError("time_axis hossza nem egyezik.")
+        Q = np.sum(S, axis=0)
+        return times, Q
+
+    def F15_temporal_centroid(self, spec: np.ndarray, time_axis=None) -> float:
+        times, Q = self._compute_temporal_spectrum(spec, time_axis)
+        total_energy = np.sum(Q)
+        return 0.0 if total_energy <= 0 else float(np.sum(times * Q) / total_energy)
+
+    def F16_temporal_spread(self, spec: np.ndarray, time_axis=None) -> float:
+        times, Q = self._compute_temporal_spectrum(spec, time_axis)
+        total_energy = np.sum(Q)
+        if total_energy <= 0:
+            return 0.0
+        tc = self.F15_temporal_centroid(spec, time_axis)
+        variance = np.sum(((times - tc)**2 * Q)) / total_energy
+        return float(np.sqrt(max(variance, 0.0)))
+
+    def F17_temporal_skewness(self, spec: np.ndarray, time_axis=None) -> float:
+        times, Q = self._compute_temporal_spectrum(spec, time_axis)
+        total_energy = np.sum(Q)
+        if total_energy <= 0:
+            return 0.0
+        tc = self.F15_temporal_centroid(spec, time_axis)
+        sigma_t = self.F16_temporal_spread(spec, time_axis)
+        if sigma_t <= 0:
+            return 0.0
+        m3 = np.sum(((times - tc)**3 * Q)) / total_energy
+        return float(m3 / (sigma_t**3 + 1e-18))
+
+    def F18_temporal_kurtosis(self, spec: np.ndarray, time_axis=None) -> float:
+        times, Q = self._compute_temporal_spectrum(spec, time_axis)
+        total_energy = np.sum(Q)
+        if total_energy <= 0:
+            return 0.0
+        tc = self.F15_temporal_centroid(spec, time_axis)
+        sigma_t = self.F16_temporal_spread(spec, time_axis)
+        if sigma_t <= 0:
+            return 0.0
+        m4 = np.sum(((times - tc)**4 * Q)) / total_energy
+        return float(m4 / (sigma_t**4 + 1e-18) - 3.0)
+
+    def F19_temporal_rolloff(self, spec: np.ndarray, time_axis=None, rolloff_ratio: float = 0.85) -> float:
+        times, Q = self._compute_temporal_spectrum(spec, time_axis)
+        total_energy = np.sum(Q)
+        if total_energy <= 0:
+            return 0.0
+        target = rolloff_ratio * total_energy
+        cumulative = np.cumsum(Q)
+        idx = np.searchsorted(cumulative, target, side='left')
+        idx = min(idx, len(times) - 1)
+        return float(times[idx])
+
+    def F20_temporal_flatness(self, spec: np.ndarray, time_axis=None) -> float:
+        times, Q = self._compute_temporal_spectrum(spec, time_axis)
+        if Q.size == 0:
+            return 0.0
+        eps = 1e-12
+        arith_mean = np.mean(Q)
+        if arith_mean <= 0:
+            return 0.0
+        geo_mean = np.exp(np.mean(np.log(Q + eps)))
+        return float(geo_mean / arith_mean)
+
+    def F21_temporal_impulsivity(self, spec: np.ndarray, time_axis=None) -> float:
+        times, Q = self._compute_temporal_spectrum(spec, time_axis)
+        if Q.size == 0 or np.sum(Q) == 0:
+            return 0.0
+        peak_energy = np.max(Q)
+        mean_energy = np.mean(Q)
+        eps = 1e-12
+        return float(peak_energy / max(mean_energy, eps))
+
+    def F22_temporal_hnr(self, spec: np.ndarray, time_axis=None, prominence_threshold: float = 0.1) -> float:
+        times, Q = self._compute_temporal_spectrum(spec, time_axis)
+        if Q.size == 0:
+            return 0.0
+        median_energy = np.median(Q)
+        if median_energy <= 0:
+            return 0.0
+        threshold = (1 + prominence_threshold) * median_energy
+        harmonic_mask = Q > threshold
+        Q_harmonic = np.sum(Q[harmonic_mask])
+        Q_noise = np.sum(Q[~harmonic_mask])
+        eps = 1e-12
+        return 10.0 * np.log10(max(Q_harmonic + eps, eps) / max(Q_noise + eps, eps))
+
+    def extract_temporal_features(self, spec: np.ndarray, time_axis=None) -> list[float]:
+        return [
+            self.F15_temporal_centroid(spec, time_axis),
+            self.F16_temporal_spread(spec, time_axis),
+            self.F17_temporal_skewness(spec, time_axis),
+            self.F18_temporal_kurtosis(spec, time_axis),
+            self.F19_temporal_rolloff(spec, time_axis),
+            self.F20_temporal_flatness(spec, time_axis),
+            self.F21_temporal_impulsivity(spec, time_axis),
+            self.F22_temporal_hnr(spec, time_axis),
+        ]
+
+    def extract_features_up_to_F22(self, spec: np.ndarray, freq_axis=None, time_axis=None) -> list[float]:
+        return (self.extract_basic_features(spec) + 
+                self.extract_frequency_features(spec, freq_axis) + 
+                self.extract_temporal_features(spec, time_axis))
