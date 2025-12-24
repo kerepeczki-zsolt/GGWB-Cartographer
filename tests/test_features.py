@@ -107,3 +107,18 @@ def test_F23_F34_shape(single_peak_spectrum):
     # F26 – excentricitás 0 és 1 között
     ecc = extractor.F26_eccentricity(single_peak_spectrum)
     assert 0 <= ecc <= 1, f"Excentricitás hibás: {ecc}"
+def test_F35_F48_texture(single_peak_spectrum, constant_spectrum):
+    """F35-F48 textúrajellemzők."""
+    
+    # Konstans: magas homogenitás
+    homo = extractor.F36_glcm_homogeneity(constant_spectrum)
+    assert homo > 0.1, f"Homogenitás: {homo}"
+    
+    # Csúcs: pozitív energia
+    energy = extractor.F37_glcm_energy(single_peak_spectrum)
+    assert energy >= 0.0, f"GLCM energia: {energy}"
+    
+    # Mindig véges értékek
+    features = extractor.extract_texture_features(single_peak_spectrum)
+    assert len(features) == 14
+    assert all(np.isfinite(f) for f in features)
