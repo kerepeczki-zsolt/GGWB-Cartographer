@@ -87,3 +87,13 @@ def test_validate_errors():
         extractor._validate_spectrogram(np.array([1]))
     with pytest.raises(ValueError):
         extractor._validate_spectrogram(np.array([[np.nan]]))
+def test_F15_F22_temporal(single_peak_spectrum, powerline_spectrum):
+    """F15-F22 időtartomány jellemzők."""
+    
+    # Egyetlen csúcs: időbeli centroid ≈ 64 (közép)
+    tc = extractor.F15_temporal_centroid(single_peak_spectrum)
+    assert abs(tc - 64) < 5, f"Temporal centroid: {tc}"
+    
+    # Powerline: széles időbeli energiaeloszlás → nagy spread
+    spread = extractor.F16_temporal_spread(powerline_spectrum)
+    assert spread > 20, "Powerline: nagy időbeli spread"
