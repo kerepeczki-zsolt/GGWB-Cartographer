@@ -97,3 +97,13 @@ def test_F15_F22_temporal(single_peak_spectrum, powerline_spectrum):
     # Powerline: széles időbeli energiaeloszlás → nagy spread
     spread = extractor.F16_temporal_spread(powerline_spectrum)
     assert spread > 20, "Powerline: nagy időbeli spread"
+def test_F23_F34_shape(single_peak_spectrum):
+    """F23-F34 alakjellemzők."""
+    
+    # F23 – terület > 0
+    area = extractor.F23_spectrogram_area(single_peak_spectrum)
+    assert area > 0, f"Terület hibás: {area}"
+    
+    # F26 – excentricitás 0 és 1 között
+    ecc = extractor.F26_eccentricity(single_peak_spectrum)
+    assert 0 <= ecc <= 1, f"Excentricitás hibás: {ecc}"
