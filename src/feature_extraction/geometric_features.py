@@ -295,3 +295,185 @@ class GeometricFeatureExtractor:
         return (self.extract_basic_features(spec) + 
                 self.extract_frequency_features(spec, freq_axis) + 
                 self.extract_temporal_features(spec, time_axis))
+# ============================================================
+    # IV. KATEGÓRIA (F23–F34) – IDŐ-FREKVENCIJA ALAKJELLEMZŐK [file:363]
+    # ============================================================
+
+    def _preprocess_spectrogram_for_shape(self, spec: np.ndarray, threshold: float = 0.1) -> tuple[np.ndarray, np.ndarray]:
+        """Spektrogram előfeldolgozás alakanalízishez: threshold + largest connected component."""
+        self._validate_spectrogram(spec)
+        S = spec.astype(np.float64)
+        S_norm = (S - np.min(S)) / (np.max(S) - np.min(S) + 1e-12)
+        binary = S_norm > threshold  # foreground pixels
+        
+        from scipy.ndimage import label
+        labeled, num_features = label(binary)
+        if num_features == 0:
+            rows, cols = spec.shape
+            return np.zeros((rows, cols)), np.zeros((rows, cols))
+        
+        sizes = np.bincount(labeled.ravel())[1:]  # skip background
+        largest_label = np.argmax(sizes) + 1
+        mask = (labeled == largest_label)
+        
+        return mask.astype(np.float64), binary.astype(np.float64)
+
+    def F23_spectrogram_area(self, spec: np.ndarray, threshold: float = 0.1) -> float:
+        """F23 – Spektrogram terület: foreground pixel szám."""
+        mask, _ = self._preprocess_spectrogram_for_shape(spec, threshold)
+        return float(np.sum(mask))
+
+    def F24_spectrogram_perimeter(self, spec: np.ndarray, threshold: float = 0.1) -> float:
+        """F24 – Peremhossz: contour hossza."""
+        mask, _ = self._preprocess_spectrogram_for_shape(spec, threshold)
+        if np.sum(mask) == 0:
+            return 0.0
+        
+        from skimage.measure import find_contours
+        contours = find_contours(mask, 0.5)
+        if len(contours) == 0:
+            return 0.0
+        perimeter = sum(np.sqrt(np.sum(np.diff(c, axis=0)**2, axis=1)) for c in contours)
+        return float(perimeter)
+
+    def F25_compactness(self, spec: np.ndarray, threshold: float = 0.1) -> float:
+        """F25 – Kompaktitás: 4π*terület/perem²."""
+        area = self.F23_spectrogram_area(spec, threshold)
+        perimeter = self.F24_spectrogram_perimeter(spec, threshold)
+        if perimeter <= 0:
+            return 0.0
+        return float(4 * np.pi * area / (perimeter**2 + 1e-12))
+
+    def F26_eccentricity(self, spec: np.ndarray, threshold: float = 0.1) -> float:
+        """F26 – Excentricitás: sqrt(1 - b²/a²), ahol a,b főtengelyek."""
+        mask, _ = self._preprocess_spectrogram_for_shape(spec, threshold)
+        if np.sum(mask) == 0:
+            return 0.0
+        
+        from skimage.measure import regionprops
+        props = regionprops(mask.astype(bool))[0]
+        return float(props.eccentricity)
+
+    def F27_orientation(self, spec: np.ndarray, threshold: float = 0.1) -> float:
+        """F27 – Orientáció: főtengely szög (radián)."""
+        mask, _ = self._preprocess_spectrogram_for_shape(spec, threshold)
+        if np.sum(mask) == 0:
+            return 0.0
+        
+        from skimage.measure import regionprops
+        props = regionprops(mask.astype(bool))[0]
+        return float(props.orientation)
+
+    def F28_bounding_box_ratio(self, spec: np.ndarray, threshold: float = 0.1) -> float:
+        """F28 – Bounding box arány: szélesség/magasság."""
+        mask, _ = self._preprocess_spectrogram_for_shape(spec, threshold)
+        if np.sum(mask) == 0:
+            return 1.0
+        
+        from skimage.measure import regionprops
+        props = regionprops(mask.astype(bool))[0]
+        bbox = props.bbox
+        height, width = bbox[2] - bbox[0], bbox[3] - bbox[1]
+        return float(width / max(height, 1e-12))
+
+    def F29_energy_ellipse_axes(self, spec: np.ndarray, threshold: float = 0.1) -> float:
+        """F29 – Energia-ellipszis főtengely aránya (a/b)."""
+        mask, _ = self._preprocess_spectrogram_for_shape(spec, threshold)
+        if np.sum(mask) == 0:
+            return 1.0
+        
+        rows, cols = np.nonzero(mask)
+        if len(rows) < 2:
+            return 1.0
+        
+        cov = np.cov(rows, cols)
+        eigvals = np.linalg.eigvalsh(cov)
+        a, b = np.sqrt(np.maximum(eigvals[::-1], 1e-12))  # nagyobb, kisebb
+        return float(a / max(b, 1e-12))
+
+    def F30_tf_skewness(self, spec: np.ndarray, threshold: float = 0.1) -> float:
+        """F30 – TF ferdeség: 2D súlyozott skewness."""
+        mask, _ = self._preprocess_spectrogram_for_shape(spec, threshold)
+        rows, cols = np.nonzero(mask)
+        if len(rows) == 0:
+            return 0.0
+        
+        mu_row, mu_col = np.mean(rows), np.mean(cols)
+        m3_row = np.mean((rows - mu_row)**3)
+        m3_col = np.mean((cols - mu_col)**3)
+        sigma_row = np.std(rows)
+        sigma_col = np.std(cols)
+        skew_row = m3_row / (sigma_row**3 + 1e-12)
+        skew_col = m3_col / (sigma_col**3 + 1e-12)
+        return float((skew_row + skew_col) / 2)
+
+    def F31_tf_kurtosis(self, spec: np.ndarray, threshold: float = 0.1) -> float:
+        """F31 – TF kurtosis: 2D súlyozott kurtosis - 3."""
+        mask, _ = self._preprocess_spectrogram_for_shape(spec, threshold)
+        rows, cols = np.nonzero(mask)
+        if len(rows) == 0:
+            return 0.0
+        
+        mu_row, mu_col = np.mean(rows), np.mean(cols)
+        m4_row = np.mean((rows - mu_row)**4)
+        m4_col = np.mean((cols - mu_col)**4)
+        sigma_row = np.std(rows)
+        sigma_col = np.std(cols)
+        kurt_row = m4_row / (sigma_row**4 + 1e-12) - 3
+        kurt_col = m4_col / (sigma_col**4 + 1e-12) - 3
+        return float((kurt_row + kurt_col) / 2)
+
+    def F32_tf_entropy(self, spec: np.ndarray, threshold: float = 0.1) -> float:
+        """F32 – TF entropia: -Σ p(f,t) log p(f,t)."""
+        mask, _ = self._preprocess_spectrogram_for_shape(spec, threshold)
+        if np.sum(mask) == 0:
+            return 0.0
+        p = mask / np.sum(mask)
+        eps = 1e-12
+        return float(-np.sum(p * np.log(p + eps)))
+
+    def F33_tf_contrast(self, spec: np.ndarray, threshold: float = 0.1) -> float:
+        """F33 – TF kontraszt: std(S)/mean(S) a maszk területén."""
+        mask, _ = self._preprocess_spectrogram_for_shape(spec, threshold)
+        if np.sum(mask) == 0:
+            return 0.0
+        S_masked = spec * mask
+        values = S_masked[S_masked > 0]
+        if len(values) == 0:
+            return 0.0
+        return float(np.std(values) / np.mean(values))
+
+    def F34_tf_flatness(self, spec: np.ndarray, threshold: float = 0.1) -> float:
+        """F34 – TF laposság: geo_mean/arith_mean 2D."""
+        mask, _ = self._preprocess_spectrogram_for_shape(spec, threshold)
+        if np.sum(mask) == 0:
+            return 0.0
+        values = spec[mask > 0]
+        if len(values) == 0:
+            return 0.0
+        eps = 1e-12
+        arith_mean = np.mean(values)
+        geo_mean = np.exp(np.mean(np.log(values + eps)))
+        return float(geo_mean / arith_mean)
+
+    def extract_shape_features(self, spec: np.ndarray, threshold: float = 0.1) -> list[float]:
+        """F23–F34 összes alakjellemzője."""
+        return [
+            self.F23_spectrogram_area(spec, threshold),
+            self.F24_spectrogram_perimeter(spec, threshold),
+            self.F25_compactness(spec, threshold),
+            self.F26_eccentricity(spec, threshold),
+            self.F27_orientation(spec, threshold),
+            self.F28_bounding_box_ratio(spec, threshold),
+            self.F29_energy_ellipse_axes(spec, threshold),
+            self.F30_tf_skewness(spec, threshold),
+            self.F31_tf_kurtosis(spec, threshold),
+            self.F32_tf_entropy(spec, threshold),
+            self.F33_tf_contrast(spec, threshold),
+            self.F34_tf_flatness(spec, threshold),
+        ]
+
+    def extract_features_up_to_F34(self, spec: np.ndarray, freq_axis=None, time_axis=None, threshold: float = 0.1) -> list[float]:
+        """F1–F34 összes jellemzője (I+II+III+IV kategória)."""
+        return (self.extract_features_up_to_F22(spec, freq_axis, time_axis) +
+                self.extract_shape_features(spec, threshold))
