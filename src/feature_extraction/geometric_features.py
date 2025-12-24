@@ -593,3 +593,164 @@ class GeometricFeatureExtractor:
         """F1–F48 ÖSSZES JELLEMZŐ (I-V kategória)."""
         return (self.extract_features_up_to_F34(spec, freq_axis, time_axis, threshold) + 
                 self.extract_texture_features(spec))
+# ============================================================
+    # VI. KATEGÓRIA (F49–F62) – BLOB + MORFOLÓGIA [file:363]
+    # ============================================================
+
+    def _preprocess_for_blobs(self, spec: np.ndarray, threshold: float = 0.1) -> tuple[np.ndarray, np.ndarray]:
+        """Blob detektáláshoz: threshold + legnagyobb komponens."""
+        self._validate_spectrogram(spec)
+        S_norm = (spec - np.min(spec)) / (np.max(spec) - np.min(spec) + 1e-12)
+        binary = S_norm > threshold
+        
+        labeled, num_features = label(binary)
+        if num_features == 0:
+            return binary.astype(float), np.zeros_like(binary)
+        
+        sizes = np.bincount(labeled.ravel())[1:]
+        if len(sizes) == 0:
+            return binary.astype(float), np.zeros_like(binary)
+        
+        largest_label = np.argmax(sizes) + 1
+        mask = (labeled == largest_label).astype(float)
+        return mask, binary.astype(float)
+
+    def F49_blob_count(self, spec: np.ndarray, threshold: float = 0.1) -> float:
+        """F49 – Blobok száma."""
+        _, binary = self._preprocess_for_blobs(spec, threshold)
+        _, num_features = label(binary)
+        return float(num_features)
+
+    def F50_largest_blob_area(self, spec: np.ndarray, threshold: float = 0.1) -> float:
+        """F50 – Legnagyobb blob területe."""
+        mask, _ = self._preprocess_for_blobs(spec, threshold)
+        return float(np.sum(mask))
+
+    def F51_largest_blob_eccentricity(self, spec: np.ndarray, threshold: float = 0.1) -> float:
+        """F51 – Legnagyobb blob excentricitása."""
+        mask, _ = self._preprocess_for_blobs(spec, threshold)
+        if np.sum(mask) == 0:
+            return 0.0
+        props = regionprops(mask.astype(bool))
+        return float(props[0].eccentricity) if props else 0.0
+
+    def F52_largest_blob_orientation(self, spec: np.ndarray, threshold: float = 0.1) -> float:
+        """F52 – Legnagyobb blob orientációja."""
+        mask, _ = self._preprocess_for_blobs(spec, threshold)
+        if np.sum(mask) == 0:
+            return 0.0
+        props = regionprops(mask.astype(bool))
+        return float(props[0].orientation) if props else 0.0
+
+    def F53_largest_blob_bbox_ratio(self, spec: np.ndarray, threshold: float = 0.1) -> float:
+        """F53 – Legnagyobb blob bounding box aránya."""
+        mask, _ = self._preprocess_for_blobs(spec, threshold)
+        if np.sum(mask) == 0:
+            return 1.0
+        props = regionprops(mask.astype(bool))
+        bbox = props[0].bbox
+        height = bbox[2] - bbox[0]
+        width = bbox[3] - bbox[1]
+        return float(width / max(height, 1e-12))
+
+    def F54_skeleton_length(self, spec: np.ndarray, threshold: float = 0.1) -> float:
+        """F54 – Skeleton hossza."""
+        mask, _ = self._preprocess_for_blobs(spec, threshold)
+        skeleton = skeletonize(mask.astype(bool))
+        return float(np.sum(skeleton))
+
+    def F55_edge_density(self, spec: np.ndarray, threshold: float = 0.1) -> float:
+        """F55 – Edge density."""
+        mask, _ = self._preprocess_for_blobs(spec, threshold)
+        edges = canny(mask, sigma=1.0)
+        return float(np.sum(edges) / max(mask.size, 1))
+
+    def F56_opening_area(self, spec: np.ndarray, threshold: float = 0.1) -> float:
+        """F56 – Opening terület."""
+        mask, _ = self._preprocess_for_blobs(spec, threshold)
+        opened = opening(mask, disk(3))
+        return float(np.sum(opened))
+
+    def F57_closing_area(self, spec: np.ndarray, threshold: float = 0.1) -> float:
+        """F57 – Closing terület."""
+        mask, _ = self._preprocess_for_blobs(spec, threshold)
+        closed = closing(mask, disk(3))
+        return float(np.sum(closed))
+
+    def F58_connected_components_count(self, spec: np.ndarray, threshold: float = 0.1) -> float:
+        """F58 – Komponensek száma."""
+        _, binary = self._preprocess_for_blobs(spec, threshold)
+        _, num_features = label(binary)
+        return float(num_features)
+
+    def F59_average_component_size(self, spec: np.ndarray, threshold: float = 0.1) -> float:
+        """F59 – Átlagos komponens méret."""
+        _, binary = self._preprocess_for_blobs(spec, threshold)
+        labeled, num_features = label(binary)
+        if num_features == 0:
+            return 0.0
+        sizes = np.bincount(labeled.ravel())[1:]
+        return float(np.mean(sizes))
+
+    def F60_component_size_variance(self, spec: np.ndarray, threshold: float = 0.1) -> float:
+        """F60 – Komponens méret variancia."""
+        _, binary = self._preprocess_for_blobs(spec, threshold)
+        labeled, num_features = label(binary)
+        if num_features == 0:
+            return 0.0
+        sizes = np.bincount(labeled.ravel())[1:]
+        return float(np.var(sizes))
+
+    def F61_component_elongation(self, spec: np.ndarray, threshold: float = 0.1) -> float:
+        """F61 – Komponens megnyúlás."""
+        _, binary = self._preprocess_for_blobs(spec, threshold)
+        labeled, num_features = label(binary)
+        if num_features == 0:
+            return 1.0
+        props_list = regionprops(labeled)
+        elongations = []
+        for p in props_list:
+            major = getattr(p, 'major_axis_length', 10)
+            minor = getattr(p, 'minor_axis_length', 1)
+            elong = min(major / max(minor, 1), 10.0)
+            elongations.append(elong)
+        return float(np.mean(elongations))
+
+    def F62_component_compactness(self, spec: np.ndarray, threshold: float = 0.1) -> float:
+        """F62 – Komponens kompaktitás."""
+        _, binary = self._preprocess_for_blobs(spec, threshold)
+        labeled, num_features = label(binary)
+        if num_features == 0:
+            return 0.0
+        props_list = regionprops(labeled)
+        compactness = []
+        for p in props_list:
+            area = p.area
+            perimeter = getattr(p, 'perimeter', 4 * np.sqrt(area))
+            comp = 4 * np.pi * area / (perimeter**2 + 1e-12)
+            compactness.append(np.clip(comp, 0, 1))
+        return float(np.mean(compactness)) if compactness else 0.0
+
+    def extract_blob_features(self, spec: np.ndarray, threshold: float = 0.1) -> list[float]:
+        """F49–F62 összes blob/morfológiai jellemzője."""
+        return [
+            self.F49_blob_count(spec, threshold),
+            self.F50_largest_blob_area(spec, threshold),
+            self.F51_largest_blob_eccentricity(spec, threshold),
+            self.F52_largest_blob_orientation(spec, threshold),
+            self.F53_largest_blob_bbox_ratio(spec, threshold),
+            self.F54_skeleton_length(spec, threshold),
+            self.F55_edge_density(spec, threshold),
+            self.F56_opening_area(spec, threshold),
+            self.F57_closing_area(spec, threshold),
+            self.F58_connected_components_count(spec, threshold),
+            self.F59_average_component_size(spec, threshold),
+            self.F60_component_size_variance(spec, threshold),
+            self.F61_component_elongation(spec, threshold),
+            self.F62_component_compactness(spec, threshold),
+        ]
+
+    def extract_features_up_to_F62(self, spec: np.ndarray, freq_axis=None, time_axis=None, threshold: float = 0.1) -> list[float]:
+        """F1–F62 ÖSSZES JELLEMZŐ (I–VI kategória)."""
+        return (self.extract_features_up_to_F48(spec, freq_axis, time_axis, threshold) +
+                self.extract_blob_features(spec, threshold))
