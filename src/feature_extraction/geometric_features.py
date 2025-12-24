@@ -1,5 +1,8 @@
 
 import numpy as np
+from skimage.feature import graycomatrix, graycoprops, local_binary_pattern
+from scipy.ndimage import sobel, label
+from skimage.measure import find_contours, regionprops
 from scipy import stats
 
 
@@ -477,3 +480,116 @@ class GeometricFeatureExtractor:
         """F1–F34 összes jellemzője (I+II+III+IV kategória)."""
         return (self.extract_features_up_to_F22(spec, freq_axis, time_axis) +
                 self.extract_shape_features(spec, threshold))
+# ============================================================
+    # V. KATEGÓRIA (F35–F48) – TEXTÚRAJELLEMZŐK [file:363]
+    # ============================================================
+
+    def _compute_glcm(self, spec: np.ndarray, distances: list[int] = [1], angles: list[float] = [0, np.pi/4, np.pi/2, 3*np.pi/4], levels: int = 8) -> np.ndarray:
+        """GLCM számítás: Gray-Level Co-occurrence Matrix."""
+        self._validate_spectrogram(spec)
+        S_norm = (spec - np.min(spec)) / (np.max(spec) - np.min(spec) + 1e-12)
+        S_quant = np.round(S_norm * (levels - 1)).astype(int)
+        glcm = graycomatrix(S_quant, distances=distances, angles=angles, levels=levels, symmetric=True, normed=True)
+        return glcm
+
+    def F35_glcm_contrast(self, spec: np.ndarray, distances: list[int] = [1], angles: list[float] = [0]) -> float:
+        """F35 – GLCM kontraszt: Σ|i-j|²*P(i,j)."""
+        glcm = self._compute_glcm(spec, distances, angles)
+        return float(graycoprops(glcm, 'contrast').mean())
+
+    def F36_glcm_homogeneity(self, spec: np.ndarray, distances: list[int] = [1], angles: list[float] = [0]) -> float:
+        """F36 – GLCM homogenitás: ΣP(i,j)/(1+|i-j|²)."""
+        glcm = self._compute_glcm(spec, distances, angles)
+        return float(graycoprops(glcm, 'homogeneity').mean())
+
+    def F37_glcm_energy(self, spec: np.ndarray, distances: list[int] = [1], angles: list[float] = [0]) -> float:
+        """F37 – GLCM energia: sqrt(ΣP(i,j)²)."""
+        glcm = self._compute_glcm(spec, distances, angles)
+        return float(graycoprops(glcm, 'energy').mean())
+
+    def F38_glcm_entropy(self, spec: np.ndarray, distances: list[int] = [1], angles: list[float] = [0]) -> float:
+        """F38 – GLCM entropia: dissimilarity proxy."""
+        glcm = self._compute_glcm(spec, distances, angles)
+        return float(graycoprops(glcm, 'dissimilarity').mean())
+
+    def F39_glcm_dissimilarity(self, spec: np.ndarray, distances: list[int] = [1], angles: list[float] = [0]) -> float:
+        """F39 – GLCM disszimilaritás: Σ|i-j|*P(i,j)."""
+        glcm = self._compute_glcm(spec, distances, angles)
+        return float(graycoprops(glcm, 'dissimilarity').mean())
+
+    def F40_glcm_correlation(self, spec: np.ndarray, distances: list[int] = [1], angles: list[float] = [0]) -> float:
+        """F40 – GLCM korreláció."""
+        glcm = self._compute_glcm(spec, distances, angles)
+        return float(graycoprops(glcm, 'correlation').mean())
+
+    def _compute_lbp(self, spec: np.ndarray, radius: int = 1, n_points: int = 8) -> np.ndarray:
+        """LBP hisztogram."""
+        self._validate_spectrogram(spec)
+        S_norm = (spec - np.min(spec)) / (np.max(spec) - np.min(spec) + 1e-12)
+        lbp = local_binary_pattern(S_norm, n_points, radius, method='uniform')
+        hist, _ = np.histogram(lbp.ravel(), bins=np.arange(0, n_points + 3), density=True)
+        return hist
+
+    def F41_lbp_energy(self, spec: np.ndarray, radius: int = 1, n_points: int = 8) -> float:
+        """F41 – LBP energia."""
+        hist = self._compute_lbp(spec, radius, n_points)
+        return float(np.sqrt(np.sum(hist**2)))
+
+    def F42_lbp_entropy(self, spec: np.ndarray, radius: int = 1, n_points: int = 8) -> float:
+        """F42 – LBP entropia."""
+        hist = self._compute_lbp(spec, radius, n_points)
+        eps = 1e-12
+        return float(-np.sum(hist * np.log(hist + eps)))
+
+    def F43_haralick_energy(self, spec: np.ndarray, distances: list[int] = [1], angles: list[float] = [0]) -> float:
+        """F43 – Haralick energia = GLCM energia."""
+        return self.F37_glcm_energy(spec, distances, angles)
+
+    def F44_haralick_entropy(self, spec: np.ndarray, distances: list[int] = [1], angles: list[float] = [0]) -> float:
+        """F44 – Haralick entropia = GLCM dissimilarity."""
+        return self.F38_glcm_entropy(spec, distances, angles)
+
+    def F45_haralick_inverse_difference(self, spec: np.ndarray, distances: list[int] = [1], angles: list[float] = [0]) -> float:
+        """F45 – Haralick inverz differencia = homogeneity."""
+        return self.F36_glcm_homogeneity(spec, distances, angles)
+
+    def F46_haralick_variance(self, spec: np.ndarray, distances: list[int] = [1], angles: list[float] = [0]) -> float:
+        """F46 – Haralick variancia = kontraszt."""
+        return self.F35_glcm_contrast(spec, distances, angles)
+
+    def F47_spectrogram_roughness(self, spec: np.ndarray) -> float:
+        """F47 – Spektrogram durvaság: gradiens."""
+        self._validate_spectrogram(spec)
+        grad_x = sobel(spec, axis=1)
+        grad_y = sobel(spec, axis=0)
+        grad_mag = np.sqrt(grad_x**2 + grad_y**2)
+        return float(np.mean(grad_mag))
+
+    def F48_spectrogram_smoothness(self, spec: np.ndarray) -> float:
+        """F48 – Spektrogram simaság."""
+        roughness = self.F47_spectrogram_roughness(spec)
+        return float(1.0 / (1.0 + roughness + 1e-12))
+
+    def extract_texture_features(self, spec: np.ndarray) -> list[float]:
+        """F35–F48 összes textúrajellemzője."""
+        return [
+            self.F35_glcm_contrast(spec),
+            self.F36_glcm_homogeneity(spec),
+            self.F37_glcm_energy(spec),
+            self.F38_glcm_entropy(spec),
+            self.F39_glcm_dissimilarity(spec),
+            self.F40_glcm_correlation(spec),
+            self.F41_lbp_energy(spec),
+            self.F42_lbp_entropy(spec),
+            self.F43_haralick_energy(spec),
+            self.F44_haralick_entropy(spec),
+            self.F45_haralick_inverse_difference(spec),
+            self.F46_haralick_variance(spec),
+            self.F47_spectrogram_roughness(spec),
+            self.F48_spectrogram_smoothness(spec),
+        ]
+
+    def extract_features_up_to_F48(self, spec: np.ndarray, freq_axis=None, time_axis=None, threshold: float = 0.1) -> list[float]:
+        """F1–F48 ÖSSZES JELLEMZŐ (I-V kategória)."""
+        return (self.extract_features_up_to_F34(spec, freq_axis, time_axis, threshold) + 
+                self.extract_texture_features(spec))
