@@ -1,7 +1,34 @@
-torch>=2.0
-torchvision>=0.15
-numpy>=1.24
-scipy>=1.10
-matplotlib>=3.7
-Pillow>=9.5
-tqdm>=4.66
+
+# GGWB-Cartographer – alap függőségek (Colab-kompatibilis célkörnyezethez)
+# Célszerű Python 3.10 környezetben használni.
+
+# Alap numerikus és tudományos stack
+numpy==1.26.4
+scipy==1.13.1
+pandas==2.2.2
+
+# Vizualizáció, alap grafika
+matplotlib==3.9.0
+
+# Képfeldolgozás és spektrogram-műveletek
+scikit-image==0.24.0
+opencv-python==4.10.0.84
+
+# Gépi tanulás (klasszikus modellek a 92 jellemzőre)
+scikit-learn==1.5.1
+
+# Mélytanulás – TensorFlow (Colabban először a default TF ajánlott)
+tensorflow==2.15.0
+tensorflow-addons==0.23.0
+
+# LIGO / grav. hullám adat-ökoszisztéma
+gwpy==3.0.9
+gwosc>=0.8
+h5py==3.11.0
+
+# Webes API (deployment-hoz)
+flask==3.0.3
+
+# Kisegítő eszközök
+tqdm==4.66.5
+pyyaml==6.0.2
