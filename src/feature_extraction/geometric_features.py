@@ -754,3 +754,7 @@ class GeometricFeatureExtractor:
         """F1–F62 ÖSSZES JELLEMZŐ (I–VI kategória)."""
         return (self.extract_features_up_to_F48(spec, freq_axis, time_axis, threshold) +
                 self.extract_blob_features(spec, threshold))
+def F63_ridge_length(self, spec):
+        """F63 - Ridge hossz (egyszerű példaváltozat)."""
+        # Itt most a nem nulla pixelek számát vesszük
+        return np.count_nonzero(spec)
