@@ -157,6 +157,16 @@ class GeometricFeatureExtractor:
             return 0.0
         geo_mean = np.exp(np.mean(np.log(P + eps)))
         return float(geo_mean / arith_mean)
+def F14_spectral_flatness(self, spec, freq_axis=None):
+        freqs, P = self._compute_frequency_spectrum(spec, freq_axis)
+        if P.size == 0:
+            return 0.0
+        eps = 1e-12
+        arith_mean = np.mean(P)
+        if arith_mean <= 0:
+            return 0.0
+        geo_mean = np.exp(np.mean(np.log(P + eps)))
+        return float(geo_mean / arith_mean)
 
     def extract_frequency_features(self, spec, freq_axis=None):
         """F7–F14 összes frekvencia jellemzője."""
@@ -171,10 +181,13 @@ class GeometricFeatureExtractor:
             self.F14_spectral_flatness(spec, freq_axis)
         ]
 
-    def extract_all_features(self, spec, freq_axis=None):
-        """F1–F14 összes jellemzője – főmetódus a disszertáció szerint."""
-        return self.extract_basic_features(spec) + self.extract_frequency_features(spec, freq_axis)
-# ============================================================
+    def extract_features_up_to_F14(self, spec, freq_axis=None):
+        """F1–F14 összes jellemzője (I + II kategória)."""
+        return (
+            self.extract_basic_features(spec) +
+            self.extract_frequency_features(spec, freq_axis)
+        ) 
+    
     # III. KATEGÓRIA (F15–F22) – IDŐTARTOMÁNY JELLEMZŐK [file:363]
     # ============================================================
 
