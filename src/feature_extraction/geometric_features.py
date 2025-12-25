@@ -187,7 +187,95 @@ def F14_spectral_flatness(self, spec, freq_axis=None):
             self.extract_basic_features(spec) +
             self.extract_frequency_features(spec, freq_axis)
         ) 
-    
+    # ============================================================
+    # III. KATEGÓRIA (F15–F22) – IDŐTARTOMÁNY JELLEMZŐK
+    # ============================================================
+
+    def _compute_temporal_spectrum(self, spec: np.ndarray, time_axis=None) -> tuple[np.ndarray, np.ndarray]:
+        """Q(t) = Σ_f S(f,t) – idő spektrum."""
+        self._validate_spectrogram(spec)
+        S = spec.astype(np.float64)
+        S = S - np.min(S)
+
+        n_time = S.shape[1]
+        if time_axis is None:
+            times = np.arange(n_time, dtype=np.float64)
+        else:
+            times = np.asarray(time_axis, dtype=np.float64)
+            if len(times) != n_time:
+                raise ValueError("time_axis hossza nem egyezik.")
+
+        Q = np.sum(S, axis=0)
+        return times, Q
+
+    # F15–F22 időtartomány jellemzők
+
+    def F15_temporal_max(self, spec: np.ndarray, time_axis=None) -> float:
+        times, Q = self._compute_temporal_spectrum(spec, time_axis)
+        return float(np.max(Q))
+
+    def F16_temporal_mean(self, spec: np.ndarray, time_axis=None) -> float:
+        times, Q = self._compute_temporal_spectrum(spec, time_axis)
+        return float(np.mean(Q))
+
+    def F17_temporal_std(self, spec: np.ndarray, time_axis=None) -> float:
+        times, Q = self._compute_temporal_spectrum(spec, time_axis)
+        return float(np.std(Q))
+
+    def F18_temporal_skewness(self, spec: np.ndarray, time_axis=None) -> float:
+        times, Q = self._compute_temporal_spectrum(spec, time_axis)
+        if np.std(Q) < 1e-12:
+            return 0.0
+        return float(stats.skew(Q))
+
+    def F19_temporal_kurtosis(self, spec: np.ndarray, time_axis=None) -> float:
+        times, Q = self._compute_temporal_spectrum(spec, time_axis)
+        if np.std(Q) < 1e-12:
+            return 0.0
+        return float(stats.kurtosis(Q))
+
+    def F20_temporal_dynamic_range(self, spec: np.ndarray, time_axis=None) -> float:
+        times, Q = self._compute_temporal_spectrum(spec, time_axis)
+        eps = 1e-12
+        return float(20.0 * np.log10(max(np.max(Q), eps) / max(np.min(Q), eps)))
+
+    def F21_temporal_entropy(self, spec: np.ndarray, time_axis=None) -> float:
+        times, Q = self._compute_temporal_spectrum(spec, time_axis)
+        Q = Q - np.min(Q)
+        total = np.sum(Q)
+        if total <= 0:
+            return 0.0
+        p = Q / total
+        p = p[p > 0]
+        return float(-np.sum(p * np.log2(p)))
+
+    def F22_temporal_flatness(self, spec: np.ndarray, time_axis=None) -> float:
+        times, Q = self._compute_temporal_spectrum(spec, time_axis)
+        Q = Q - np.min(Q)
+        eps = 1e-12
+        arith = np.mean(Q)
+        geo = np.exp(np.mean(np.log(Q + eps)))
+        return float(geo / (arith + eps))
+
+    def extract_temporal_features(self, spec: np.ndarray, time_axis=None) -> list[float]:
+        """F15–F22 összes időtartomány jellemzője."""
+        return [
+            self.F15_temporal_max(spec, time_axis),
+            self.F16_temporal_mean(spec, time_axis),
+            self.F17_temporal_std(spec, time_axis),
+            self.F18_temporal_skewness(spec, time_axis),
+            self.F19_temporal_kurtosis(spec, time_axis),
+            self.F20_temporal_dynamic_range(spec, time_axis),
+            self.F21_temporal_entropy(spec, time_axis),
+            self.F22_temporal_flatness(spec, time_axis),
+        ]
+
+    def extract_features_up_to_F22(self, spec: np.ndarray, freq_axis=None, time_axis=None) -> list[float]:
+        """F1–F22 összes jellemzője (I+II+III kategória)."""
+        return (
+            self.extract_features_up_to_F14(spec, freq_axis) +
+            self.extract_temporal_features(spec, time_axis)
+        )
     # III. KATEGÓRIA (F15–F22) – IDŐTARTOMÁNY JELLEMZŐK [file:363]
     # ============================================================
 
