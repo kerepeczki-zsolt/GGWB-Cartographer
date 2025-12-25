@@ -1,6 +1,7 @@
 # Trigger GitHub Actions workflowimport numpy as np
 import pytest
 from src.feature_extraction.geometric_features import GeometricFeatureExtractor
+import numpy as np
 
 extractor = GeometricFeatureExtractor()
 
