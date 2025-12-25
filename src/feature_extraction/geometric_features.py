@@ -76,11 +76,6 @@ class GeometricFeatureExtractor:
         eps = 1e-12
         return float((I_fg - I_bg) / (I_fg + I_bg + eps))
 
-    def extract_basic_features(self, spec):
-        return [self.F1_max_intensity(spec), self.F2_mean_intensity(spec),
-                self.F3_std_intensity(spec), self.F4_dynamic_range(spec),
-                self.F5_entropy(spec), self.F6_contrast_ratio(spec)]
-
     # II. KATEGÓRIA F7–F14
     def F7_frequency_centroid(self, spec, freq_axis=None):
         freqs, P = self._compute_frequency_spectrum(spec, freq_axis)
