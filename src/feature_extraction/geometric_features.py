@@ -753,3 +753,7 @@ def F63_ridge_length(self, spec):
         """F63 - Ridge hossz (egyszerű példaváltozat)."""
         # Itt most a nem nulla pixelek számát vesszük
         return np.count_nonzero(spec)
+def F63_ridge_length(self, spec):
+    """F63 – Ridge hossz (egyszerű példaváltozat)."""
+    self._validate_spectrogram(spec)
+    return float(np.count_nonzero(spec))
