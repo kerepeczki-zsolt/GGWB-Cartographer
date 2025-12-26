@@ -594,4 +594,4 @@ class GeometricFeatureExtractor:
         if not np.isfinite(v):
             features[k] = 0.0
 
-    return features
+            return features
