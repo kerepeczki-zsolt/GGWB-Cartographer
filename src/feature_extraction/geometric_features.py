@@ -590,8 +590,8 @@ class GeometricFeatureExtractor:
     features['F92'] = self.F92_lacunarity(spec_nonneg)
 
     # Final cleanup: replace NaN/inf with 0
-        for k, v in features.items():
-            if not np.isfinite(v):
-                features[k] = 0.0
+for k, v in features.items():
+    if not np.isfinite(v):
+        features[k] = 0.0
 
-        return features
+return features
