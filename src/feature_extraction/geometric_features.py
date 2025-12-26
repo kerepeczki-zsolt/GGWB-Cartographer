@@ -512,25 +512,25 @@ class GeometricFeatureExtractor:
             return 0.0
         return float(np.mean(lacs))
 
-    # ------------------------- Main public API -------------------------
+        # ------------------------- Main public API -------------------------
 
-def extract_all_features(
-    self,
-    spec: np.ndarray,
-    freq_axis: Optional[np.ndarray] = None,
-    time_axis: Optional[np.ndarray] = None,
-) -> Dict[str, float]:
-    """
-    Extract all 92 features as a dict { 'F1': ..., ..., 'F92': ... }.
-    Safe version: handles NaN, inf, empty spectrum, float index issues.
-    """
-    spec_nonneg, freq_axis, time_axis = self._validate_spectrogram(spec, freq_axis, time_axis)
+    def extract_all_features(
+        self,
+        spec: np.ndarray,
+        freq_axis: Optional[np.ndarray] = None,
+        time_axis: Optional[np.ndarray] = None,
+    ) -> Dict[str, float]:
+        """
+        Extract all 92 features as a dict { 'F1': ..., ..., 'F92': ... }.
+        Safe version: handles NaN, inf, empty spectrum, float index issues.
+        """
+        spec_nonneg, freq_axis, time_axis = self._validate_spectrogram(spec, freq_axis, time_axis)
 
-# Global fallback: empty or zero spectrum
-    if np.sum(spec_nonneg) <= 0 or np.all(spec_nonneg == 0):
-        return {f"F{i}": 0.0 for i in range(1, 93)}
-
-    features = {}
+    # Global fallback: empty or zero spectrum
+        if np.sum(spec_nonneg) <= 0 or np.all(spec_nonneg == 0):
+            return {f"F{i}": 0.0 for i in range(1, 93)}
+    
+        features = {}
     # I: Basic
     features.update({
         'F1': self.F1_max_intensity(spec_nonneg),
