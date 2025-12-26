@@ -552,46 +552,45 @@ class GeometricFeatureExtractor:
         'F13': self.F13_hnr(spec_nonneg),
         'F14': self.F14_spectral_flatness(spec_nonneg),
     })
+# III: Temporal
+        features.update({
+            'F15': self.F15_temporal_centroid(spec_nonneg, time_axis),
+            'F16': self.F16_temporal_spread(spec_nonneg, time_axis),
+            'F17': self.F17_temporal_skewness(spec_nonneg, time_axis),
+            'F18': self.F18_temporal_kurtosis(spec_nonneg, time_axis),
+            'F19': self.F19_onset_time(spec_nonneg, time_axis),
+            'F20': self.F20_offset_time(spec_nonneg, time_axis),
+            'F21': self.F21_duration(spec_nonneg, time_axis),
+            'F22': self.F22_rise_time(spec_nonneg, time_axis),
+        })
 
-    # III: Temporal
-    features.update({
-        'F15': self.F15_temporal_centroid(spec_nonneg, time_axis),
-        'F16': self.F16_temporal_spread(spec_nonneg, time_axis),
-        'F17': self.F17_temporal_skewness(spec_nonneg, time_axis),
-        'F18': self.F18_temporal_kurtosis(spec_nonneg, time_axis),
-        'F19': self.F19_onset_time(spec_nonneg, time_axis),
-        'F20': self.F20_offset_time(spec_nonneg, time_axis),
-        'F21': self.F21_duration(spec_nonneg, time_axis),
-        'F22': self.F22_rise_time(spec_nonneg, time_axis),
-    })
+        # IV: Geometric shape
+        features.update(self.F23_to_F29_moments(spec_nonneg))
+        features.update(self.F30_to_F36_hu_moments(spec_nonneg))
+        features['F37'] = self.F37_area(spec_nonneg)
+        features['F38'] = self.F38_perimeter(spec_nonneg)
+        features['F39'] = self.F39_eccentricity(spec_nonneg)
+        features['F40'] = self.F40_extent(spec_nonneg)
+        features['F41'] = self.F41_compactness(spec_nonneg)
+        features['F42'] = self.F42_convexity(spec_nonneg)
+        features['F43'] = self.F43_solidity(spec_nonneg)
+        features['F44'] = self.F44_orientation(spec_nonneg)
 
-    # IV: Geometric shape
-    features.update(self.F23_to_F29_moments(spec_nonneg))
-    features.update(self.F30_to_F36_hu_moments(spec_nonneg))
-    features['F37'] = self.F37_area(spec_nonneg)
-    features['F38'] = self.F38_perimeter(spec_nonneg)
-    features['F39'] = self.F39_eccentricity(spec_nonneg)
-    features['F40'] = self.F40_extent(spec_nonneg)
-    features['F41'] = self.F41_compactness(spec_nonneg)
-    features['F42'] = self.F42_convexity(spec_nonneg)
-    features['F43'] = self.F43_solidity(spec_nonneg)
-    features['F44'] = self.F44_orientation(spec_nonneg)
+        # V: Wavelets
+        features.update(self.F45_to_F60_db4_energies(spec_nonneg))
+        features.update(self.F61_to_F68_haar_energies(spec_nonneg))
+        features.update(self.F69_to_F80_morlet_coeffs(spec_nonneg))
+        features['F81'] = self.F81_wavelet_entropy(spec_nonneg)
 
-    # V: Wavelets
-    features.update(self.F45_to_F60_db4_energies(spec_nonneg))
-    features.update(self.F61_to_F68_haar_energies(spec_nonneg))
-    features.update(self.F69_to_F80_morlet_coeffs(spec_nonneg))
-    features['F81'] = self.F81_wavelet_entropy(spec_nonneg)
+        # VI: Texture & pattern
+        features.update(self.F82_to_F89_glcm(spec_nonneg))
+        features['F90'] = self.F90_lbp_entropy(spec_nonneg)
+        features['F91'] = self.F91_fractal_dimension(spec_nonneg)
+        features['F92'] = self.F92_lacunarity(spec_nonneg)
 
-    # VI: Texture & pattern
-    features.update(self.F82_to_F89_glcm(spec_nonneg))
-    features['F90'] = self.F90_lbp_entropy(spec_nonneg)
-    features['F91'] = self.F91_fractal_dimension(spec_nonneg)
-    features['F92'] = self.F92_lacunarity(spec_nonneg)
+        # Final cleanup: replace NaN/inf with 0
+        for k, v in features.items():
+            if not np.isfinite(v):
+                features[k] = 0.0
 
-    # Final cleanup: replace NaN/inf with 0
-for k, v in features.items():
-    if not np.isfinite(v):
-        features[k] = 0.0
-
-return features
+        return features
