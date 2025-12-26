@@ -514,7 +514,7 @@ class GeometricFeatureExtractor:
 
     # ------------------------- Main public API -------------------------
 
-    def extract_all_features(
+def extract_all_features(
     self,
     spec: np.ndarray,
     freq_axis: Optional[np.ndarray] = None,
@@ -526,12 +526,11 @@ class GeometricFeatureExtractor:
     """
     spec_nonneg, freq_axis, time_axis = self._validate_spectrogram(spec, freq_axis, time_axis)
 
-    # Global fallback: empty or zero spectrum
+# Global fallback: empty or zero spectrum
     if np.sum(spec_nonneg) <= 0 or np.all(spec_nonneg == 0):
         return {f"F{i}": 0.0 for i in range(1, 93)}
 
     features = {}
-
     # I: Basic
     features.update({
         'F1': self.F1_max_intensity(spec_nonneg),
