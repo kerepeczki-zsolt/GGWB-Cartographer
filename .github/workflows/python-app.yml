@@ -27,5 +27,5 @@ jobs:
     - name: Set PYTHONPATH
       run: echo "PYTHONPATH=$GITHUB_WORKSPACE" >> $GITHUB_ENV
 
-    - name: Run tests
-      run: pytest -q
+    - name: Run full test suite (diagnostic)
+  run: pytest --maxfail=0 --disable-warnings -q
