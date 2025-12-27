@@ -512,7 +512,7 @@ class GeometricFeatureExtractor:
             return 0.0
         return float(np.mean(lacs))
 
-# ------------------------- Main public API -------------------------
+    # ------------------------- Main public API -------------------------
 
     def extract_all_features(
         self,
@@ -529,7 +529,7 @@ class GeometricFeatureExtractor:
 
         features: Dict[str, float] = {}
 
-                        # I. Basic intensity features (F1–F6)
+        # I. Basic intensity features (F1–F6)
         features.update({
             "F1": self.F1_max_intensity(spec),
             "F2": self.F2_mean_intensity(spec),
@@ -538,6 +538,7 @@ class GeometricFeatureExtractor:
             "F5": self.F5_entropy(spec),
             "F6": self.F6_contrast_ratio(spec),
         })
+
         # II. Spectral domain (F7–F14)
         if freq_axis is None:
             freq_axis = np.arange(spec.shape[0], dtype=float)
@@ -551,19 +552,7 @@ class GeometricFeatureExtractor:
             "F13": self.F13_hnr(spec_nonneg),
             "F14": self.F14_spectral_flatness(spec_nonneg),
         })
-        # II. Spectral domain (F7–F14)
-        if freq_axis is None:
-            freq_axis = np.arange(spec.shape[0], dtype=float)
-        features.update({
-            "F7": self.F7_frequency_centroid(spec, freq_axis),
-            "F8": self.F8_spectral_spread(spec, freq_axis),
-            "F9": self.F9_spectral_skewness(spec, freq_axis),
-            "F10": self.F10_spectral_kurtosis(spec, freq_axis),
-            "F11": self.F11_peak_frequency(spec, freq_axis),
-            "F12": self.F12_spectral_rolloff(spec, freq_axis),
-            "F13": self.F13_hnr(spec_nonneg),
-            "F14": self.F14_spectral_flatness(spec_nonneg),
-        })
+
         # III. Temporal domain (F15–F22)
         if time_axis is None:
             time_axis = np.arange(spec.shape[1], dtype=float)
@@ -572,7 +561,7 @@ class GeometricFeatureExtractor:
             "F16": self.F16_temporal_spread(spec_nonneg, time_axis),
             "F17": self.F17_temporal_skewness(spec_nonneg, time_axis),
             "F18": self.F18_temporal_kurtosis(spec_nonneg, time_axis),
-            "F19": self.F19_temporal_rolloff(spec_nonneg, time_axis),
+            "F19": self.F19_onset_time(spec_nonneg, time_axis),
             "F20": self.F20_offset_time(spec_nonneg, time_axis),
             "F21": self.F21_duration(spec_nonneg, time_axis),
             "F22": self.F22_rise_time(spec_nonneg, time_axis),
@@ -592,4 +581,4 @@ class GeometricFeatureExtractor:
             if not np.isfinite(v):
                 features[k] = 0.0
 
-        return features
+        return features 
