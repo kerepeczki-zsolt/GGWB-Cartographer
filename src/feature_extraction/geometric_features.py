@@ -538,21 +538,32 @@ class GeometricFeatureExtractor:
             "F5": self.F5_entropy(spec),
             "F6": self.F6_contrast_ratio(spec),
         })
-
         # II. Spectral domain (F7–F14)
         if freq_axis is None:
             freq_axis = np.arange(spec.shape[0], dtype=float)
         features.update({
-            "F7": self.F7_spectral_centroid(spec, freq_axis),
+            "F7": self.F7_frequency_centroid(spec, freq_axis),
             "F8": self.F8_spectral_spread(spec, freq_axis),
             "F9": self.F9_spectral_skewness(spec, freq_axis),
             "F10": self.F10_spectral_kurtosis(spec, freq_axis),
-            "F11": self.F11_spectral_bandwidth(spec, freq_axis),
+            "F11": self.F11_peak_frequency(spec, freq_axis),
             "F12": self.F12_spectral_rolloff(spec, freq_axis),
             "F13": self.F13_hnr(spec_nonneg),
             "F14": self.F14_spectral_flatness(spec_nonneg),
         })
-
+        # II. Spectral domain (F7–F14)
+        if freq_axis is None:
+            freq_axis = np.arange(spec.shape[0], dtype=float)
+        features.update({
+            "F7": self.F7_frequency_centroid(spec, freq_axis),
+            "F8": self.F8_spectral_spread(spec, freq_axis),
+            "F9": self.F9_spectral_skewness(spec, freq_axis),
+            "F10": self.F10_spectral_kurtosis(spec, freq_axis),
+            "F11": self.F11_peak_frequency(spec, freq_axis),
+            "F12": self.F12_spectral_rolloff(spec, freq_axis),
+            "F13": self.F13_hnr(spec_nonneg),
+            "F14": self.F14_spectral_flatness(spec_nonneg),
+        })
         # III. Temporal domain (F15–F22)
         if time_axis is None:
             time_axis = np.arange(spec.shape[1], dtype=float)
