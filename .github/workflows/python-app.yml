@@ -1,31 +1,9 @@
-name: Python tests
+- name: Run full test suite
+  run: pytest --junitxml=test-results.xml --maxfail=0 --disable-warnings -q
 
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-
-jobs:
-  test:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
-
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.11'
-
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
-
-    - name: Set PYTHONPATH
-      run: echo "PYTHONPATH=$GITHUB_WORKSPACE" >> $GITHUB_ENV
-
-    - name: Run full test suite (diagnostic)
-  run: pytest --maxfail=0 --disable-warnings -q
+- name: Show test summary
+  if: always()
+  uses: pmeier/pytest-results-action@main
+  with:
+    path: test-results.xml
+    fail-action: false  # ne bukjon el summary-tól
