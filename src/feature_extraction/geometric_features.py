@@ -1,626 +1,435 @@
 import numpy as np
-from scipy.stats import entropy
-from skimage.feature import graycomatrix, graycoprops, local_binary_pattern
-from skimage.filters import threshold_otsu
-from skimage.measure import (
-    find_contours,
-    moments,
-    moments_central,
-    moments_normalized,
-    moments_hu,
-    label,
-    regionprops,
-)
-from scipy.signal import cwt, morlet
-import pywt  # Requires installation: pip install PyWavelets
-from typing import Optional, Tuple, Dict
+import cv2
+from scipy import stats
+from skimage.feature import greycomatrix, greycoprops
 
 
 class GeometricFeatureExtractor:
-    """
-    Extracts the 92 geometric/physical features defined in the GGWB-Cartographer v2.0 documentation.
-    """
-    EPS = 1e-12  # Small value to avoid division by zero
-
     def __init__(self):
-        pass
+        # A teljes feature-vektor hossza (F1–F92)
+        self.feature_count = 92
 
-    # ------------------------- Core helpers -------------------------
-
-    def _validate_spectrogram(
-        self,
-        spec: np.ndarray,
-        freq_axis: Optional[np.ndarray] = None,
-        time_axis: Optional[np.ndarray] = None,
-    ) -> Tuple[np.ndarray, np.ndarray, np.ndarray]:
+    def extract_all_features(self, spectrogram: np.ndarray) -> np.ndarray:
         """
-        Validates the spectrogram and axes; returns non-negative spec, freq_axis, time_axis.
+        Az összes (F1–F92) feature kinyerése egy spektrumból / spektrogramból.
+
+        - Bemenet: 2D numpy tömb (frekvencia x idő)
+        - Kimenet: 1D numpy vektor, hossz: self.feature_count
         """
-        if not isinstance(spec, np.ndarray) or spec.ndim != 2 or spec.size == 0:
-            raise ValueError("Spectrogram must be a non-empty 2D numpy array.")
-        if np.isnan(spec).any() or np.isinf(spec).any():
-            raise ValueError("Spectrogram contains NaN or Inf values.")
+        # Biztonságos konverzió float típusra
+        spec = np.asarray(spectrogram, dtype=float)
 
-        # Shift to non-negative
-        spec_nonneg = spec - np.min(spec)
-        spec_nonneg = np.maximum(spec_nonneg, 0)
+        # NaN / ±inf eltávolítása
+        spec = np.nan_to_num(spec, nan=0.0, posinf=0.0, neginf=0.0)
 
-        if freq_axis is None:
-            freq_axis = np.arange(spec.shape[0], dtype=float)
-        elif len(freq_axis) != spec.shape[0]:
-            raise ValueError("freq_axis length does not match spectrogram frequency dimension.")
+        features = []
 
-        if time_axis is None:
-            time_axis = np.arange(spec.shape[1], dtype=float)
-        elif len(time_axis) != spec.shape[1]:
-            raise ValueError("time_axis length does not match spectrogram time dimension.")
+        # Kategória I: Alapvető jellemzők
+        features.extend(self.basic_features(spec))
 
-        return spec_nonneg, freq_axis, time_axis
+        # Kategória II: Frekvencia domain
+        features.extend(self.frequency_features(spec))
 
-    def _compute_prob_density(self, spec: np.ndarray) -> np.ndarray:
-        """Compute normalized probability density P(t,f)."""
-        total = np.sum(spec) + self.EPS
-        return spec / total
+        # Kategória III: Időbeli domain
+        features.extend(self.temporal_features(spec))
 
-    def _compute_frequency_pdf(self, spec: np.ndarray) -> np.ndarray:
-        """Frequency marginal P(f) = sum_t P(t,f)."""
-        total = np.sum(spec) + self.EPS
-        return np.sum(spec, axis=1) / total
+        # Kategória IV: Geometriai forma
+        features.extend(self.geometric_features(spec))
 
-    def _compute_temporal_pdf(self, spec: np.ndarray) -> np.ndarray:
-        """Temporal marginal P(t) = sum_f P(t,f)."""
-        total = np.sum(spec) + self.EPS
-        return np.sum(spec, axis=0) / total
+        # Kategória V: Wavelet
+        features.extend(self.wavelet_features(spec))
 
-    def _get_binary_image(self, spec: np.ndarray) -> np.ndarray:
-        """Binarize spectrogram using Otsu's threshold."""
-        thresh = threshold_otsu(spec)
-        return spec > thresh
+        # Kategória VI: Textúra
+        features.extend(self.texture_features(spec))
 
-    def _get_largest_region_props(self, binary: np.ndarray):
-        """Label and get properties of the largest region."""
-        labeled = label(binary)
-        props = regionprops(labeled)
-        if not props:
-            raise ValueError("No regions found in binary image.")
-        largest = max(props, key=lambda p: p.area)
-        return largest
+        return np.asarray(features, dtype=float)
 
-    # ------------------------- Category I: Basic features (F1-F6) -------------------------
-
-    def F1_max_intensity(self, spec: np.ndarray) -> float:
-        """F1: Maximum intensity."""
-        return float(np.max(spec))
-
-    def F2_mean_intensity(self, spec: np.ndarray) -> float:
-        """F2: Mean intensity."""
-        return float(np.mean(spec))
-
-    def F3_std_intensity(self, spec: np.ndarray) -> float:
-        """F3: Intensity standard deviation."""
-        return float(np.std(spec))
-
-    def F4_dynamic_range(self, spec: np.ndarray) -> float:
-        """F4: Dynamic range in dB."""
-        I_max = np.max(spec)
-        I_min = np.min(spec) + self.EPS
-        return float(20 * np.log10((I_max + self.EPS) / I_min))
-
-    def F5_entropy(self, spec: np.ndarray) -> float:
-        """F5: Spectrogram entropy."""
-        P = self._compute_prob_density(spec)
-        return float(-np.sum(P * np.log2(P + self.EPS)))
-
-    def F6_contrast_ratio(self, spec: np.ndarray) -> float:
-        """F6: Contrast ratio using Otsu-based foreground/background."""
-        thresh = threshold_otsu(spec)
-        foreground = np.mean(spec[spec > thresh]) if np.any(spec > thresh) else 0.0
-        background = np.mean(spec[spec <= thresh]) if np.any(spec <= thresh) else 0.0
-        denom = foreground + background + self.EPS
-        return float((foreground - background) / denom)
-
-    # ------------------------- Category II: Frequency domain (F7-F14) -------------------------
-
-    def F7_frequency_centroid(self, spec: np.ndarray, freq_axis: np.ndarray) -> float:
-        """F7: Spectral centroid."""
-        P_f = self._compute_frequency_pdf(spec)
-        num = np.sum(freq_axis * P_f)
-        den = np.sum(P_f) + self.EPS
-        return float(num / den)
-
-    def F8_spectral_spread(self, spec: np.ndarray, freq_axis: np.ndarray) -> float:
-        """F8: Spectral spread (std)."""
-        fc = self.F7_frequency_centroid(spec, freq_axis)
-        P_f = self._compute_frequency_pdf(spec)
-        num = np.sum(P_f * (freq_axis - fc) ** 2)
-        den = np.sum(P_f) + self.EPS
-        return float(np.sqrt(num / den))
-
-    def F9_spectral_skewness(self, spec: np.ndarray, freq_axis: np.ndarray) -> float:
-        """F9: Spectral skewness."""
-        fc = self.F7_frequency_centroid(spec, freq_axis)
-        sigma_f = self.F8_spectral_spread(spec, freq_axis) + self.EPS
-        P_f = self._compute_frequency_pdf(spec)
-        num = np.sum(P_f * (freq_axis - fc) ** 3)
-        return float(num / (sigma_f ** 3))
-
-    def F10_spectral_kurtosis(self, spec: np.ndarray, freq_axis: np.ndarray) -> float:
-        """F10: Spectral kurtosis."""
-        fc = self.F7_frequency_centroid(spec, freq_axis)
-        sigma_f = self.F8_spectral_spread(spec, freq_axis) + self.EPS
-        P_f = self._compute_frequency_pdf(spec)
-        num = np.sum(P_f * (freq_axis - fc) ** 4)
-        return float(num / (sigma_f ** 4) - 3.0)
-
-    def F11_peak_frequency(self, spec: np.ndarray, freq_axis: np.ndarray) -> float:
-        """F11: Peak frequency."""
-        P_f = self._compute_frequency_pdf(spec)
-        return float(freq_axis[np.argmax(P_f)])
-
-    def F12_spectral_rolloff(self, spec: np.ndarray, freq_axis: np.ndarray) -> float:
-        """F12: Spectral roll-off at 85%."""
-        P_f = self._compute_frequency_pdf(spec)
-        cumsum = np.cumsum(P_f) / (np.sum(P_f) + self.EPS)
-        idx = np.searchsorted(cumsum, 0.85)
-        idx = min(idx, len(freq_axis) - 1)
-        return float(freq_axis[idx])
-
-    def F13_hnr(self, spec: np.ndarray) -> float:
-        """F13: Harmonic-to-noise ratio (simplified: max / std)."""
-        return float(10.0 * np.log10((np.max(spec) + self.EPS) / (np.std(spec) + self.EPS)))
-
-    def F14_spectral_flatness(self, spec: np.ndarray) -> float:
-        """F14: Spectral flatness."""
-        P_f = self._compute_frequency_pdf(spec)
-        geo_mean = np.exp(np.mean(np.log(P_f + self.EPS)))
-        arith_mean = np.mean(P_f)
-        return float(geo_mean / (arith_mean + self.EPS))
-
-    # ------------------------- Category III: Temporal domain (F15-F22) -------------------------
-
-    def F15_temporal_centroid(self, spec: np.ndarray, time_axis: np.ndarray) -> float:
-        """F15: Temporal centroid."""
-        P_t = self._compute_temporal_pdf(spec)
-        num = np.sum(time_axis * P_t)
-        den = np.sum(P_t) + self.EPS
-        return float(num / den)
-
-    def F16_temporal_spread(self, spec: np.ndarray, time_axis: np.ndarray) -> float:
-        """F16: Temporal spread (std)."""
-        tc = self.F15_temporal_centroid(spec, time_axis)
-        P_t = self._compute_temporal_pdf(spec)
-        num = np.sum(P_t * (time_axis - tc) ** 2)
-        den = np.sum(P_t) + self.EPS
-        return float(np.sqrt(num / den))
-
-    def F17_temporal_skewness(self, spec: np.ndarray, time_axis: np.ndarray) -> float:
-        """F17: Temporal skewness."""
-        tc = self.F15_temporal_centroid(spec, time_axis)
-        sigma_t = self.F16_temporal_spread(spec, time_axis) + self.EPS
-        P_t = self._compute_temporal_pdf(spec)
-        num = np.sum(P_t * (time_axis - tc) ** 3)
-        return float(num / (sigma_t ** 3))
-
-    def F18_temporal_kurtosis(self, spec: np.ndarray, time_axis: np.ndarray) -> float:
-        """F18: Temporal kurtosis."""
-        tc = self.F15_temporal_centroid(spec, time_axis)
-        sigma_t = self.F16_temporal_spread(spec, time_axis) + self.EPS
-        P_t = self._compute_temporal_pdf(spec)
-        num = np.sum(P_t * (time_axis - tc) ** 4)
-        return float(num / (sigma_t ** 4) - 3.0)
-
-    def F19_onset_time(self, spec: np.ndarray, time_axis: np.ndarray) -> float:
-        """F19: Onset time."""
-        P_t = self._compute_temporal_pdf(spec)
-        max_P = np.max(P_t)
-        idxs = np.where(P_t > 0.1 * max_P)[0]
-        if len(idxs) == 0:
-            return float(time_axis[0])
-        return float(time_axis[idxs[0]])
-
-    def F20_offset_time(self, spec: np.ndarray, time_axis: np.ndarray) -> float:
-        """F20: Offset time."""
-        P_t = self._compute_temporal_pdf(spec)
-        max_P = np.max(P_t)
-        idxs = np.where(P_t > 0.1 * max_P)[0]
-        if len(idxs) == 0:
-            return float(time_axis[-1])
-        return float(time_axis[idxs[-1]])
-
-    def F21_duration(self, spec: np.ndarray, time_axis: np.ndarray) -> float:
-        """F21: Signal duration."""
-        return float(self.F20_offset_time(spec, time_axis) - self.F19_onset_time(spec, time_axis))
-
-    def F22_rise_time(self, spec: np.ndarray, time_axis: np.ndarray) -> float:
-        """F22: Average rise time."""
-        P_t = self._compute_temporal_pdf(spec)
-        t_peak = float(time_axis[np.argmax(P_t)])
-        t_onset = self.F19_onset_time(spec, time_axis)
-        return float(t_peak - t_onset)
-
-    # ------------------------- Category IV: Geometric shape (F23-F44) -------------------------
-
-    def _compute_moments(self, binary: np.ndarray) -> Dict[str, float]:
-        """Compute raw and central moments needed for the features."""
-        m = moments(binary)
-        mu = moments_central(binary)
-        # no need for normalized here except Hu
-        return {
-            'M00': m[0, 0],
-            'M10': m[1, 0],
-            'M01': m[0, 1],
-            'M20': m[2, 0],
-            'M11': m[1, 1],
-            'M02': m[0, 2],
-            'mu20': mu[2, 0],
-            'mu11': mu[1, 1],
-            'mu02': mu[0, 2],
-        }
-
-    def F23_to_F29_moments(self, spec: np.ndarray) -> Dict[str, float]:
+    def basic_features(self, spec: np.ndarray) -> list[float]:
         """
-        F23-F29: Image moments.
-        Mapping (7 features, consistent with doc):
-          F23: M00
-          F24: M10
-          F25: M01
-          F26: M20
-          F27: M11
-          F28: M02
-          F29: mu20
+        Kategória I – Alapvető intenzitás-jellemzők.
+
+        F1: max intensity
+        F2: mean intensity
+        F3: std intensity
+        F4: dynamic range (dB, stabilizált)
+        F5: entropy (stabilizált)
+        F6: contrast (stabilizált)
         """
-        binary = self._get_binary_image(spec)
-        moms = self._compute_moments(binary)
-        return {
-            'F23': float(moms['M00']),
-            'F24': float(moms['M10']),
-            'F25': float(moms['M01']),
-            'F26': float(moms['M20']),
-            'F27': float(moms['M11']),
-            'F28': float(moms['M02']),
-            'F29': float(moms['mu20']),
-        }
+        eps = 1e-8  # numerikus stabilitási konstans
 
-    def F30_to_F36_hu_moments(self, spec: np.ndarray) -> Dict[str, float]:
-        """F30-F36: 7 Hu invariant moments."""
-        binary = self._get_binary_image(spec).astype(float)
-        mu = moments_central(binary)
-        nu = moments_normalized(mu)
-        hu = moments_hu(nu)
-        return {f'F{30 + i}': float(hu[i]) for i in range(7)}
+        # Alap statisztikák
+        max_val = float(np.max(spec))
+        mean_val = float(np.mean(spec))
+        std_val = float(np.std(spec))
+        min_val = float(np.min(spec))
 
-    def F37_area(self, spec: np.ndarray) -> float:
-        """F37: Area (M00)."""
-        binary = self._get_binary_image(spec)
-        return float(moments(binary)[0, 0])
+        # F4: dynamic range [dB] – elkerüljük a log(0)-t
+        dynamic_range = 20.0 * np.log10((max_val + eps) / (min_val + eps))
 
-    def F38_perimeter(self, spec: np.ndarray) -> float:
-        """F38: Perimeter (approximate via largest contour length)."""
-        binary = self._get_binary_image(spec)
-        contours = find_contours(binary, 0.5)
-        if not contours:
-            return 0.0
-        # Better approximation: sum of distances
-        c = max(contours, key=len)
-        perimeter = 0.0
-        for i in range(len(c) - 1):
-            perimeter += np.linalg.norm(c[i] - c[i+1])
-        perimeter += np.linalg.norm(c[-1] - c[0])  # close the contour
-        return float(perimeter)
+        # F5: entropy – normalizált, pozitív eloszlásból
+        flat = spec.flatten().astype(float)
+        flat = flat + eps          # mindenhol > 0
+        flat = flat / np.sum(flat) # normált eloszlás
+        entropy = float(stats.entropy(flat))
 
-    def F39_eccentricity(self, spec: np.ndarray) -> float:
-        """F39: Eccentricity of largest region."""
-        binary = self._get_binary_image(spec)
-        props = self._get_largest_region_props(binary)
-        return float(props.eccentricity)
+        # F6: contrast – elkerüljük az osztást 0-val
+        contrast = (max_val - mean_val) / (max_val + mean_val + eps)
 
-    def F40_extent(self, spec: np.ndarray) -> float:
-        """F40: Extent of largest region."""
-        binary = self._get_binary_image(spec)
-        props = self._get_largest_region_props(binary)
-        return float(props.extent)
+        return [
+            max_val,       # F1
+            mean_val,      # F2
+            std_val,       # F3
+            dynamic_range, # F4
+            entropy,       # F5
+            contrast       # F6
+        ]
 
-    def F41_compactness(self, spec: np.ndarray) -> float:
-        """F41: Compactness P^2 / A."""
-        A = self.F37_area(spec)
-        P = self.F38_perimeter(spec)
-        return float(P ** 2 / (A + self.EPS))
-
-    def F42_convexity(self, spec: np.ndarray) -> float:
-        """F42: Convex hull ratio A / A_convex."""
-        binary = self._get_binary_image(spec)
-        props = self._get_largest_region_props(binary)
-        return float(props.area / (props.convex_area + self.EPS))
-
-    def F43_solidity(self, spec: np.ndarray) -> float:
-        """F43: Solidity (same formula as convexity in original doc)."""
-        return self.F42_convexity(spec)
-
-    def F44_orientation(self, spec: np.ndarray) -> float:
-        """F44: Orientation of largest region."""
-        binary = self._get_binary_image(spec)
-        props = self._get_largest_region_props(binary)
-        return float(props.orientation)
-    def extract_shape_features(
-        self,
-        spec_nonneg: np.ndarray,
-        threshold: float = 0.1,
-    ) -> Dict[str, float]:
-        """Collect F23–F44 geometric shape features into a flat dict."""
-        features: Dict[str, float] = {}
-
-        # F23–F29: image moments
-        features.update(self.F23_to_F29_moments(spec_nonneg))
-
-        # F30–F36: Hu invariant moments
-        features.update(self.F30_to_F36_hu_moments(spec_nonneg))
-
-        # F37–F44: single‑value region shape features
-        features["F37"] = self.F37_area(spec_nonneg)
-        features["F38"] = self.F38_perimeter(spec_nonneg)
-        features["F39"] = self.F39_eccentricity(spec_nonneg)
-        features["F40"] = self.F40_extent(spec_nonneg)
-        features["F41"] = self.F41_compactness(spec_nonneg)
-        features["F42"] = self.F42_convexity(spec_nonneg)
-        features["F43"] = self.F43_solidity(spec_nonneg)
-        features["F44"] = self.F44_orientation(spec_nonneg)
-
-        return features
-    # ------------------------- Category V: Wavelet transform (F45-F81) -------------------------
-
-    def _compute_wavelet_energies_db4(self, spec: np.ndarray) -> np.ndarray:
+    def frequency_features(self, spec: np.ndarray) -> list[float]:
         """
-        Compute Daubechies db4 energies.
-        Returns 16-dimensional vector (F45-F60).
+        Kategória II – Frekvencia domain jellemzők (F7–F22)
         """
-        coeffs = pywt.wavedec2(spec, 'db4', level=3)
-        energies = []
-        cA3, (cH3, cV3, cD3), (cH2, cV2, cD2), (cH1, cV1, cD1) = coeffs
-        energies.append(np.sum(np.abs(cA3) ** 2))
-        for cset in [(cH3, cV3, cD3), (cH2, cV2, cD2), (cH1, cV1, cD1)]:
-            for c in cset:
-                energies.append(np.sum(np.abs(c) ** 2))
-        energies = np.array(energies, dtype=float)
-        if energies.size < 16:
-            energies = np.pad(energies, (0, 16 - energies.size), mode='constant')
+        eps = 1e-8
+
+        # 1) Ha 2D spektrogram jön, átlagoljuk időben
+        if spec.ndim == 2:
+            spectrum = np.mean(spec, axis=1)
         else:
-            energies = energies[:16]
-        return energies
+            spectrum = spec.copy()
 
-    def _compute_wavelet_energies_haar(self, spec: np.ndarray) -> np.ndarray:
+        spectrum = np.asarray(spectrum, dtype=float)
+        spectrum = np.nan_to_num(spectrum, nan=0.0, posinf=0.0, neginf=0.0)
+
+        # 2) FFT
+        fft_vals = np.abs(np.fft.rfft(spectrum)) + eps
+        freqs = np.fft.rfftfreq(len(spectrum))
+
+        # Normalizált spektrum
+        P = fft_vals / np.sum(fft_vals)
+
+        # F7: centroid
+        centroid = float(np.sum(freqs * P))
+
+        # F8: spread
+        spread = float(np.sqrt(np.sum(((freqs - centroid) ** 2) * P)))
+
+        # F9: skewness
+        skewness = float(np.sum(((freqs - centroid) ** 3) * P) / (spread**3 + eps))
+
+        # F10: kurtosis
+        kurtosis = float(np.sum(((freqs - centroid) ** 4) * P) / (spread**4 + eps))
+
+        # F11: spectral flatness
+        geometric_mean = float(np.exp(np.mean(np.log(fft_vals))))
+        arithmetic_mean = float(np.mean(fft_vals))
+        flatness = geometric_mean / (arithmetic_mean + eps)
+
+        # F12: spectral rolloff (85%)
+        rolloff_threshold = 0.85 * np.sum(fft_vals)
+        cumulative = np.cumsum(fft_vals)
+        rolloff_idx = int(np.searchsorted(cumulative, rolloff_threshold))
+        rolloff = float(freqs[min(rolloff_idx, len(freqs) - 1)])
+
+        # F13: HNR
+        max_val = float(np.max(fft_vals))
+        noise_mean = float(np.mean(fft_vals[fft_vals < max_val])) + eps
+        hnr = max_val / noise_mean
+
+        # F14: spectral flux
+        shifted = np.roll(fft_vals, 1)
+        flux = float(np.sum((fft_vals - shifted) ** 2))
+
+        # F15: spectral decrease
+        k = np.arange(1, len(fft_vals) + 1)
+        decrease = float(np.sum((fft_vals[1:] - fft_vals[0]) / k[1:]) / (np.sum(fft_vals[1:]) + eps))
+
+        # F16: spectral slope
+        slope = float(np.polyfit(freqs, fft_vals, 1)[0])
+
+        # F17: spectral entropy
+        entropy = float(stats.entropy(P))
+
+        # F18: spectral energy
+        energy = float(np.sum(fft_vals**2))
+
+        # F19: low/high energy ratio
+        mid = len(fft_vals) // 2
+        low_energy = float(np.sum(fft_vals[:mid]))
+        high_energy = float(np.sum(fft_vals[mid:]) + eps)
+        energy_ratio = low_energy / high_energy
+
+        # F20: dominant frequency
+        dom_idx = int(np.argmax(fft_vals))
+        dominant_freq = float(freqs[dom_idx])
+
+        # F21: peak-to-average ratio
+        peak_to_avg = max_val / (arithmetic_mean + eps)
+
+        # F22: spectral crest factor
+        crest = max_val / (np.mean(np.abs(fft_vals)) + eps)
+
+        return [
+            centroid,
+            spread,
+            skewness,
+            kurtosis,
+            flatness,
+            rolloff,
+            hnr,
+            flux,
+            decrease,
+            slope,
+            entropy,
+            energy,
+            energy_ratio,
+            dominant_freq,
+            peak_to_avg,
+            crest
+        ]
+
+    def temporal_features(self, spec: np.ndarray) -> list[float]:
         """
-        Compute Haar energies.
-        Returns 8-dimensional vector (F61-F68).
+        Kategória III – Időbeli jellemzők (F23–F44)
+        Stabil, integer-biztos, NaN-mentes időtartománybeli jellemzők.
         """
-        coeffs = pywt.wavedec2(spec, 'haar', level=3)  # Adjust level if needed
-        energies = []
-        for c in coeffs:
-            if isinstance(c, tuple):
-                for sub in c:
-                    energies.append(np.sum(np.abs(sub) ** 2))
-            else:
-                energies.append(np.sum(np.abs(c) ** 2))
-        energies = np.array(energies, dtype=float)
-        if energies.size < 8:
-            energies = np.pad(energies, (0, 8 - energies.size), mode='constant')
+
+        eps = 1e-8
+
+        # Ha 2D spektrogram jön, időirányban átlagoljuk
+        if spec.ndim == 2:
+            signal = np.mean(spec, axis=0)
         else:
-            energies = energies[:8]
-        return energies
+            signal = spec.copy()
 
-    def F45_to_F60_db4_energies(self, spec: np.ndarray) -> Dict[str, float]:
-        """F45-F60: Daubechies db4 energies on 16 scales/components."""
-        energies = self._compute_wavelet_energies_db4(spec)
-        return {f'F{45 + i}': float(e) for i, e in enumerate(energies)}
+        signal = np.asarray(signal, dtype=float)
+        signal = np.nan_to_num(signal, nan=0.0, posinf=0.0, neginf=0.0)
 
-    def F61_to_F68_haar_energies(self, spec: np.ndarray) -> Dict[str, float]:
-        """F61-F68: Haar energies on 8 scales/components."""
-        energies = self._compute_wavelet_energies_haar(spec)
-        return {f'F{61 + i}': float(e) for i, e in enumerate(energies)}
+        N = len(signal)
+        t = np.arange(N)
 
-    def F69_to_F80_morlet_coeffs(self, spec: np.ndarray) -> Dict[str, float]:
-        """F69-F80: Morlet wavelet coefficients on 12 frequency bands (1D CWT over time-averaged signal)."""
-        sig = np.mean(spec, axis=0)  # average over frequency → temporal signal
-        widths = np.arange(1, 13).astype(float)  # Use integers cast to float to ensure compatibility
-        cwtmatr = cwt(sig, morlet, widths)
-        coeffs = np.mean(np.abs(cwtmatr), axis=1)
-        return {f'F{69 + i}': float(c) for i, c in enumerate(coeffs)}
+        # F23: időbeli centroid
+        centroid = float(np.sum(t * signal) / (np.sum(signal) + eps))
 
-    def F81_wavelet_entropy(self, spec: np.ndarray) -> float:
-        """F81: Wavelet entropy (using db4 energies)."""
-        energies = self._compute_wavelet_energies_db4(spec)
-        Etot = np.sum(energies) + self.EPS
-        Pj = energies / Etot
-        return float(-np.sum(Pj * np.log2(Pj + self.EPS)))
+        # F24: időbeli spread
+        spread = float(np.sqrt(np.sum(((t - centroid) ** 2) * signal) / (np.sum(signal) + eps)))
 
-    # ------------------------- Category VI: Texture and pattern (F82-F92) -------------------------
+        # F25: időbeli skewness
+        skewness = float(np.sum(((t - centroid) ** 3) * signal) / ((spread**3 + eps) * (np.sum(signal) + eps)))
 
-    def _compute_glcm_props(self, spec: np.ndarray) -> Dict[str, float]:
-        """Compute GLCM properties (8 gray levels, distance=1, angle=0)."""
-        levels = 8
-        vmin, vmax = np.min(spec), np.max(spec)
-        if vmax == vmin:
-            spec_quant = np.zeros_like(spec, dtype=np.uint8)
+        # F26: időbeli kurtosis
+        kurtosis = float(np.sum(((t - centroid) ** 4) * signal) / ((spread**4 + eps) * (np.sum(signal) + eps)))
+
+        # F27: zero-crossing rate
+        zero_crossings = np.where(np.diff(np.sign(signal)))[0]
+        zcr = float(len(zero_crossings) / (N + eps))
+
+        # F28: short-time energy
+        ste = float(np.sum(signal**2))
+
+        # F29: RMS
+        rms = float(np.sqrt(np.mean(signal**2)))
+
+        # F30: peak amplitude
+        peak = float(np.max(np.abs(signal)))
+
+        # F31: peak-to-RMS ratio
+        peak_to_rms = peak / (rms + eps)
+
+        # F32: temporal entropy
+        P = np.abs(signal) + eps
+        P = P / np.sum(P)
+        entropy = float(stats.entropy(P))
+
+        # F33: temporal flatness
+        geometric_mean = float(np.exp(np.mean(np.log(np.abs(signal) + eps))))
+        arithmetic_mean = float(np.mean(np.abs(signal)))
+        flatness = geometric_mean / (arithmetic_mean + eps)
+
+        # F34: temporal crest factor
+        crest = peak / (arithmetic_mean + eps)
+
+        # F35: temporal rolloff (85%)
+        cumulative = np.cumsum(np.abs(signal))
+        rolloff_threshold = 0.85 * cumulative[-1]
+        rolloff_idx = int(np.searchsorted(cumulative, rolloff_threshold))
+        rolloff = float(rolloff_idx)
+
+        # F36: temporal slope (lineáris regresszió)
+        slope = float(np.polyfit(t, signal, 1)[0])
+
+        # F37: temporal flux
+        shifted = np.roll(signal, 1)
+        flux = float(np.sum((signal - shifted) ** 2))
+
+        # F38: temporal decrease
+        k = np.arange(1, N + 1)
+        decrease = float(np.sum((signal[1:] - signal[0]) / k[1:]) / (np.sum(signal[1:]) + eps))
+
+        # F39: temporal energy ratio (first half / second half)
+        mid = N // 2
+        low_energy = float(np.sum(signal[:mid] ** 2))
+        high_energy = float(np.sum(signal[mid:] ** 2) + eps)
+        energy_ratio = low_energy / high_energy
+
+        # F40: dominant time index
+        dom_idx = int(np.argmax(signal))
+        dominant_time = float(dom_idx)
+
+        # F41: mean absolute derivative
+        mad = float(np.mean(np.abs(np.diff(signal))))
+
+        # F42: variance of derivative
+        var_deriv = float(np.var(np.diff(signal)))
+
+        # F43: temporal smoothness
+        smoothness = float(np.mean((signal[1:] - signal[:-1]) ** 2))
+
+        # F44: temporal stability
+        stability = float(1.0 / (smoothness + eps))
+
+        return [
+            centroid,       # F23
+            spread,         # F24
+            skewness,       # F25
+            kurtosis,       # F26
+            zcr,            # F27
+            ste,            # F28
+            rms,            # F29
+            peak,           # F30
+            peak_to_rms,    # F31
+            entropy,        # F32
+            flatness,       # F33
+            crest,          # F34
+            rolloff,        # F35
+            slope,          # F36
+            flux,           # F37
+            decrease,       # F38
+            energy_ratio,   # F39
+            dominant_time,  # F40
+            mad,            # F41
+            var_deriv,      # F42
+            smoothness,     # F43
+            stability       # F44
+        ]
+
+    def geometric_features(self, spec: np.ndarray) -> list[float]:
+        """
+        Kategória IV – Geometriai forma jellemzők (F45–F56)
+        Stabil, bináris maszk-biztos, kontúr-biztos implementáció.
+        """
+
+        eps = 1e-8
+
+        # 1) Ha 2D spektrogram jön, normalizáljuk 0–255 közé
+        if spec.ndim == 2:
+            img = spec.copy()
         else:
-            # Scale to 0 to levels-1
-            spec_quant = np.floor((spec - vmin) / (vmax - vmin + self.EPS) * (levels - 1)).astype(np.uint8)
-        glcm = graycomatrix(
-            spec_quant,
-            distances=[1],
-            angles=[0],
-            levels=levels,
-            symmetric=True,
-            normed=True,
-        )
-        energy = graycoprops(glcm, 'energy')[0, 0]
-        contrast = graycoprops(glcm, 'contrast')[0, 0]
-        correlation = graycoprops(glcm, 'correlation')[0, 0]
-        homogeneity = graycoprops(glcm, 'homogeneity')[0, 0]
-        dissimilarity = graycoprops(glcm, 'dissimilarity')[0, 0]
-        asm = graycoprops(glcm, 'ASM')[0, 0]
-        glcm_vals = glcm.astype(float)
-        glcm_entropy = -np.sum(glcm_vals * np.log2(glcm_vals + self.EPS))
-        variance = float(np.var(spec_quant))
-        return {
-            'energy': float(energy),
-            'contrast': float(contrast),
-            'correlation': float(correlation),
-            'homogeneity': float(homogeneity),
-            'entropy': float(glcm_entropy),
-            'variance': variance,
-            'dissimilarity': float(dissimilarity),
-            'ASM': float(asm),
-        }
+            img = np.asarray(spec, dtype=float)
 
-    def F82_to_F89_glcm(self, spec: np.ndarray) -> Dict[str, float]:
-        """F82-F89: GLCM features."""
-        props = self._compute_glcm_props(spec)
-        return {
-            'F82': props['energy'],
-            'F83': props['contrast'],
-            'F84': props['correlation'],
-            'F85': props['homogeneity'],
-            'F86': props['entropy'],
-            'F87': props['variance'],
-            'F88': props['dissimilarity'],
-            'F89': props['ASM'],
-        }
+        img = np.nan_to_num(img, nan=0.0, posinf=0.0, neginf=0.0)
 
-    def F90_lbp_entropy(self, spec: np.ndarray) -> float:
-        """F90: LBP histogram entropy (P=8, R=1, uniform)."""
-        lbp = local_binary_pattern(spec, P=8, R=1, method='uniform')
-        hist, _ = np.histogram(lbp.ravel(), bins=np.arange(0, 10), density=True)
-        return float(entropy(hist + self.EPS))
+        # Normalizálás 0–255 közé
+        img_norm = img - np.min(img)
+        img_norm = img_norm / (np.max(img_norm) + eps)
+        img_norm = (img_norm * 255).astype(np.uint8)
 
-    def F91_fractal_dimension(self, spec: np.ndarray) -> float:
-        """F91: Fractal dimension via simple box-counting."""
-        binary = self._get_binary_image(spec)
-        max_box = min(binary.shape) // 2
-        if max_box < 2:
-            return 0.0
-        sizes = 2 ** np.arange(1, int(np.log2(max_box)) + 1)
-        counts = []
-        for s in sizes:
-            cnt = 0
-            for i in range(0, binary.shape[0], s):
-                for j in range(0, binary.shape[1], s):
-                    block = binary[i:i + s, j:j + s]
-                    if block.size > 0 and np.any(block):
-                        cnt += 1
-            counts.append(max(cnt, 1))
-        sizes = np.array(sizes, dtype=float)
-        counts = np.array(counts, dtype=float)
-        p = np.polyfit(np.log(sizes), np.log(counts), 1)
-        return float(-p[0])
+        # 2) Binarizálás (Otsu)
+        try:
+            _, binary = cv2.threshold(img_norm, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
+        except:
+            binary = (img_norm > 128).astype(np.uint8) * 255
 
-    def F92_lacunarity(self, spec: np.ndarray) -> float:
-        """F92: Lacunarity averaged over several box sizes."""
-        binary = self._get_binary_image(spec)
-        sizes = [2, 4, 8, 16]
-        sizes = [s for s in sizes if s <= min(binary.shape)]
-        if not sizes:
-            return 0.0
-        lacs = []
-        for r in sizes:
-            masses = []
-            for i in range(0, binary.shape[0] - r + 1, r):
-                for j in range(0, binary.shape[1] - r + 1, r):
-                    mass = np.sum(binary[i:i + r, j:j + r])
-                    masses.append(mass)
-            masses = np.array(masses, dtype=float)
-            if masses.size == 0:
-                continue
-            mu = np.mean(masses)
-            sigma = np.std(masses)
-            lacs.append((sigma ** 2) / (mu ** 2 + self.EPS))
-        if not lacs:
-            return 0.0
-        return float(np.mean(lacs))
+        # 3) Kontúrok keresése
+        contours, _ = cv2.findContours(binary, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
-                # ------------------------- Main public API -------------------------
+        if len(contours) == 0:
+            # Ha nincs kontúr → minden érték 0
+            return [0.0] * 12
 
-    def extract_all_features(
-        self,
-        spec: np.ndarray,
-        freq_axis: Optional[np.ndarray] = None,
-        time_axis: Optional[np.ndarray] = None,
-        threshold: float = 0.1,
-    ) -> Dict[str, float]:
-        """Compute all F1–F92 features and return as a flat dict."""
-        # Spektrogram ellenőrzése + nemnegatívvá alakítás + tengelyek
-        spec_nonneg, freq_axis, time_axis = self._validate_spectrogram(
-            spec, freq_axis, time_axis
-        )
+        # Legnagyobb kontúr
+        cnt = max(contours, key=cv2.contourArea)
 
-        features: Dict[str, float] = {}
+        area = float(cv2.contourArea(cnt))
+        perimeter = float(cv2.arcLength(cnt, True))
 
-        # I. Basic intensity features (F1–F6)
-        features.update({
-            "F1": self.F1_max_intensity(spec),
-            "F2": self.F2_mean_intensity(spec),
-            "F3": self.F3_std_intensity(spec),
-            "F4": self.F4_dynamic_range(spec),
-            "F5": self.F5_entropy(spec),
-            "F6": self.F6_contrast_ratio(spec),
-        })
+        # F45: area
+        F45 = area
 
-        # II. Spectral domain (F7–F14)
-        if freq_axis is None:
-            freq_axis = np.arange(spec.shape[0], dtype=float)
-        features.update({
-            "F7": self.F7_frequency_centroid(spec, freq_axis),
-            "F8": self.F8_spectral_spread(spec, freq_axis),
-            "F9": self.F9_spectral_skewness(spec, freq_axis),
-            "F10": self.F10_spectral_kurtosis(spec, freq_axis),
-            "F11": self.F11_peak_frequency(spec, freq_axis),
-            "F12": self.F12_spectral_rolloff(spec, freq_axis),
-            "F13": self.F13_hnr(spec_nonneg),
-            "F14": self.F14_spectral_flatness(spec_nonneg),
-        })
+        # F46: perimeter
+        F46 = perimeter
 
-        # III. Temporal domain (F15–F22)
-        if time_axis is None:
-            time_axis = np.arange(spec.shape[1], dtype=float)
-        features.update({
-            "F15": self.F15_temporal_centroid(spec_nonneg, time_axis),
-            "F16": self.F16_temporal_spread(spec_nonneg, time_axis),
-            "F17": self.F17_temporal_skewness(spec_nonneg, time_axis),
-            "F18": self.F18_temporal_kurtosis(spec_nonneg, time_axis),
-            "F19": self.F19_onset_time(spec_nonneg, time_axis),
-            "F20": self.F20_offset_time(spec_nonneg, time_axis),
-            "F21": self.F21_duration(spec_nonneg, time_axis),
-            "F22": self.F22_rise_time(spec_nonneg, time_axis),
-        })
+        # F47: circularity
+        F47 = 4 * np.pi * area / (perimeter**2 + eps)
 
-        # IV. Geometriai alak jellemzők (F23–F44)
-        features.update(
-            self.extract_shape_features(spec_nonneg, threshold=threshold)
-        )
+        # F48: bounding box aspect ratio
+        x, y, w, h = cv2.boundingRect(cnt)
+        F48 = float(w / (h + eps))
 
-        # V. Wavelet / sáv / blob jellemzők (F45–F62)
-        # Ha később szeretnél külön temporal-shape (F45–F48) gyűjtőt,
-        # akkor azt itt lehet majd beilleszteni.
-        features.update(
-            self.F45_to_F60_db4_energies(spec_nonneg)
-        )
-        features.update(
-            self.F61_to_F68_haar_energies(spec_nonneg)
-        )
-        features.update(
-            self.F69_to_F80_morlet_coeffs(spec_nonneg)
-        )
-        features["F81"] = self.F81_wavelet_entropy(spec_nonneg)
-        features.update(
-            self.extract_blob_features(spec_nonneg)
-        )
+        # F49: extent (area / bounding box area)
+        F49 = float(area / (w * h + eps))
 
-        # VI. Textúra és mintázat (F82–F92)
-        features.update(
-            self.extract_texture_features(spec_nonneg)
-        )
+        # F50: solidity (area / convex hull area)
+        hull = cv2.convexHull(cnt)
+        hull_area = float(cv2.contourArea(hull) + eps)
+        F50 = float(area / hull_area)
 
-        # Végső takarítás: NaN / inf -> 0
-        for k, v in features.items():
-            if not np.isfinite(v):
-                features[k] = 0.0
+        # F51: equivalent diameter
+        F51 = float(np.sqrt(4 * area / np.pi))
 
-        return features
+        # F52: major axis length
+        try:
+            (cx, cy), (MA, ma), angle = cv2.fitEllipse(cnt)
+            F52 = float(ma)
+        except:
+            F52 = 0.0
+
+        # F53: minor axis length
+        try:
+            (cx, cy), (MA, ma), angle = cv2.fitEllipse(cnt)
+            F53 = float(MA)
+        except:
+            F53 = 0.0
+
+        # F54: eccentricity
+        F54 = float(np.sqrt(1 - (F53**2) / (F52**2 + eps))) if F52 > 0 else 0.0
+
+        # F55: orientation angle
+        try:
+            (cx, cy), (MA, ma), angle = cv2.fitEllipse(cnt)
+            F55 = float(angle)
+        except:
+            F55 = 0.0
+
+        # F56: convexity (perimeter / convex hull perimeter)
+        try:
+            hull_perimeter = float(cv2.arcLength(hull, True))
+            F56 = float(perimeter / (hull_perimeter + eps))
+        except:
+            F56 = 0.0
+
+        return [
+            F45, F46, F47, F48, F49, F50,
+            F51, F52, F53, F54, F55, F56
+        ]
+
+    def wavelet_features(self, spec: np.ndarray) -> list[float]:
+        """
+        Kategória V – Wavelet jellemzők (F57–F81)
+        Stabil, integer-biztos, NaN-mentes wavelet alapú jellemzők.
+        """
+
+        import pywt
+
+        eps = 1e-8
+
+        # Ha 2D spektrogram jön, időirányban átlagoljuk
+        if spec.ndim == 2:
+            signal = np.mean(spec, axis=0)
+        else:
+            signal = spec.copy()
+
+        signal = np.asarray(signal, dtype=float)
+        signal = np.nan_to_num(signal, nan=0.0, posinf=0.0, neginf=0.0)
+
+        N = len(signal)
+
+        # Wavelet szint meghatározása (
