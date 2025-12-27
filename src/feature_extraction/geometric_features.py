@@ -529,9 +529,9 @@ class GeometricFeatureExtractor:
 
         features: Dict[str, float] = {}
 
-                # I. Basic intensity features (F1–F6)
+                        # I. Basic intensity features (F1–F6)
         features.update({
-            "F1": self.F1_maximum_intensity(spec),
+            "F1": self.F1_max_intensity(spec),
             "F2": self.F2_mean_intensity(spec),
             "F3": self.F3_std_intensity(spec),
             "F4": self.F4_dynamic_range(spec),
