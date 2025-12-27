@@ -341,7 +341,31 @@ class GeometricFeatureExtractor:
         binary = self._get_binary_image(spec)
         props = self._get_largest_region_props(binary)
         return float(props.orientation)
+    def extract_shape_features(
+        self,
+        spec_nonneg: np.ndarray,
+        threshold: float = 0.1,
+    ) -> Dict[str, float]:
+        """Collect F23–F44 geometric shape features into a flat dict."""
+        features: Dict[str, float] = {}
 
+        # F23–F29: image moments
+        features.update(self.F23_to_F29_moments(spec_nonneg))
+
+        # F30–F36: Hu invariant moments
+        features.update(self.F30_to_F36_hu_moments(spec_nonneg))
+
+        # F37–F44: single‑value region shape features
+        features["F37"] = self.F37_area(spec_nonneg)
+        features["F38"] = self.F38_perimeter(spec_nonneg)
+        features["F39"] = self.F39_eccentricity(spec_nonneg)
+        features["F40"] = self.F40_extent(spec_nonneg)
+        features["F41"] = self.F41_compactness(spec_nonneg)
+        features["F42"] = self.F42_convexity(spec_nonneg)
+        features["F43"] = self.F43_solidity(spec_nonneg)
+        features["F44"] = self.F44_orientation(spec_nonneg)
+
+        return features
     # ------------------------- Category V: Wavelet transform (F45-F81) -------------------------
 
     def _compute_wavelet_energies_db4(self, spec: np.ndarray) -> np.ndarray:
