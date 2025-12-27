@@ -536,7 +536,7 @@ class GeometricFeatureExtractor:
             return 0.0
         return float(np.mean(lacs))
 
-    # ------------------------- Main public API -------------------------
+        # ------------------------- Main public API -------------------------
 
     def extract_all_features(
         self,
@@ -545,64 +545,50 @@ class GeometricFeatureExtractor:
         time_axis: Optional[np.ndarray] = None,
         threshold: float = 0.1,
     ) -> Dict[str, float]:
-        """Compute all F1–F62 geometric features and return as a flat dict."""
-        self._validate_spectrogram(spec)
-
-        # Non‑negative spectrogram for temporal / shape / blob features
-        spec_nonneg = np.clip(spec - np.min(spec), 0, None)
+        """Compute all F1–F92 features and return as a flat dict."""
+        # Spektrogram ellenőrzése + nemnegatívvá alakítás + tengelyek
+        spec_nonneg, freq_axis, time_axis = self._validate_spectrogram(
+            spec, freq_axis, time_axis
+        )
 
         features: Dict[str, float] = {}
 
-        # I. Basic intensity features (F1–F6)
-        features.update({
-            "F1": self.F1_max_intensity(spec),
-            "F2": self.F2_mean_intensity(spec),
-            "F3": self.F3_std_intensity(spec),
-            "F4": self.F4_dynamic_range(spec),
-            "F5": self.F5_entropy(spec),
-            "F6": self.F6_contrast_ratio(spec),
-        })
+        # I. Alap spektrális/energia jellemzők (F1–F13)
+        features.update(
+            self.F1_to_F13_energy_stats(spec_nonneg, freq_axis, time_axis)
+        )
 
-        # II. Spectral domain (F7–F14)
-        if freq_axis is None:
-            freq_axis = np.arange(spec.shape[0], dtype=float)
-        features.update({
-            "F7": self.F7_frequency_centroid(spec, freq_axis),
-            "F8": self.F8_spectral_spread(spec, freq_axis),
-            "F9": self.F9_spectral_skewness(spec, freq_axis),
-            "F10": self.F10_spectral_kurtosis(spec, freq_axis),
-            "F11": self.F11_peak_frequency(spec, freq_axis),
-            "F12": self.F12_spectral_rolloff(spec, freq_axis),
-            "F13": self.F13_hnr(spec_nonneg),
-            "F14": self.F14_spectral_flatness(spec_nonneg),
-        })
+        # II. Idő‑frekvencia eloszlások / entropiák (F14–F22)
+        features.update(
+            self.F14_to_F22_time_freq_features(spec_nonneg, freq_axis, time_axis)
+        )
 
-        # III. Temporal domain (F15–F22)
-        if time_axis is None:
-            time_axis = np.arange(spec.shape[1], dtype=float)
-        features.update({
-            "F15": self.F15_temporal_centroid(spec_nonneg, time_axis),
-            "F16": self.F16_temporal_spread(spec_nonneg, time_axis),
-            "F17": self.F17_temporal_skewness(spec_nonneg, time_axis),
-            "F18": self.F18_temporal_kurtosis(spec_nonneg, time_axis),
-            "F19": self.F19_onset_time(spec_nonneg, time_axis),
-            "F20": self.F20_offset_time(spec_nonneg, time_axis),
-            "F21": self.F21_duration(spec_nonneg, time_axis),
-            "F22": self.F22_rise_time(spec_nonneg, time_axis),
-        })
+        # III. Geometriai alak jellemzők (F23–F44)
+        features.update(
+            self.extract_shape_features(spec_nonneg, threshold=threshold)
+        )
 
-        # IV. Shape features (F23–F34)
-        features.update(self.extract_shape_features(spec_nonneg, threshold=threshold))
+        # IV. Időbeli alak / borítás jellemzők (F45–F48)
+        features.update(
+            self.extract_temporal_shape_features(spec_nonneg, time_axis)
+        )
 
-        # V. Texture features (F35–F48)
-        features.update(self.extract_texture_features(spec_nonneg))
+        # V. Frekvencia‑sáv / blob / region jellemzők (F49–F62)
+        features.update(
+            self.extract_band_features(spec_nonneg, freq_axis)
+        )
+        features.update(
+            self.extract_blob_features(spec_nonneg)
+        )
 
-        # VI. Blob / region features (F49–F62)
-        features.update(self.extract_blob_features(spec_nonneg))
+        # VI. Textúra és mintázat (F82–F92)
+        features.update(
+            self.extract_texture_features(spec_nonneg)
+        )
 
-        # Final cleanup: replace NaN/inf with 0
+        # Végső takarítás: NaN / inf -> 0
         for k, v in features.items():
             if not np.isfinite(v):
                 features[k] = 0.0
 
-        return features 
+        return features
