@@ -536,7 +536,7 @@ class GeometricFeatureExtractor:
             return 0.0
         return float(np.mean(lacs))
 
-            # ------------------------- Main public API -------------------------
+                # ------------------------- Main public API -------------------------
 
     def extract_all_features(
         self,
@@ -596,20 +596,24 @@ class GeometricFeatureExtractor:
             self.extract_shape_features(spec_nonneg, threshold=threshold)
         )
 
-        # V. Időbeli alak / borítás jellemzők (F45–F48)
+        # V. Wavelet / sáv / blob jellemzők (F45–F62)
+        # Ha később szeretnél külön temporal-shape (F45–F48) gyűjtőt,
+        # akkor azt itt lehet majd beilleszteni.
         features.update(
-            self.extract_temporal_shape_features(spec_nonneg, time_axis)
+            self.F45_to_F60_db4_energies(spec_nonneg)
         )
-
-        # VI. Frekvencia‑sáv / blob / region jellemzők (F49–F62)
         features.update(
-            self.extract_band_features(spec_nonneg, freq_axis)
+            self.F61_to_F68_haar_energies(spec_nonneg)
         )
+        features.update(
+            self.F69_to_F80_morlet_coeffs(spec_nonneg)
+        )
+        features["F81"] = self.F81_wavelet_entropy(spec_nonneg)
         features.update(
             self.extract_blob_features(spec_nonneg)
         )
 
-        # VII. Textúra és mintázat (F82–F92)
+        # VI. Textúra és mintázat (F82–F92)
         features.update(
             self.extract_texture_features(spec_nonneg)
         )
