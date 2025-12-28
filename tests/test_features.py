@@ -1,13 +1,9 @@
-       
-        import numpy as np
+import numpy as np
 import math
 
 from ggwb_cartographer.features import FeatureExtractor
 
 
-# -----------------------------
-# Helper: check numeric validity
-# -----------------------------
 def _check_numeric_list(values, expected_len):
     assert isinstance(values, list)
     assert len(values) == expected_len
@@ -17,9 +13,6 @@ def _check_numeric_list(values, expected_len):
         assert math.isfinite(v)
 
 
-# -----------------------------
-# Geometric features tests
-# -----------------------------
 def test_geometric_features_random():
     extractor = FeatureExtractor()
     spec = np.random.rand(64, 64)
@@ -41,9 +34,6 @@ def test_geometric_features_nan_input():
     _check_numeric_list(result, 12)
 
 
-# -----------------------------
-# Wavelet features tests
-# -----------------------------
 def test_wavelet_features_random():
     extractor = FeatureExtractor()
     spec = np.random.rand(64, 64)
@@ -65,9 +55,6 @@ def test_wavelet_features_nan_input():
     _check_numeric_list(result, 25)
 
 
-# -----------------------------
-# Texture features tests
-# -----------------------------
 def test_texture_features_random():
     extractor = FeatureExtractor()
     spec = np.random.rand(64, 64)
@@ -89,14 +76,10 @@ def test_texture_features_nan_input():
     _check_numeric_list(result, 11)
 
 
-# -----------------------------
-# Full feature vector test
-# -----------------------------
 def test_full_feature_vector():
     extractor = FeatureExtractor()
     spec = np.random.rand(64, 64)
 
-    # Ha van extract_all_features metódusod:
     if hasattr(extractor, "extract_all_features"):
         result = extractor.extract_all_features(spec)
         assert isinstance(result, list)
