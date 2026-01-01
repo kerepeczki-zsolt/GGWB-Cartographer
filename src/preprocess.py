@@ -26,6 +26,8 @@ def compute_spectrogram(strain, fs, nperseg=256, noverlap=128):
         strain,
         fs=fs,
         nperseg=nperseg,
+            return Sxx, freqs, times
+
         noverlap=noverlap,
         scaling="density",
         mode="magnitude"
