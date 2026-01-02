@@ -24,6 +24,10 @@ jobs:
           pip install -r requirements.txt
           pip install pytest
 
+      - name: Add src to PYTHONPATH
+        run: echo "PYTHONPATH=$PYTHONPATH:$(pwd)/src" >> $GITHUB_ENV
+
       - name: Run tests
         run: |
           pytest --maxfail=0 --disable-warnings -q
+
