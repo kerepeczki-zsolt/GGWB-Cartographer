@@ -1,5 +1,6 @@
 import numpy as np
-from ggwb_cartographer.models.geometric import GeometricClassifier
+from src.models.geometric import GeometricClassifier
+
 
 def test_geometric_classifier_basic_fit_and_predict():
     clf = GeometricClassifier()
