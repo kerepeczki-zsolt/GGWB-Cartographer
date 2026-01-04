@@ -36,3 +36,4 @@ A részletes módszertan, az alkalmazott adatválogatás, a tanító‑ és tesz
 
 A projekthez tartozó részletes tudományos tanulmány külön fájlban érhető el a `docs/` mappában (pl. `docs/ggwb_terkepesz_tanulmany.pdf`).  
 A tanulmány tartalmazza a teljes elméleti hátteret, az adatkezelés részleteit, a modellarchitektúrákat, valamint az eredmények fizikai értelmezését.
+📄 [Teljes elméleti dokumentáció (PDF)](docs/GGWB-Cartographer-Theory.pdf)
