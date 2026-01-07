@@ -1,5 +1,5 @@
-from src.models.feature_extractor import CompleteFeatureExtractor
-
+import numpy as np
+from src.Modellek.feature_extractor import CompleteFeatureExtractor
 
 def test_feature_extractor_output_shape():
     extractor = CompleteFeatureExtractor()
