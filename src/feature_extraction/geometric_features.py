@@ -410,18 +410,17 @@ class GeometricFeatureExtractor:
             F45, F46, F47, F48, F49, F50,
             F51, F52, F53, F54, F55, F56
         ]
-
     def wavelet_features(self, spec: np.ndarray) -> list[float]:
         """
         Kategória V – Wavelet jellemzők (F57–F81)
         Stabil, integer-biztos, NaN-mentes wavelet alapú jellemzők.
+        25 darab jellemzőt ad vissza.
         """
 
         import pywt
-
         eps = 1e-8
 
-        # Ha 2D spektrogram jön, időirányban átlagoljuk
+        # Ha 2D spektrogram jön → időirányban átlagoljuk
         if spec.ndim == 2:
             signal = np.mean(spec, axis=0)
         else:
@@ -430,6 +429,69 @@ class GeometricFeatureExtractor:
         signal = np.asarray(signal, dtype=float)
         signal = np.nan_to_num(signal, nan=0.0, posinf=0.0, neginf=0.0)
 
-        N = len(signal)
+        # Normalizálás
+        if np.max(np.abs(signal)) > 0:
+            signal = signal / (np.max(np.abs(signal)) + eps)
 
-        # Wavelet szint meghatározása (
+        # 3 szintű wavelet dekompozíció (Daubechies 4)
+        try:
+            coeffs = pywt.wavedec(signal, "db4", level=3)
+        except Exception:
+            # Ha bármi hiba történik → 25 nulla
+            return [0.0] * 25
+
+        # coeffs = [cA3, cD3, cD2, cD1]
+        features = []
+
+        # Minden subbandra számolunk:
+        # energia, átlag abszolút érték, szórás, entropia, RMS
+        for band in coeffs:
+            band = np.asarray(band, dtype=float)
+            band = np.nan_to_num(band, nan=0.0, posinf=0.0, neginf=0.0)
+
+            # Energia
+            energy = float(np.sum(band ** 2))
+
+            # Átlag abszolút érték
+            mean_abs = float(np.mean(np.abs(band)))
+
+            # Szórás
+            std = float(np.std(band))
+
+            # Entropia
+            P = np.abs(band) + eps
+            P = P / np.sum(P)
+            entropy = float(np.sum(-P * np.log(P + eps)))
+
+            # RMS
+            rms = float(np.sqrt(np.mean(band ** 2)))
+
+            features.extend([energy, mean_abs, std, entropy, rms])
+
+        # Összesen 4 subband × 5 jellemző = 20
+        # Még 5 jellemző kell → globális wavelet statisztikák
+
+        all_coeffs = np.concatenate(coeffs)
+        all_coeffs = np.nan_to_num(all_coeffs, nan=0.0, posinf=0.0, neginf=0.0)
+
+        # Globális energia
+        g_energy = float(np.sum(all_coeffs ** 2))
+
+        # Globális abszolút átlag
+        g_mean_abs = float(np.mean(np.abs(all_coeffs)))
+
+        # Globális szórás
+        g_std = float(np.std(all_coeffs))
+
+        # Globális entropia
+        P = np.abs(all_coeffs) + eps
+        P = P / np.sum(P)
+        g_entropy = float(np.sum(-P * np.log(P + eps)))
+
+        # Globális RMS
+        g_rms = float(np.sqrt(np.mean(all_coeffs ** 2)))
+
+        features.extend([g_energy, g_mean_abs, g_std, g_entropy, g_rms])
+
+        # Összesen: 20 + 5 = 25 jellemző
+        return features
