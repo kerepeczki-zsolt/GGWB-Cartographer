@@ -1,8 +1,8 @@
 import numpy as np
-from src.Modellek.feature_extractor import CompleteFeatureExtractor
+from ggwb_cartographer.features import FeatureExtractor
 
 def test_feature_extractor_output_shape():
-    extractor = CompleteFeatureExtractor()
+    extractor = FeatureExtractor()
     spec = np.random.rand(64, 64)
     freqs = np.linspace(0, 1, 64)
     times = np.linspace(0, 1, 64)
