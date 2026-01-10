@@ -483,4 +483,66 @@ class GeometricFeatureExtractor:
         features.extend([g_energy, g_mean_abs, g_std, g_entropy, g_rms])
 
         return features
+    def texture_features(self, spec: np.ndarray) -> list[float]:
+        """
+        Kategória VI – Textúra jellemzők (F82–F92)
+        GLCM alapú, numerikusan stabil, NaN-mentes implementáció.
+        11 darab jellemzőt ad vissza.
+        """
+
+        eps = 1e-8
+
+        # Ha 2D spektrogram → normalizáljuk 0–255 közé
+        if spec.ndim == 2:
+            img = spec.copy()
+        else:
+            img = np.asarray(spec, dtype=float)
+
+        img = np.nan_to_num(img, nan=0.0, posinf=0.0, neginf=0.0)
+
+        img_norm = img - np.min(img)
+        img_norm = img_norm / (np.max(img_norm) + eps)
+        img_norm = (img_norm * 255).astype(np.uint8)
+
+        # GLCM számítása 4 irányban
+        glcm = greycomatrix(
+            img_norm,
+            distances=[1],
+            angles=[0, np.pi/4, np.pi/2, 3*np.pi/4],
+            levels=256,
+            symmetric=True,
+            normed=True
+        )
+
+        contrast = greycoprops(glcm, 'contrast').mean()
+        dissimilarity = greycoprops(glcm, 'dissimilarity').mean()
+        homogeneity = greycoprops(glcm, 'homogeneity').mean()
+        ASM = greycoprops(glcm, 'ASM').mean()
+        energy = greycoprops(glcm, 'energy').mean()
+        correlation = greycoprops(glcm, 'correlation').mean()
+
+        # Saját textúra statisztikák
+        flat = img_norm.flatten().astype(float)
+        flat = flat + eps
+        flat = flat / np.sum(flat)
+
+        entropy = float(stats.entropy(flat))
+        mean_val = float(np.mean(flat))
+        std_val = float(np.std(flat))
+        skewness = float(stats.skew(flat))
+        kurtosis = float(stats.kurtosis(flat))
+
+        return [
+            float(contrast),      # F82
+            float(dissimilarity), # F83
+            float(homogeneity),   # F84
+            float(ASM),           # F85
+            float(energy),        # F86
+            float(correlation),   # F87
+            entropy,              # F88
+            mean_val,             # F89
+            std_val,              # F90
+            skewness,             # F91
+            kurtosis              # F92
+        ]
            
