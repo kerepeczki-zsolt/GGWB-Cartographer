@@ -1,5 +1,5 @@
 import numpy as np
-from ggwb_cartographer.features import FeatureExtractor
+from feature_extraction.geometric_features import FeatureExtractor
 
 def test_feature_extractor_output_shape():
     extractor = FeatureExtractor()
