@@ -1,4 +1,4 @@
-# Python cache és build fájlok
+# --- Meglévő alapok ---
 __pycache__/
 *.py[cod]
 *.so
@@ -6,24 +6,22 @@ __pycache__/
 *.egg-info/
 dist/
 build/
-
-# Virtuális környezetek
 venv*/
 env*/
 .venv/
 .venv310/
 .venv311/
 venv310/
-
-# IDE és editor fájlok
 .vscode/
 .idea/
-
-# Teszt cache
 .pytest_cache/
-
-# Notebook checkpointok
 .ipynb_checkpoints/
-
-# Egyéb
 .DS_Store
+
+# --- Zsolt speciális LIGO beállításai ---
+# Ne töltse fel a nyers képeket a felhőbe, mert túl nagyok és elrontják a GitHubot
+IDEGEN_TESZT/
+TrainingSet/
+
+# Ne töltse fel a log fájlokat, ha nem muszáj
+*.log
