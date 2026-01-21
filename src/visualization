@@ -1,0 +1,54 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.decomposition import PCA
+from sklearn.preprocessing import StandardScaler
+import os
+
+class CartographerViz:
+    def __init__(self, csv_path):
+        self.csv_path = csv_path
+        self.df = None
+        self.features = None
+        
+    def load_data(self):
+        if os.path.exists(self.csv_path):
+            self.df = pd.read_csv(self.csv_path)
+            # Az első oszlop a filenév, a többi a feature (F1-F92)
+            self.features = self.df.iloc[:, 1:].values
+            print(f">>> {len(self.df)} gravitációs jel betöltve.")
+            return True
+        print("Hiba: Nincs meg a feature CSV!")
+        return False
+
+    def plot_pca_map(self, output_name="ggwb_map.png"):
+        # 1. Normalizálás (Fontos a LIGO-szintű precizitáshoz)
+        scaler = StandardScaler()
+        scaled_features = scaler.fit_transform(self.features)
+        
+        # 2. PCA analízis (92 dimenzió -> 2 dimenzió)
+        pca = PCA(n_components=2)
+        pca_results = pca.fit_transform(scaled_features)
+        
+        # 3. Grafikon készítése
+        plt.figure(figsize=(12, 8))
+        plt.scatter(pca_results[:, 0], pca_results[:, 1], alpha=0.6, c='cyan', edgecolors='white')
+        
+        plt.title("GGWB-Cartographer: Gravitációs Hullám Térkép", fontsize=15)
+        plt.xlabel(f"Főkomponens 1 ({pca.explained_variance_ratio_[0]*100:.1f}%)")
+        plt.ylabel(f"Főkomponens 2 ({pca.explained_variance_ratio_[1]*100:.1f}%)")
+        plt.grid(True, linestyle='--', alpha=0.3)
+        
+        plt.savefig(output_name)
+        print(f">>> Térkép elmentve: {output_name}")
+        plt.show()
+
+if __name__ == "__main__":
+    # Feltételezzük, hogy a CSV a data mappában van
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    CSV_FILE = os.path.join(BASE_DIR, '../../data/gravitational_features.csv')
+    
+    viz = CartographerViz(CSV_FILE)
+    if viz.load_data():
+        viz.plot_pca_map()

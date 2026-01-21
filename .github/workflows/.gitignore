@@ -1,0 +1,29 @@
+# Python cache és build fájlok
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Virtuális környezetek
+venv*/
+env*/
+.venv/
+.venv310/
+.venv311/
+venv310/
+
+# IDE és editor fájlok
+.vscode/
+.idea/
+
+# Teszt cache
+.pytest_cache/
+
+# Notebook checkpointok
+.ipynb_checkpoints/
+
+# Egyéb
+.DS_Store
