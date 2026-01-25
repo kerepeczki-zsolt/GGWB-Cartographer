@@ -1,0 +1,27 @@
+# --- Meglévő alapok ---
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+venv*/
+env*/
+.venv/
+.venv310/
+.venv311/
+venv310/
+.vscode/
+.idea/
+.pytest_cache/
+.ipynb_checkpoints/
+.DS_Store
+
+# --- Zsolt speciális LIGO beállításai ---
+# Ne töltse fel a nyers képeket a felhőbe, mert túl nagyok és elrontják a GitHubot
+IDEGEN_TESZT/
+TrainingSet/
+
+# Ne töltse fel a log fájlokat, ha nem muszáj
+*.log
