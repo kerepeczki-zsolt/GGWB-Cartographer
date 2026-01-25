@@ -1,7 +1,4 @@
-venv/
-.venv/
-env/
-Include/
-Lib/
-Scripts/
-pyvenv.cfg
+numpy
+pandas
+matplotlib
+scipy
