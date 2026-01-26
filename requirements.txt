@@ -5,3 +5,4 @@ scipy
 pydantic
 tensorflow
 opencv-python
+scikit-image
