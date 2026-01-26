@@ -6,3 +6,10 @@ pydantic
 tensorflow
 opencv-python
 scikit-image
+PyWavelets
+scikit-learn
+seaborn
+plotly
+h5py
+pyyaml
+jinja2
