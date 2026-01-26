@@ -13,3 +13,4 @@ plotly
 h5py
 pyyaml
 jinja2
+pytest
