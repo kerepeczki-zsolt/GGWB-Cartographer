@@ -1,4 +1,4 @@
-Nem vagyok Gravity Spy kutato ezt miert nem erted meg. Ne ird oda mert ez jogilag nem igaz. Es figyelj oda a helyesirasodra. Ird ujra
+
 
 # 🛰️ GGWB-Cartographer **v0.12.0** - **LIGO Publication-Ready Milestone**  
 **Kétszintű Kiadás** | **Bilingual Edition**
