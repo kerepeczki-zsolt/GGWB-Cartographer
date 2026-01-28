@@ -1,4 +1,0 @@
-GGWB Analysis Metadata
-Time: 20260115-141712
-GPS: 1126259462.42
-Status: SUCCESS
