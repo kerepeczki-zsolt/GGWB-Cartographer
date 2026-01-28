@@ -1,0 +1,6 @@
+# Adatok és eredmények kizárása a GitHub-ról
+data/raw/*.csv
+results/figures/*.png
+archive/
+__pycache__/
+*.pyc

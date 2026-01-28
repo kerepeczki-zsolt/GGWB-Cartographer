@@ -1,0 +1,5 @@
+MOVED: migration_log.txt -> docs
+MOVED: requirements.txt -> docs
+MOVED: TELJES_LELTAR.txt -> docs
+MOVED: truth_log.txt -> docs
+=== MIGRATION ENDED: 2026-01-28 14:47:18.809234 ===
