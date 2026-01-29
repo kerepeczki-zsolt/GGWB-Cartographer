@@ -2,7 +2,14 @@ import numpy as np
 from skimage.feature import greycomatrix, greycoprops, local_binary_pattern
 from skimage.measure import label, regionprops
 from scipy.stats import entropy
-from framework.config.features import FEATURE_FLAGS
+
+# --- KRITIKUS JAVÍTÁS: Biztonsági import blokk ---
+try:
+    from framework.config.features import FEATURE_FLAGS
+except ImportError:
+    # Fail-safe: Ha a fájl hiányzik, az F92 alapértelmezetten inaktív marad
+    FEATURE_FLAGS = {"ENABLE_F92_GEOMETRIC_MORPHOLOGY": False}
+# ------------------------------------------------
 
 class GGWBFingerprintExtractor:
     """
