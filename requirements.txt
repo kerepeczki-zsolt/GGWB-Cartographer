@@ -1,19 +1,5 @@
-# Alapvető adatkezelés és numerikus számítások
-pandas
+﻿pytest
+scikit-image
 numpy
 scipy
-
-# Grafikonok és vizualizáció
 matplotlib
-seaborn
-plotly
-
-# Tudományos és asztrofizikai eszközök (LIGO-hoz elengedhetetlenek)
-astropy
-gwpy
-h5py
-
-# Rendszer és segédeszközök
-python-dotenv
-tqdm
-pyyaml
