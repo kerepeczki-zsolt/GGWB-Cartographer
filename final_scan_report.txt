@@ -1,0 +1,12 @@
+ID | BESOROLÁS | KONFIDENCIA
+----------------------------------------
+ID 025 | No_Glitch            | 95.40%
+ID 026 | No_Glitch            | 95.40%
+ID 027 | No_Glitch            | 95.40%
+ID 028 | No_Glitch            | 95.40%
+ID 029 | No_Glitch            | 95.40%
+ID 030 | No_Glitch            | 95.40%
+ID 031 | No_Glitch            | 95.40%
+ID 032 | No_Glitch            | 95.40%
+ID 033 | No_Glitch            | 95.40%
+ID 034 | No_Glitch            | 95.40%
