@@ -1,6 +1,5 @@
-﻿numpy
-scipy
-matplotlib
-scikit-learn
-torch
-pyyaml
+﻿numpy>=1.24.0
+scipy>=1.10.0
+matplotlib>=3.7.0
+gwpy>=3.0.0
+torch>=2.0.0
