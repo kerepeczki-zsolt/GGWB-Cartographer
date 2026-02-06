@@ -1,0 +1,13 @@
+﻿model:
+  type: beta_vae
+  latent_dim: 32
+  beta: 4.0
+  input_shape: [1, 128, 128]
+  learning_rate: 0.0001
+  batch_size: 64
+
+data:
+  detector: "L1"
+  source: "GWOSC / LIGO Livington"
+  validation_samples: 32000
+  notes: "L1 integration phase - reference parameters mirrored from H1 validation."
