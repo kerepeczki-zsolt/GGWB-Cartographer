@@ -1,9 +1,1 @@
-﻿detector: H1
-model_params:
-  latent_dim: 128
-  beta: 4.0
-  epochs: 50
-  batch_size: 32
-paths:
-  training_data: "C:/Users/vivob/Desktop/data/TrainingSet"
-  output_results: "./results"
+﻿model: {type: beta_vae, latent_dim: 32, beta: 4.0, input_shape: [1, 128, 128]}
