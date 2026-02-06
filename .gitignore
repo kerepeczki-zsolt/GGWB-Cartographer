@@ -1,0 +1,11 @@
+﻿__pycache__/
+*.pyc
+data/
+results/
+archive/
+*.png
+*.json
+*.md
+LICENSE
+.env
+.vscode/
