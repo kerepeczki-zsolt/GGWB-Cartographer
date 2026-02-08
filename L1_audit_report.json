@@ -1,0 +1,3621 @@
+{
+    "timestamp": "2026-02-08T13:46:52.979882",
+    "found_files": [
+        {
+            "path": "data\\splits\\L1_test_blind.csv",
+            "sha256": "aae0bc91c6374284c1290474983c46f8634e4330945b1f5ecf957346f2a26c57"
+        },
+        {
+            "path": "data\\splits\\L1_train.csv",
+            "sha256": "905b3986917b195bd166503f578f15161a8759ed04e7e6d9e06b2930078287a5"
+        },
+        {
+            "path": "data\\splits\\L1_val.csv",
+            "sha256": "4f9a2c3236a4febc68a20089d691eb77b9f4481db685eb2db106b7ac1aaaef41"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\1080Lines\\5FJVl1wdez.png",
+            "sha256": "48c9441efef12a53a6f3301cd06ed7cd9c2b4f8c9d4c4bed127bc4bffe1a2d5c"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\1080Lines\\baMGL1VOYd.png",
+            "sha256": "9a04fbe9b1f68cee9ea8af147b9d87fe0658d7625700cab4a8dfb841b760cf91"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\1080Lines\\dCWL1oa2hZ.png",
+            "sha256": "1a1f33e1d494481ee515abc38db2fa88147cfefdebd163cacf724be977fbbab6"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\1400Ripples\\LTYl1XRQzR.png",
+            "sha256": "fe36033ae0301e307260617df0571cf230cadd8758745dd885b463f45f85511a"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Air_Compressor\\1qVl1iGqeo.png",
+            "sha256": "3a9aeda3125cf9d21cb60f81528d3bb2a8f2d435d828da718243ea5b99953c49"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Air_Compressor\\l1D7m3p6vp.png",
+            "sha256": "ffc45fc05fec477fbb6c76062bf930bc4c76973d61b7720f09c12b68bbf3d53e"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Air_Compressor\\SAlsa7L17i.png",
+            "sha256": "2338d386b20022cc79c3bec96e9735bb01ada6043074daeb1e739348990c999c"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Air_Compressor\\tL1Qjh7v5O.png",
+            "sha256": "f865670ffae044a3290184eedfdc785ed42d34ea4bd4b2c3bd3f25012641ea86"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Air_Compressor\\TWCL13n5MJ.png",
+            "sha256": "331975581e217d7264bef132eb9368753052f3ff51e94f8047fc32fef0db8dba"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Air_Compressor\\uxPxJL1bRG.png",
+            "sha256": "a06ba0dcda5eea8321cbadfc09751d4a2b90d093d88331a5b0b87304e58ccd85"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Air_Compressor\\vCPrL1OUsE.png",
+            "sha256": "9a35b691505b668cbc88b28d0ff9eca9423bf904a21d81a35060ab596d43c670"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Air_Compressor\\VJL1jQ3hpU.png",
+            "sha256": "c0ef5b3f1a826de3f77d64bbac81eb80a7c3de58527ba4d2398b0c129362f283"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Air_Compressor\\ZPbL1ge8dU.png",
+            "sha256": "80bcc3dffe9c2e8524bb598d9fa2dd1c1e303bbe0448c3a685c5b456564ce506"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Blip\\2BSLzbdl1J.png",
+            "sha256": "31c76b9b8c8a9e8e336070baae5e38d76b45ee5ef47476e42f3f5e2154ef933a"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Blip\\2l1VPRD4DM.png",
+            "sha256": "9e7f6dad0ec924a974a438e842d5338d2a8e08b2477db289d651ec5db38045eb"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Blip\\3yX3EhMxl1.png",
+            "sha256": "192a5e0410d8052f439d3b00f3848540100b641f5c88a9fbd1feb6ff694baadf"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Blip\\4CzLnl12Fw.png",
+            "sha256": "2cc1bb70aa60b1c28cde3175eb814ee6fec5300c6630c92060c0a98a5bc3a9b8"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Blip\\67l101B2Ot.png",
+            "sha256": "95b73f2ef48f4c43886a7b8e4e7196f712bf34fe0f08588bbd821f329c30f887"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Blip\\8Ympu0gL1j.png",
+            "sha256": "d3e727f0fa03401c67ddfd31789ef46135114857f658c94c83d3b6bd1b3c789b"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Blip\\BQQ6L17ghx.png",
+            "sha256": "80656ab9eddc0f73ff859091d71aff3d492eefb7d1756baa0ef7d2d6af886cff"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Blip\\EsMbIl1Hih.png",
+            "sha256": "7b3bd448500bedda8a6f1f5596533751201c713404a832756067858e168be337"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Blip\\KcYl1d7jk2.png",
+            "sha256": "8bb0996ff39d304bede0d3d7ae5ddb2e08baae7b3fa0973d292b752c93d68109"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Blip\\liTwl1m4rP.png",
+            "sha256": "b664656ca41def5e8098c917c3539641675e97db525813e7bb3329a8784f8fec"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Blip\\lL1GYGocd6.png",
+            "sha256": "f0a94e79178f924f58dd526916dfac7ceaaeedf95aea36954a34e57e95133628"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Blip\\MAaNCL1AGg.png",
+            "sha256": "84d5e8fc8be5ae8c12b4ca44dc6df2a744e150ae8ea61847f9ffb7f629ef469c"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Blip\\Tdx5nl1Kcq.png",
+            "sha256": "59f67442c7ac60114d5c6672a9dcbdef166052ae72b776bcf7f6ff748d20969b"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Blip_Low_Frequency\\0Nl1LvAWei.png",
+            "sha256": "a9a4130f97fa4ff480cc9ab621b10e47c914177b3aea5b6eb5510a29c820c18e"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Blip_Low_Frequency\\74RG3Jbl1a.png",
+            "sha256": "5776b1982521cc8f06ad33a17227d48f771257a200fc5c1f737f73b3a4963827"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Blip_Low_Frequency\\8iKL13kNYJ.png",
+            "sha256": "bc1e9cb54d0f04d829355ce4c6a81fc2878b13f4c99225a7d826c6696d758f88"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Blip_Low_Frequency\\AEdmm8wQL1.png",
+            "sha256": "a81b57b4b60f0cb5bde6778b46f53efa35f9eeb0311b908b868865c43d5fe846"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Blip_Low_Frequency\\bGEL1mujSv.png",
+            "sha256": "828a73d5ca69f37e55d428f093567d43a2904c95fea82d37b26889f7a7e05d3e"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Blip_Low_Frequency\\cC2ZLL1geV.png",
+            "sha256": "e76b8d3f0ba776620c083ba5d2662e60477ff8b0bd1aac44a910390243db87b0"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Blip_Low_Frequency\\CIxNL1c263.png",
+            "sha256": "99e2a821b8c9024f05c863a9c6500867bb886af6689f382e203d03c47fcd6ad0"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Blip_Low_Frequency\\dCRx4osJL1.png",
+            "sha256": "ade1702d5f7e99f7fa2490419984c8f053e8e40ee135bdc1cdc02229aa52f431"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Blip_Low_Frequency\\deWYJfkRl1.png",
+            "sha256": "bbb37576a34702d36112845e135d9fd7d217cf9c2e569f15a5a30eae304a4b34"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Blip_Low_Frequency\\DnPcATL1bS.png",
+            "sha256": "bc1c88c43b3c425cd137055663d0d1da7a54dee9c31eb3f9ff788e797d72abc7"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Blip_Low_Frequency\\F1ol1l4NWr.png",
+            "sha256": "ba208fb0a8cb80af0ac112a966763b04a161610f1f8b8ac5ca8604117d17fc6a"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Blip_Low_Frequency\\fL11jnr37w.png",
+            "sha256": "875bce4db73695f63bbdabdb02ff47be4747a80605dd21cb29d84a40acade6d2"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Blip_Low_Frequency\\FuSELsmOl1.png",
+            "sha256": "f2012614163a8b7ce705232a0f40a95d5a706273b8136e24b16a0a3530f1744a"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Blip_Low_Frequency\\HTIl1DDPpd.png",
+            "sha256": "4f18c5daa0bbc081a12f3b82408815c7119a1cea978d923e0a43049ccf9b2a23"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Blip_Low_Frequency\\i9oyL1LvJD.png",
+            "sha256": "868c27245c6cbf9fe91256ebe70ed0e8d015728db0289f5dded33f5a1e49ca83"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Blip_Low_Frequency\\il1L4mbUyl.png",
+            "sha256": "934732ad90bf4b11b63d6114e2b441d676b38e57226b754b9d25a9d515abca96"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Blip_Low_Frequency\\ixl1R93IxR.png",
+            "sha256": "d64e60cbfdcd396112d956ea1b5547f53b024b34fdd59d0c702774ad9767cadc"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Blip_Low_Frequency\\L18N9euvBl.png",
+            "sha256": "0dd04c6840b785154602afb2a3bd76004e3c90fff8ecbc88902ccd140ce8cf9a"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Blip_Low_Frequency\\l1KUMBLzMe.png",
+            "sha256": "df42fde444a8dabb5a639508d7cc6b553149f77144a880def37f5ab8e6a181ee"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Blip_Low_Frequency\\l1sqz3FNOC.png",
+            "sha256": "400a4d002be6e647d07b2c6fd726af13fb21ecd4ee2825d4b5349c29f8aa9fa6"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Blip_Low_Frequency\\N6NLw8PVL1.png",
+            "sha256": "6d7c83b562e82be8a37d7358eb3a73ea519b2457871b8bea343e3f4036cf7de1"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Blip_Low_Frequency\\nL19fdSISa.png",
+            "sha256": "b05223d7d47578f52c7be0c0e368c55aad2d6f1df03ebfb1852febc1499e8534"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Blip_Low_Frequency\\NL1daOfQQn.png",
+            "sha256": "b4de1d1309a5c8ad682b006bc355036baeb9195c643814e738aca14fa2043f25"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Blip_Low_Frequency\\ptLx9AIL1W.png",
+            "sha256": "65d53b31d101ca912fc1ff3b4d444b5dfba819897d28cf564698da02f2783811"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Blip_Low_Frequency\\rlsL1BbMLO.png",
+            "sha256": "91299c871152e39f217508f53b5c74603e112f7f44ede0f0dfa6c245c94f6478"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Blip_Low_Frequency\\sLzJvT2L1S.png",
+            "sha256": "9a9a9604aa41eeeeb54587b3a2492cfb39708227a50e7551d14ebfb05b563825"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Blip_Low_Frequency\\sReE3L1kQo.png",
+            "sha256": "060d7c5800053b48cb4d7a43b58bf1acde9752021c5326bb88fbd6058be27338"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Blip_Low_Frequency\\TwLkl1sF7L.png",
+            "sha256": "a2d85165b04f293cbd03ac06454dc0458ef55d13c5c66e6a343f628fd3470783"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Blip_Low_Frequency\\twt9ZXl1Cp.png",
+            "sha256": "6cd382cb62dad0e90a2e1fb9ef7a298b5ac754dbc3d52781ca57b3f5694ec2fa"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Blip_Low_Frequency\\tYl1khwuUC.png",
+            "sha256": "b4a8a59c34529a6a54622672c3133411d68910c3d9804fd60269b0acafd51d6d"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Blip_Low_Frequency\\UGO9Ip8wL1.png",
+            "sha256": "bc5fd92a039a72ad7c81e0389bb63c273d0ea05aca52b32d56b1532fed7df4dd"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Blip_Low_Frequency\\uu8nadL1Cs.png",
+            "sha256": "990338e8ad87a83f0dcb2cdb0a4592c6833aba340227c924236ea56b3d20a594"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Blip_Low_Frequency\\v6VukX1l1A.png",
+            "sha256": "d7a854e72ba88e6641f2fb15d78033e409ce8451975380f9c83f880aecbaf5d0"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Blip_Low_Frequency\\VWl1LrtEV0.png",
+            "sha256": "f702bb805b1945ab06c98b09131cd5ba7b2c8e4d3971d39f9b0ae475101b47b5"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Blip_Low_Frequency\\WHZTG6JL10.png",
+            "sha256": "c989cf714a19cc74c3345c4c3b7206ac0b7c2f99f8d5e60b4a686298ac84772b"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Blip_Low_Frequency\\WvTol1vuyu.png",
+            "sha256": "afe531206d5973acd3a25ef92e132d19ad53cadbf0032617b85e4290fdc33c98"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Blip_Low_Frequency\\WxQ71m4FL1.png",
+            "sha256": "8f872138321431d56e25c4bc7434d5a631c1c404e04251567d5c69cbb88bee88"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Blip_Low_Frequency\\X6JoXl1Gxg.png",
+            "sha256": "b9cfeb0c60d872f0f684849bd6274100b8ffa5aa759d8cc18322764e369728f5"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Blip_Low_Frequency\\x8a4RL13nz.png",
+            "sha256": "5300cdb8ca0d48d441a868ef99eada437f8f5977543f3f3c6d0e1f3054dae3f2"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Blip_Low_Frequency\\Xvl1OraXFF.png",
+            "sha256": "b34a6b7bf52065737bb73a9f6925ee87aecf9e7fdf36a9eb5c1ceef693e560a8"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Blip_Low_Frequency\\ZLdh7k6L1t.png",
+            "sha256": "23e7ab94667f0096c1ab3f15f609b1910a0238d3ab93fa581f451cc31e1bcf1b"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Blip_Low_Frequency\\ZpOSGl1bCj.png",
+            "sha256": "ec5ae9e7799ebe811c3f0d2ac705dbd6f48e51e41cdddd9db93dcf26c792182c"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Extremely_Loud\\7l1eisGoOE.png",
+            "sha256": "4af0dcf8dd1211eddac7cf4e795b3fcef633f2e58a4b875f906ea5121b6911d3"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Extremely_Loud\\8eyl1EN1EZ.png",
+            "sha256": "c33ed3b7c765aaf8efa629f1e19b8860d882fcd28c8798c0a7190f624a285900"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Extremely_Loud\\aZZWDuUl1S.png",
+            "sha256": "a2acb684202fc58f85545d0651942ab0472a9c13e0ad7651c8338a2e0cbcd77d"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Extremely_Loud\\B5IKCil17t.png",
+            "sha256": "0171e0c4e8839b3bcc593d159b24a38b2a0f125abec38d72f2f8ab9f1bab8582"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Extremely_Loud\\BFI1L1FNCf.png",
+            "sha256": "32d62d08d695b9248d6d8e79e3d59f366152cb3e949c7e90a69e91f4de4a73f9"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Extremely_Loud\\dBn2WpRpl1.png",
+            "sha256": "6f1f6658b472624c73ea243ba31c1ed9baa625dbd712297db267550fc06782a4"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Extremely_Loud\\Ghe9XlL1Pg.png",
+            "sha256": "4222f24e7886c9c5b5b12928a7ae9cc17bcc50a4ee36b40e39fac8522bb06bd8"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Extremely_Loud\\iijYFL1SuN.png",
+            "sha256": "5c8a2a0d731fc15648f714d4a4a2a5e6638508137481b5b766d349a0bd806806"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Extremely_Loud\\jFxfXL1OZr.png",
+            "sha256": "d6050d905e1a6e7687cedfb1bac90c01768ec646972a6cda9041b902c4918479"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Extremely_Loud\\L14HC3pQ8g.png",
+            "sha256": "6918af19844d69b2f2d586b98d467de5cb08b2580fcb492e32798a61a96bd442"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Extremely_Loud\\l15s2FRTWw.png",
+            "sha256": "ef846c3471625f0a2d5477980358d81df5b0d7279ef2bfbe3f78458e5b2df693"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Extremely_Loud\\L1lDAMRIn2.png",
+            "sha256": "f6628734108fa766d9d70919ff8addbcad16515f34797dd63631c766db9f4ede"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Extremely_Loud\\l1VOfiWOUA.png",
+            "sha256": "804ce71eeb1ea97319194d7da4a4b68fae3c860ed96c2fca79475d2f35233dad"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Extremely_Loud\\L1xnrmeV6f.png",
+            "sha256": "536e12042c1361138550c2cc25b75ca4dabdc768193e3ea18987a32e2add245d"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Extremely_Loud\\pah8lL1iBq.png",
+            "sha256": "3286844bed8dff8c858576998b4fc501ac423bbaded5e3661b5f5b397a8c1037"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Extremely_Loud\\pwTn3L5VL1.png",
+            "sha256": "8947f71b20e98de4e66f953844ed71a4288c966c8432fc137ca9841af623caca"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Extremely_Loud\\q4mEFDl1Qp.png",
+            "sha256": "78ef609d776b56ebdbf3150f7150f553985c7b8cd7fdfc982bf956af1cf8874f"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Extremely_Loud\\qaUzl18fUX.png",
+            "sha256": "53b33aab7471883059eff7e538ba71fb21f6de17c809581939dca2baa16b4826"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Extremely_Loud\\Sql1ZpCKFs.png",
+            "sha256": "b60d26f25007e83057befe2dd5646377a9adf58ae74f8f77d7dad285e228afba"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Extremely_Loud\\TzAHuL1EAs.png",
+            "sha256": "7804106af4e19359d0724a30550016457a30ecfd87ea9881c0594e0135455769"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Extremely_Loud\\v6XZMLibl1.png",
+            "sha256": "cdbf6e1a08701a072154690de5cf77a683083bb6d7bc5aea414c474986ef3ba5"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Extremely_Loud\\xFUSPl1fWJ.png",
+            "sha256": "bdbfac0d57ff428721dc05f573c8571df911da99129eb5ef45f018ff0a238cda"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Extremely_Loud\\zhl1SMYNg5.png",
+            "sha256": "81e64a1ebb4f7aa4d8d35a9eb704758615b294cf5dbad36310a0cb6f7fc45f16"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Extremely_Loud\\zWL14d8ctR.png",
+            "sha256": "57e7ece14849b4f672bd7d57e806ac49fe69309f88990f99993b19fd313de3b3"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\0Bqg3nJZl1.png",
+            "sha256": "d589c25fc3e726ce018d7689312fadb16f10ba97e6cf8cccf9a4c28f0df3b702"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\0f97l1wtYt.png",
+            "sha256": "bb0ed4e968e27896e9e18cf2286c6938e49d4870ffbb526682611b9ca065e459"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\0l1hnIZj0D.png",
+            "sha256": "534ff4f695dd95f018d02ed14a3630c2a8e641a19ae23603dbccac18319d2181"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\0nSQrYiEL1.png",
+            "sha256": "f2c60c7b7e92e9755e1711b3255533b85ee5006986acc07954226cdfa2c8c323"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\11ZWfl16Wr.png",
+            "sha256": "d181b29e5b36801517e6968f4e2b065ea74a17822e7a4df4a188b38bf8be0014"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\1mL1b8PzcW.png",
+            "sha256": "7cf69707d7bba7196620e45325793e2df5dba90fc0f579f17fb69c06f04ebe39"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\1W2zrkZl1N.png",
+            "sha256": "72d3abb739d039e092658079e0bdaca2d4ab3a22b57b1d84ee8ea372e4303e1d"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\2DAl1x5h6W.png",
+            "sha256": "d2e9520da80927271cb1829a6781d8083378f6c53eaaeeadf7162e21ddd5af8e"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\2l1OfSpaeu.png",
+            "sha256": "2ec8975e51318ba7f534147b5527c7d8f88fc79774bcc3bc874bfd977947b352"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\3bnXSVdNl1.png",
+            "sha256": "cfb485e02cfddbefd7b976cc8aed04a623f8fad079e00ae45771993367083c6b"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\3wL1WUhOiO.png",
+            "sha256": "2776962e97946de52f298f3490ac8e47bf38c89d34b938176ff46c78f88e6498"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\3wql4EL1Ol.png",
+            "sha256": "de0dc74b87969e9cd8b3e1d8e8c73d276b7f5ebb4b1d66dd09015c462a59e6d8"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\4EcGL1x4Gc.png",
+            "sha256": "d3e7002c76079d55589d5d22277a127e87dc358e6ac4c723ffa77e88cfa5b7aa"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\4eFL1ht9pP.png",
+            "sha256": "b8ce1155fa7ed92a1a395fa389bc02b8732c8afcee77cf1766495e42b0e4baa7"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\4EmJxE7yL1.png",
+            "sha256": "0dd01e629cd5c8895f0e81a53e960331f245428298d98db3366928b79416266a"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\4Hl1btHpQx.png",
+            "sha256": "73b3f4c667f1d5dea40252ac9a025382dc6587eb5392fa10b2ebb375841d4cd4"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\4nBCZyQL1P.png",
+            "sha256": "affb68ecfcbe63a426d91bea5d91289c429f99cbe25399a3a8dd6c047b5ac3bf"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\4ogE5l1yah.png",
+            "sha256": "aef2b06211097d7064fe16e3955c6973c12e8c2544dffab384648b34b4b04089"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\52EL1tvLwx.png",
+            "sha256": "5c1f26a16806ed0d5d98066dcd0c5e5a78dfe845df96dd6687c265db892d338f"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\55l1daF9yE.png",
+            "sha256": "31dfe18f13a90975db38d32a14df5ceff2c9713b2e2471edad23cfd1533c7766"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\5AhC3bzL11.png",
+            "sha256": "8e009958cb9a1ee9e558c1356d779d030741a5f5199aee150b97de3b5a72392c"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\5L1jhPFYJ1.png",
+            "sha256": "dc06d2500dec7167a205bd31c3b58aa908ddb2230ad83558ec39be0511e3c7c5"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\5l1tTD3o7j.png",
+            "sha256": "fbbc10780b9001e409a31f0471a925627aae08f71d080358432783db6bde73ad"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\5PxDBM4L1K.png",
+            "sha256": "6c301f70802403bf8d2df83bf31c9dedbe7fac34d49bea92bd01bbbcba7aeefc"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\5Ra95mFMl1.png",
+            "sha256": "918b9a6edaf817d0e48d9efa9e6c0768ed9f39f828a3583a33dc3611ba22c97e"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\6g2Gl102TX.png",
+            "sha256": "f14e645f87e3d94be940e66abc7be0987a1862b62b54462bd88642626aba1755"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\6sszTrYl1P.png",
+            "sha256": "561fd1bb474c6c9f76dc54d502472377d4940d23523ff7f2c144316b5da827aa"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\72GdL1yK6A.png",
+            "sha256": "bdcf5c54be6e0ee0afda563d08c73895a36d100f75e83a7144cf64e3421276e1"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\7B8RL1mnU1.png",
+            "sha256": "a75afdf11cf3dd2d04071220ffdd87d04cbdd1a557899a36d1c5cf1fa7c37625"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\7IHxl1OZnl.png",
+            "sha256": "85c5c7e5a6cfce2ff05a87b54490aaebc5092227519cf794aaea8c0906061dcc"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\7L1zY9B90b.png",
+            "sha256": "c8f807115ca97a3fc6115950d290dbdc8e8522bf122c85c724480b8679ede18f"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\7r1HPnOl1s.png",
+            "sha256": "14b924f8f5017dcfdc612734e07becbc7723fbfa303e1979f179d6a2c4c75a6c"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\7xxvilol1T.png",
+            "sha256": "8160d478760361b789c347fc5f00643808e89b38576828cd807aaf5d22c2d18c"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\8bQ6oiA5l1.png",
+            "sha256": "a4821e9da3e5059f55c891981f01fd282088c9e84bc05e1c74c04ec2b88bbb42"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\8FycHL1Gox.png",
+            "sha256": "eb43bfa6e351182aa59cc434c2d1945ce28e1e1cb40435c20c3d2bee089e7363"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\8tL1GlMIEX.png",
+            "sha256": "d3b690e95b817361e99a3537cec5aee264cd65f0407029488cc2a0ea698de086"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\96xI9L184Y.png",
+            "sha256": "be736c718ac5b710071835897ac789e25bf054d3d032e4715a1a60c8196a1a19"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\9P3TL1HkeU.png",
+            "sha256": "009ccfb2604ca3447516366bb69239ea2cd8963603677ee5af2c2e999aea5179"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\9QI3l1EMqr.png",
+            "sha256": "5298fac568af1bd3244751a2ab051139d9f299d55e6b1c080223bff5c832dc6d"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\A5LLKL1TNa.png",
+            "sha256": "162e4de38a1d4f36c8684018ef08169491def8b468506dc2fc28bd9a25bee021"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\al1Z7BOT1M.png",
+            "sha256": "830016a02b16448f2c5f6094ad2c5dc58792c0dd28f2ce750fd7efbc0fd83104"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\aMI6U6L1IT.png",
+            "sha256": "fbb734680a205d75d58e017dc63d614a201c5f4a51ebd34189c3cdef8b265430"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\atl1xuMeRr.png",
+            "sha256": "0404bc40d27bf85d140804af245e22664ecde3a52331d4b7cd3f7067eb549edb"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\Azl1J37MSm.png",
+            "sha256": "0eb655215c1cf922f9dcd0ffaf02ef11c65c2176a58287d3eb4c036361af426e"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\BcOPCl1esW.png",
+            "sha256": "22b0bc42c0a8501408e769ae0fb667df8eb1f0237b435e7685434dca88b383f2"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\BIErl19mVz.png",
+            "sha256": "04acf6cae1202bedac3a59f00193ab4cd2649defd2d107cc47a0496914576524"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\Bl19L3xQNg.png",
+            "sha256": "022075991bbf076ed7f1d9c87743db022a828da38aaa4bd7b6426a882b44b269"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\Bmb2l1bVfh.png",
+            "sha256": "d42359e094939a4a84104edf46d68341f0f574ed7d3ee28198e5647b1761bd9e"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\bOl1tl9s80.png",
+            "sha256": "7f03b90c0476d75b85542e55f3ea6bfdb9ef2990ab0eda184f9df0783b11e244"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\bTxP2L124R.png",
+            "sha256": "e7c9eab84677d1377cdaabf582bb1b88057c05308b0f8b097d67000da911f16b"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\bW0L1Gqk5E.png",
+            "sha256": "8bbffbfa0097424632edc0c1c0a28a96df5d9eed0938c5ea9d1a50051b36e11d"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\byydinKRL1.png",
+            "sha256": "a919a369ff50624c62e946e82a32ce5b4a220e88868f84720c94c67252330829"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\C0iGLY7Bl1.png",
+            "sha256": "5520fc85d3cacfadc006da1fd14661785e34f01ddb8b5a51b8877e4e49c37005"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\C7QP3pol1H.png",
+            "sha256": "0ba8446989d5a8b2e780d7cee09c2da59983cff810f8f06f60a3775debd01bc4"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\CbOL10JlGU.png",
+            "sha256": "754e151819d77cd68175397f7fff43e54092315d219b26c35013db4c8e9573af"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\cJpjLMl17L.png",
+            "sha256": "40b6313156b1d78b3bdf0e24b809b593ce66b6addd3e97289e2382911f019a1e"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\CpBhl14gNH.png",
+            "sha256": "4c8b6aa62e118e2b2d25a0173235a9be282d7c5d93baded85f15dbe0c19e700c"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\cTGl143d5O.png",
+            "sha256": "098a74fcc2eee60dce1c008f8b9c5516f368c0d58cb103d17f5fe57e88bc1b20"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\cx2L1iMhIN.png",
+            "sha256": "9312c73b6b9ab0bc7a755df90e708ef86149ab9eec877dc55822a5ceb64247f6"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\cxwy1kDL1q.png",
+            "sha256": "99f15f83f12f50e6e273278b73def32e2bbee3ff48102dfeb9baeb51b6c9ea0f"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\D8Bl1kpMSr.png",
+            "sha256": "fcec21b30ff49d9cc7b78020368b9ae4e83fc903136998289f218979d2e92506"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\DfQwsNvKL1.png",
+            "sha256": "a50e3098456482a573e1988cbe7113d1273a41883caf901df29c28aa8d28e1f3"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\dJnfl1WOZu.png",
+            "sha256": "feb2bb18488545199d2f699a8ea0ed716c2e5a674bdf576bfdb9e4e607add175"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\dKJEL1znJq.png",
+            "sha256": "a54299e0a77c9c3f0b2830441e490d51b5d72d268e91864aecef793245d1b66b"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\Dl187yPYvX.png",
+            "sha256": "2d5c47df70fe6f24c8e683d4b793a81aea8c7107142e71d5ef842a26986603ad"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\dL1fHWSwI4.png",
+            "sha256": "07b94f528ec4afcd98bab0d79f71e0f6fcce1fb04d30440a4ac13c97ba5e458d"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\DMqYVbl1xR.png",
+            "sha256": "3b538c85c852d27f72621302aed37a3a4d05b54adfb7c7923e8bab85c45d164d"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\dN8MSewhL1.png",
+            "sha256": "90093197abf4b3dfaf7e104d563884fa8da5cb55d0a07499704a5f3cea5e2f18"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\DpSL1Vb6Ye.png",
+            "sha256": "5a3780ae8a9f3fb3dcfcd7ed21f3503a6ab6c64b5756605bd37bdadaeb205d65"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\DqlCIl1kRe.png",
+            "sha256": "3b3a88dcf92bc0831626889327ffe5a0ecf9f79a2ed1eca59950382b590f5098"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\dRyCl1Otvl.png",
+            "sha256": "27f20f7b81d607b8a4d7e592692e7fc05fc7d2d893aaafdd8fd65da0b7fd709e"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\DUxl1IsbIN.png",
+            "sha256": "9195085065f12dac67c04c562c831b11477b866ea9bf1b82ca2478cd3099a7d6"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\dzL1lsfD6Z.png",
+            "sha256": "f42008598f28b6cfedb40a17fdbe92a7d998216f6f6f65174a79817da4d6bc60"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\dZUL1jfeDX.png",
+            "sha256": "ecb3ce23990242dd6a3b89cc8667792906827578010a09517ad4d796525c241d"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\e0L1ob6KGP.png",
+            "sha256": "58b825e7ac233ef4b50ca8ea9200f1c9ccba1b034a0f0773516de2ebac0dd07c"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\EA16l1idqH.png",
+            "sha256": "c36186d32925e5a8442391fab2448aa086438b4f1ea7d9994f5b3cb39d5732cf"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\Ebl1xjkIVg.png",
+            "sha256": "3e87e7014ee7d2a301b1434d9595d8975f9c9817ce00f59771f359e00d417ac4"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\EDL1r3o6rZ.png",
+            "sha256": "b284a077ef75a81d83b8af7594c50947f2e495ab922e18acd965f28ef9ec0fff"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\eDsHIL1pUu.png",
+            "sha256": "9b1b096c10969c23f44cbda607af2e4cb43e7151c44565f40a883221ea94623f"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\EeaKISL1eR.png",
+            "sha256": "24ed1f5cf7d0388234dd018c73e0a66a1a01f1ec1dcdd0d1c3d3e0513ccff498"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\EjNL1SdQzp.png",
+            "sha256": "79594023c1a2efd8b9bb719e7ff368a221965f9029691196b93e754fc8a788e2"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\eL1x4dXl5S.png",
+            "sha256": "b329b39bc13978c7e459e9868c5f7d5ad6d5707c4b014a09fbe5861f5f42a05a"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\eLlhWnZEL1.png",
+            "sha256": "134df8035fe163d4dab2e0ad8969510d265154f819bde5e757c01c7fa249bb20"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\EpBGl1aTIm.png",
+            "sha256": "6511014e008457cbc3c8295e793851fb8e5b4c3e63c29213d0bf3103556411e0"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\ePPtkl1cnz.png",
+            "sha256": "96ea09094e56ef9255b711f56601b8eea9329a2c1769ba5d0f9a6ba4c24b85a0"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\eVpX734Tl1.png",
+            "sha256": "a164eb2214076a7cf4222b818517ed20cb745f718d0bf534df35e452c34f4034"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\EZSqL1QObi.png",
+            "sha256": "e17d2fee38069b4cbb81ccbb3839420fad8905bb5eb7eccb92d59e2059c4e83d"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\F46mtJl16r.png",
+            "sha256": "87c570a075f06772dba11024bfc567c5b48a8b742410eb678054c5ae96bb1c7d"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\fkr337l1hu.png",
+            "sha256": "c36a2f15948419b271ddebd0bf1bb77aed11607860ca5ee4c0c86767f2533937"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\fL1TCkidox.png",
+            "sha256": "bfe1759475d51596910f179770e495c52848b481668bfc0d1cf0c6bbf7e038e4"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\fm4rl1EPQv.png",
+            "sha256": "8d1218df5ca5ae7fa56c7f60412faa0319259500d1ff17d51f5f304338be5ea1"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\FNHl1OrQWt.png",
+            "sha256": "68ee75bd31f23ab2ea60db4817d7ea2ceb0be8e39cc3d39bd2a3fdbec9c4cf8e"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\fSzL12RAQc.png",
+            "sha256": "3d7597ce5af30d5da1ea0b5db279722ddba30c487ef74ce0d7452d47559e6d10"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\FXbvUgZl1H.png",
+            "sha256": "d01be6b419d0331d7d8c4aaad0b7d5358812a2dd6b7bebece0a95912f5ba4a87"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\G7ZfL1U0vl.png",
+            "sha256": "41b2a5e86ec2005ba2a5823d4f84e2156322d08c619da161a11e648253742938"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\gib0QZPcl1.png",
+            "sha256": "412e3b5b16c27b2364cb622cec264f5739dd8355a9c534bb01eaf40767e2758c"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\GkV1Vl12Mf.png",
+            "sha256": "597a00ab82539b4e0e5c26c254566b437a59a6584a04d33c465201fd4b4691e2"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\gl1h9IvnE9.png",
+            "sha256": "7ea13bf38fa2be3e6b822c6030dc24741cdff7598f3d1388a9f99042ca7954ba"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\GxWYo6ecL1.png",
+            "sha256": "b1f0f2580295d565858b850b87061f840457d64e768beed3871243e62025136a"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\H0L1dVSOOC.png",
+            "sha256": "84d1a757bbd1d2d28cbdefd12155bff8b50a9684c46882d8c542365bfba78460"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\H3ckTL1k27.png",
+            "sha256": "b1776348ad164bad14e1c4bc1c1b8101c56ac77b323cf28e9e9df7338a0a6c17"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\hA3eazQZL1.png",
+            "sha256": "4dd2750e3c2d236cc500b9778ce49eef0cce983eee8cd7867861df5042dda742"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\HBcl1cJOUc.png",
+            "sha256": "719d1fac5b209dc739c7dedbd333d5ded896ff84178dc2a1804aaa873d19fc12"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\hDJxURL1TS.png",
+            "sha256": "bc75b2b8973522c642e4c2611c1f3e86a68be673c11c601b9a63a522c9116bb0"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\HeXRYNDtl1.png",
+            "sha256": "bff770d09482e77e6e799b150de57a492b68c04cee92d9e6392016cd6a30c032"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\Hg3EqYl1Nc.png",
+            "sha256": "3d3e618de94b2654f5b260008c95105c3220a695b8f658189bb67cd8c2cbe20a"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\HL0XquaJL1.png",
+            "sha256": "260dd332812b4641a69f4b0113183b8245b4923b51f180edfe8bbe52af3313d8"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\hL15nSz4fu.png",
+            "sha256": "9a37a5d02997bbe1f334f0e854c4aa84443d3770f3936981bd0bbd424899262b"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\Hl1IlRCdA0.png",
+            "sha256": "9e1bef4744a174d1df5d90eea5b52d6834fe5c024c6ae9de20729251e714cb3b"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\hSe8QGl1i0.png",
+            "sha256": "fc0e3ff44dfe0d292b4ee869f429f5c795d3af27ad151ea948b3acb9353f6d95"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\HsTiusnvL1.png",
+            "sha256": "95d6f5f6c167fcd6617cad48d5c4a3aa314967bdbac29eaefd12c5ddd1b74822"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\HTmppL11kn.png",
+            "sha256": "ea9ea8b9b47023b4d677b55518b526dedbf1f8a69e5a754918bd7f9ee2f1bc46"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\htR1taMl1w.png",
+            "sha256": "59fe516700b03ca0a2dacb43e3b4893947b87bea3965b31e1fc741e92c859aa1"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\hU0l1eocNQ.png",
+            "sha256": "b90b10cda17b6b944b725acc050e011c082f0fa7c4a0d646e096c563591ae191"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\hWCL1P65c4.png",
+            "sha256": "20c3865b3354bad4a9945b6afd54d2b59097e9bd44a75b59492bf4dba40c2855"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\HWDl1Z39Bl.png",
+            "sha256": "e0f034a7ecdcdeb0adbc8adaae7aa029d364a7cf2dbcbb0b34c7ddf342b011f7"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\IbL1EVNix6.png",
+            "sha256": "12f0c2ae2b524f5eddabc4d6198c250f7b16a3b426db229b14366249278a5aa6"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\ioTK8jL1TA.png",
+            "sha256": "a85e133e2c43e40d27d7e235a4484f806c6ee64175354e1bcb657c0f28dc6378"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\iPl1gKhzKQ.png",
+            "sha256": "8dfa1b822b614f95e56f61629fd841eb2690b7c37dc3e22026864aca7915e496"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\iq2L1xcjpO.png",
+            "sha256": "4ed8797a13fc76b1b196321324d72160cae3cf410cac9e6795cd458fe4103640"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\iqcku6L1eP.png",
+            "sha256": "b7fdf4203375a14d616b0d50dfc320018e842d481606b783e27f4dc0f48d8c80"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\Irl18UyJm5.png",
+            "sha256": "c5008499384dadf3820fe6b0bfd639778ea46c501204d12d812b907415012816"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\IUMDil1okl.png",
+            "sha256": "eba17465636ee9670c2fa4e0c65e3e1ee34d78701c4bcf9f865f1173f95f5eab"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\iVKUL1cmZX.png",
+            "sha256": "8ac693fc6e78666e8a0b5efe655011778978d168ad9b782a48f770dd2c5a3e88"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\j6r9CNf6l1.png",
+            "sha256": "9dceeba02edfa3c547f0518c4d8131edf4b9f0fc15131a5bb2d4cb6352e8ed96"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\jL15FxKnWq.png",
+            "sha256": "6d3293b17c2966add78ce71a0332428e914dfc57e64d75b6b182484345b35601"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\JlL1puyNRs.png",
+            "sha256": "5112c4a30794eb073d982c2ce0b36ae262f6492c7b0f0283e2f4f0e2ea169073"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\jNsL1R84DZ.png",
+            "sha256": "90c0914b985062866adea186b867628486e52fa5ef59deb07a025074539f8d91"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\jqL1CyZesQ.png",
+            "sha256": "1b5fffb403d0d955f2f561e41f842c15e6a1c15d3c5fe46002cccb402e47061c"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\jRjj4L15BS.png",
+            "sha256": "1d7521e9b960d8562a814d7e07398f98360e638758ba826f451639d3fa801ea6"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\jsDtNO5l1q.png",
+            "sha256": "ed0956be0aba87f175a59a70dbfde97ae036410d2b9b035944460cdd29d03be3"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\jsML2A0l1I.png",
+            "sha256": "e17ce838831c76117fa5750d716019cfaa70ae9db60b5e07666156059e2a00ee"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\k69l1dIKXQ.png",
+            "sha256": "fe385a24b501aac51ecb6fb7616f02bb27f076a616080f476dcb59c170733c39"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\Kb2l1cIVLH.png",
+            "sha256": "ca559fb6e09e7a94261c6c1f7802def635cb32ae2307ef9bcfb34b25ecf9a105"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\KBl1q9Y9jj.png",
+            "sha256": "30c26cfbdf72a92aadb3dc7382fc957df1ecf01990ca3dabb767d7aad55fa0b5"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\kcfrKL14sY.png",
+            "sha256": "be5f34fe5e4033b5655bc26dca5ad78d055615f92475fd4c5429aa0dc085aef3"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\khrCnSl1F0.png",
+            "sha256": "a790caa1439e0e9a423ab4cae0d16ca9e8548fd2016912f255882691f9a6df37"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\KJdu0Jgl1E.png",
+            "sha256": "dc20773470319fe28f490d4d10343e9a5761d66b5c34a4e111f7d84a6206cbe2"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\kl0zL17hpA.png",
+            "sha256": "ca25dc058b72f64178bfd7c47e1171f9ec8ad875c5f099aa59ce6e9c49f0dd21"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\KL13R5oGlK.png",
+            "sha256": "4236a82e2a584f86bad5cc09f3ce05d41669af6ce522444d0698601dc29d3eda"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\Km8iMoIL1z.png",
+            "sha256": "abb1c467995c758caaeeccc783ae5b3ed390bddeb9659bb17f72c2d0eca28b4b"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\kZDQTL1YaS.png",
+            "sha256": "96d80c2f61d2b077e7e3285317318866cf579c98dd54af51f3d7b631a8a593ff"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\l11oObsHHY.png",
+            "sha256": "3b8d4b5c1d67d95eb4232f2b5208d8ec3640e3d98840627feced717261f2bc6d"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\l13zaJERfw.png",
+            "sha256": "10b07dc81690bbb3ac17512077a62173fdfaf9ea78924e6e3ffd378e826fcefb"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\L15Uci5Fx6.png",
+            "sha256": "03c28b6d56500d27d45ee774258a7e8db0924d787c4030fbf65448ac97fdaaab"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\L16t5gCFHh.png",
+            "sha256": "33ab744d69ebed80af27bd047f082a66cb2a6c502bc0652768f60ca3c3dbc8b9"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\l1AuamNLj3.png",
+            "sha256": "cda67ea56551074d61b3fa13ea7981506f4e8c3c43688f543dc16e8930575eb9"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\l1b6a7LG3P.png",
+            "sha256": "0f7257705c84d665a81d5e788c6cc7ea325a9d9448cdf34d6a1e7bc0c0f12c53"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\l1Cq3jRgEg.png",
+            "sha256": "135dfeac66cf957bd9be93fa04bf1851667955fa2f0a2c9eda0f89bdacee1560"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\l1CZeu5duV.png",
+            "sha256": "912045292cfcf738a8ca134ff3f531e99261ae36d29694a863b761f1413a6af2"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\l1ECpWpNql.png",
+            "sha256": "907abd843eb1f5ac193bac99ba61441cce0e2aec28615f2a78cac902c4e7890c"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\L1hizHdBvi.png",
+            "sha256": "a611860905c11a140a6d9b51e537a11b6d51f7ee8fbe0fea58478d72230d6e86"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\l1MARr6GuR.png",
+            "sha256": "59ea920859472c143fa638589cfe21a657eb5b107bdeebb62c91fff577fdc502"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\L1mJgBvUvt.png",
+            "sha256": "d91522e8f28da0c01b3ef256ecc568d1d37b9857bd7fc8d7d41265ad95c259c8"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\L1oa34p6X8.png",
+            "sha256": "48bc96e703797876879d2a4b241f0e3f16055a4f98c2f5074e1e1139156c3fec"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\L1PcmXN56g.png",
+            "sha256": "83c66f6dcbc7f86881b5c5c0b8f30e6296a6e5d80a26c37414dd51b5ba0924f6"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\L1RK16GL7T.png",
+            "sha256": "099e1edaf819fa59778e528051947ff1cb02e0a8e8a5b66b459397bca8454dfc"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\l1rRt9DSOE.png",
+            "sha256": "1c540772a5fe787c6b6d7dc7a7adc3736b27bb8cfa8083a04bcdf569bdfa47a6"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\L1s7v4ADpZ.png",
+            "sha256": "e93dbd09fa0f925d3abb7aad8fdff8d2b619c6a383562597fa2eb7608ea28d4e"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\L1SYGWWpFN.png",
+            "sha256": "e12e196638945e9a4f3ba41c4348166501b505c661afae1b2a408bd7d1ff9c6f"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\l1T09Kby6a.png",
+            "sha256": "b4da5dcbb8e2b6e4bde038ce82ad9b6643c94be5d164a9263fb9a19989b32418"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\L1t2B3hZPe.png",
+            "sha256": "f62a7a920fb37bb81a7cce39dc684d010fcd4b6e28db0d9029eec5f792de902c"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\l1UROZoAoK.png",
+            "sha256": "57c479167b85165ddf89141ad94bca6072311a3d7eb8254fb50ff6fbeb3808d9"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\l1yMMy3HGY.png",
+            "sha256": "25aed6ea3ffb012b58b175809a22281bf2fc803a3f23d08fcd0a5c000e37c75a"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\l1zbAgMn9v.png",
+            "sha256": "c57e40258edc7da8c896a8a728d1ba5b52866604e50c89a8b93b7957bc38cb47"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\l1Zeof2M0c.png",
+            "sha256": "6262f9cbbc9555a8d4e2b0f20c207a2fa212794b1fb594f9af16b0e0f98a7d6b"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\L3Ojl1DgFq.png",
+            "sha256": "316b09af5fda92d5c9c27812c40ace66100ee16295abcafc971f1fb62a1c505d"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\LA2FtY6l1i.png",
+            "sha256": "fe4078aa81298ba7e690fc681eba27954bd8fa9bfc1ba6aa2af189e99ae1f711"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\lbl1i6Ytwp.png",
+            "sha256": "4ab55f68ed9beeeef000de88259e02bdf38c84fd23033bb1431feae795e499ec"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\lDGnpjNl1K.png",
+            "sha256": "bdee0ad7b425b57586ff3f537cdf2b85cf7d16e2d0c12bd179911979dbade8ec"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\lE1x2l1eiy.png",
+            "sha256": "78c5466abf5e5367c72424c6fb966ef5b9439d22f15498cf3841bde0496fa5ae"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\Ll1l53JhGo.png",
+            "sha256": "7609bfae0d93ac8565c3e41f3102c5a50ef21d2a2501f36ba96b399892b59198"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\LL1s63SzjN.png",
+            "sha256": "74115caff97de80aac76128d569e440d62b4974360977a652df1020daf0f24f3"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\LqMgXNPl1k.png",
+            "sha256": "86e0a97f449140da64a81b6ffee626981e51510317926e9a754bdbb70484f911"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\LqRGL10XZ4.png",
+            "sha256": "ed7bf93c080d00675d78dee53221f11979f8ec6c44f83e20398cf6663ba9a968"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\LSl1Q8mMKx.png",
+            "sha256": "41d898142fa23d4cdf42ee019971892f914edc534281c8a18cde448ad2c0bc78"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\M22wuVrL1R.png",
+            "sha256": "34f19be858372ccde58639040a1b9c9cc3be9d0c41c4410838c9abdfaa172e12"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\Mdg6Zl16M9.png",
+            "sha256": "628522f8300fb0fda8145bfe42ef6c0700e3b41d55cf665a67cd4cf30c703b4a"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\ML1DNjFSE3.png",
+            "sha256": "12e4db6d6f98c0fa633c6dabf7c92951ea487e87db598856f29d71553e250ba7"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\MNtkrL1EFH.png",
+            "sha256": "5693f3ea46cd36425c7a45c4d9a85819430ce0882224337018e9fb7201c3e950"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\moRYl1LL5u.png",
+            "sha256": "d4d3699cd8e8d119bf767ec73a4684eddfba11c3a2ed01a242eb62ef6a670e06"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\MQmtoMGmL1.png",
+            "sha256": "2b47d108ef1e103199149a20f002bc2bdb69f2db30b6782105ea4f0ead030dc1"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\mTPL1oWqao.png",
+            "sha256": "35687a228dec29c6c6008b847f65a383c2ad7c3408714a58b38c4484d97ffc7f"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\mU9TBsUL13.png",
+            "sha256": "f73d9021035041708853ff37cb8f4784534fc9e2fc8d06c6fc0e8987c6812378"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\mWEi8SL1qB.png",
+            "sha256": "e385ce22a4296c056929bd0f74b93f05c1cea07ff0f9cbf26003232121cebfc3"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\N0rBwq0L18.png",
+            "sha256": "a873fe82593902a628e347701303214f96e12cbb896cec51b423862706f75174"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\NBaD7n6l1F.png",
+            "sha256": "2365254e867104437ee740e0a53ce57fcb883dca6dc771d665912b6cf5810adb"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\Ndl1rQqiSV.png",
+            "sha256": "2c13da201fa70f433101f7239f06c27e4cc9f996810b2e050d4747a631768f2a"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\NGUuUDL1C3.png",
+            "sha256": "01566b1a168aa9d33f09be624ac7491abb1c33b99b7bf4200ea58fa976d9140e"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\NnNbYDL1Wa.png",
+            "sha256": "179956b9d0a5d757c7b038e057d78407282db96967113a3e79142eae8af60866"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\nprOl1QUws.png",
+            "sha256": "0ec43e5800892561e5f37658880e8ab9a891e6ada66fc506d986749dc3910105"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\O1Jfl1u3Oo.png",
+            "sha256": "ba91b43654d139c6803e950fc6c9a825a8f21ba4df07c1045f44cdca90e0e8b7"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\O5JL1dPrQc.png",
+            "sha256": "223050c8b3648d6505573adf7110812a340e6ee43e5c52acba390019371a8acc"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\ONZocWl1t0.png",
+            "sha256": "2c7f6baa51ce11cceb51d0ac517f4cbe103dbc3ae90c861de075cedb487396a9"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\Osl1vHFujh.png",
+            "sha256": "6b2c3515531821a07e9004567f4a0eb55fb97593d2c05399797b086f096ce85c"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\OsZvl1lMuQ.png",
+            "sha256": "8d1fe03031ee0c8d1bcd16867da8bc2dc4a6782ffa5a7f823df5c25f0d85fdee"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\oXnPkEl1GV.png",
+            "sha256": "8fa492510b10226369034fb55b5fd28ed38a38227b56764c3440ec8ddebf1358"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\Pf9NL1uRAR.png",
+            "sha256": "1ef84fd65741995cc47fbb3a7b2f3f45858ab8e94fb204186b13f8b8cda64486"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\pl1FA0Qo1J.png",
+            "sha256": "d581b5813c6111943510836cbdbff840b4dd4ec0a18872c8fb5f2fdc311955fb"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\pl1Z4Ee1M0.png",
+            "sha256": "71e8c500694b71abfd1656a7e417723aaf11eb2e99c0c2494e61c5b8947e09e7"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\PMNNJZzl1V.png",
+            "sha256": "d72f8a5788038acb9f4dd95db87ca213867de1f6a0fcc68852dfa12d103f4fc8"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\qL1jCu9Pe6.png",
+            "sha256": "a7a5edfafd0771a4ae914d9a06caa158c9f0e3ecd667a7ca55484cc89ae466c6"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\QL1MRQ7qgz.png",
+            "sha256": "ad566969124db1a9205314b1745f645579400a7960443a266a6f52ea70212f1e"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\qO3473zmL1.png",
+            "sha256": "1a7a292b01b5de074afb22453acf21293ba45413ac236874400db4d130c0bff2"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\QYabPxEL1U.png",
+            "sha256": "dd3594db8d712ebfecc5d1707844724d68e3549158be7efedc7d9818ff4092c3"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\raGltl1tHq.png",
+            "sha256": "797f7d81904d069d3776cdc7560777a5a159bc6130fed0d7a6d6fa0dc6e1d5bc"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\Rbil1y2Chz.png",
+            "sha256": "72bfcae0ac033f2a8ce7ac60289ef6f3a4225fd1122733ae7d69789a78d982ca"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\rD0V3L1WDj.png",
+            "sha256": "dde906e5a439ae1e4226745f87b31d09d015e4ef5117193f0346d9818a78af0d"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\RhiHhl1FRK.png",
+            "sha256": "403f8732c49dce1ee3cedc9ba1181b240d1cca8159915522dd9380416e840763"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\rlq9Q8L1fC.png",
+            "sha256": "7bf9b77944deb8b067b99a4a487daeb4443c947f19c16affcb58891831c41710"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\RoekA0DL1a.png",
+            "sha256": "cc6ad96be9bdceae800c4f775f9c23855cbe63bf604827e7b542cb674363cbc6"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\Rpl1J5FTnb.png",
+            "sha256": "4250abc1b4caf096692d0a641a0b439094a19b6a3b717bcd805b173924af8eac"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\RR7a0LIul1.png",
+            "sha256": "b0545c91328dbeb171fa13257d4429b6e5c8a7067b02d5b9d04653b035c51ccf"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\rsvPdgdLL1.png",
+            "sha256": "18c7b7b0b55f0a4c5e8c2a3b56ca0a0012f08598910356a9342d8976968c8652"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\RTLo2Zo5L1.png",
+            "sha256": "64291ef39eafdf4ed2bfb668777ef532f060e771b91e596a1dc0353ffc2959be"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\rzml1MyT8H.png",
+            "sha256": "5f231fe0039fb143f4410b515832df2ee28aa2f2e5866ff33f26b4928b430b8b"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\SHk7nnIL1o.png",
+            "sha256": "fbeabbd8fc8fc29eb3213ca2671a0f5300aabe75f8e0e6ebb3ab6460e6eb7abc"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\sL1xMcSgBm.png",
+            "sha256": "cd3d71b293e39bfc96b38870539e3fc6c7d8cb4b5044dc20f5a8ef7065bcd9d7"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\SL1zK6RRfU.png",
+            "sha256": "c7f923bb0db15dcf7f6e3bc9aecc02cd86c15d9b1f336ccdcedb3a670efdd2e5"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\sLALxE4PL1.png",
+            "sha256": "4bfd4b11d61bc7eef2cc57fb0bcbf58d04eddab5d9e288aa8507493eccb111fd"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\sm20tVl1mM.png",
+            "sha256": "93d366cd000ccf3ee5c39aba8413abd5854d04e0f012e63127caa86edd6813ae"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\sslGw8Zl1X.png",
+            "sha256": "0d96220c16667a37d6af67bb1bf6dfcfdf26a9465ca7472b6b37f64e012d501f"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\svuCjaL1QR.png",
+            "sha256": "90fde693a91dddda17063f6c07162d75b03b37c0dc4740d6d68d6ddd4f2935e6"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\t4K5EbbNl1.png",
+            "sha256": "9c70e9564f617523ac164c8f1f0ede37c4a76b012601b88efd3e484a4c554c92"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\tHBIyL1nZb.png",
+            "sha256": "dc4530fc1e475f8cd74680f8b6ec0b2d9e369e488373f7fa50b48f8a50bbc7b0"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\TL1flXKs7L.png",
+            "sha256": "6c665aad798f149251627434932373587525746b9a412ef419e5802005866730"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\tL1JG93GKD.png",
+            "sha256": "9231ca9ab1ab9f3f0f7205c6318de31c52270ebe59762d0c8cb0b6461727aaa3"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\tl1qOfzkh5.png",
+            "sha256": "9e70071698ad19bd66f660f39dbbd9d289d96ac1c62ee8108500e2a9bd401a07"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\tmL1W9vVYC.png",
+            "sha256": "4ddc06adeb49dd0ace515b9f7fbce8cbd798d0fe7ba01967387c5272529780d5"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\tspvl1NNm4.png",
+            "sha256": "10218a4b7c7fd8c936fe8ee90c41ac611682551983b7cbe8a773fe501a189cc1"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\TX6CJkl1xu.png",
+            "sha256": "13190e28bd84529dae00194411adf11679f787024a7ba3c244a81418a4dac970"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\uaPY6Cil1I.png",
+            "sha256": "74c308f863abff8a22728dc8fa847d648d0e0ab22e42ae994c24c00d9d263c02"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\uDuoV3l1Xn.png",
+            "sha256": "73647c78e60f4d77f0210755fc8108f393aa2c8d795a51cc01662eebd8fd94ec"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\UGL1jxKf8I.png",
+            "sha256": "445f78405005c6eb55087e2a1fefd737ec24c63e7d589ac79e499b7dce3877ff"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\uhL1Are23P.png",
+            "sha256": "3a4cea90d3bb24913af3a914156b3d94fa392ac24b57529d89675dc18c7458ac"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\uiiDl1kzkL.png",
+            "sha256": "b79fd36aca577a83a382056329aa58b34409b8aeaa5ff15662a2334a95329ebd"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\uRgxTl1u9t.png",
+            "sha256": "87c10ed5cda8c5537041489d96f3071118062f687acfdd03d342514c2ddc39fa"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\UUX38ukwL1.png",
+            "sha256": "8dbf21381fc6c49d7da79749e6c08fa2090ebb0b564fbbaa8091454bbed768ab"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\V3Psl1OEjl.png",
+            "sha256": "e6743b6f115089ffdc4b8f4d2d47a8e2cbfe5f273caa934c5dbd2858de7625aa"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\VdVC2DLNL1.png",
+            "sha256": "bf88d3ec89ffc20a8fe8abc075d3ca9f809dabeae3e11dc80ff8d281ad474386"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\vEDl1Fextn.png",
+            "sha256": "4f3e1ee86bc02a43dd944a3f98e05a0f8324f03988cd81fa47ab93d79c72e377"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\Vl1fy8ZNHF.png",
+            "sha256": "e4d39bca3ce64c6012856ff1f9d0ea23e1d5e0eca98820245d6f266070663ca6"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\vl1nAbCyhg.png",
+            "sha256": "0d095d3cd1e1e6007aed48e180b82b1e7dbea5438ac5479e4bf9c150101005ca"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\VLbtl1TmlU.png",
+            "sha256": "4445e7f490a21a51db1d9770e3e590acbdcb59712831934924d94a865e8459d7"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\vy9K4Fn1l1.png",
+            "sha256": "4ad809435b4399cd706f2eec9027e89068a224e84699c43bfe6b3b7550f08c1d"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\w029Igl1nr.png",
+            "sha256": "46aec04923e6af84b4dac7c8b82e0e9988414fa3ce9ac6130231eabbd88cb5a9"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\w68jejml1T.png",
+            "sha256": "05951a05b235916e1fbeb9ab4cddfb4123a53d8034fef6045a74df0af75121b8"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\w7il1paZWm.png",
+            "sha256": "a7f7e67d16f4deaee74b2672baa6bbd02101246dbd13c72498415022d4ccfb69"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\WcAFWl1Scq.png",
+            "sha256": "4f22c2842a8169f124aded2256ac0adb0ea936291b5e7ca9d116bc6a1b121ba8"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\whuyL1O0Ej.png",
+            "sha256": "b3d2ca906122ec8b49624904588614aba6b64df8592028d832d40ed7a5744e27"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\WJL1QCDE8V.png",
+            "sha256": "b90d9c1a917eda8c077ff729f5148934ea502a10fdf4c1e3e7353bb4396b60c0"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\wKkoMZL1vt.png",
+            "sha256": "4f42ad39f777345f1a1dbf65260b4d371333ff1ad5ba4868fe4da94d42b7a771"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\wlS59L1bUL.png",
+            "sha256": "a1961ad9929de405afc15e301f1be29f04a04d453cc193d879417c15458f407e"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\wR6sL1D7L1.png",
+            "sha256": "d2be7005f4de7a4883313881bc2ef7fb6069937324114377733df3ef7d2a28c9"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\wsXsDl191j.png",
+            "sha256": "1dd436dcfed20578356be4f19df6db60efbec7181d84a7d39c55a11665180d5c"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\X7erL1iwL9.png",
+            "sha256": "6f6632914e86624fc5c9ec3d08580ef99a56e638b157c673d1ada59ea7d4f2f9"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\Xhc30Nwxl1.png",
+            "sha256": "90a4d0eac7190c8b11e8a69cb927147cac68d0552b4d7bc6acd3331eee9a157e"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\xL10AoAgP8.png",
+            "sha256": "03a8d8b9699710eb0487a0b889d6247c577c75927b8e4882532fd5cfd2b39841"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\Xl1CNAQ2Bi.png",
+            "sha256": "ef8a63dbf64a5eff9f8f14ccb6946ec750d7c3cc073deb3f7f4ff5ceca281564"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\Xl1mJI5jIB.png",
+            "sha256": "7194ae5a96644ae250511915c9ec0a3b5f4d56cc267c8cab7077564e40cf688e"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\XL1ZSS6tmC.png",
+            "sha256": "c13ec0dc62effc5fdb7b47daa4c83b69e9b2a12fa49006b7a71846ad7cac419c"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\xlmJl11WDy.png",
+            "sha256": "24b8ac9492fcd363270b7dfa1553a04402da6e29225ef45c28f9d6a390c14321"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\xR3DmxMPl1.png",
+            "sha256": "40a9f6fc57cabc88fd866c8dc2ad674ca6266f80699448eee0f002852b517d2d"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\xT5CL1vdz6.png",
+            "sha256": "536846a08a5cedc0ebab09a2ff84042285a004db62ccdf7fae66737a04082d0a"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\xTunZEL153.png",
+            "sha256": "e550918fcb2930cba0b9c9e4061370fe01c57e114cb33c3769139eb6cc0de0d3"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\xZAnl1hK0K.png",
+            "sha256": "24b654d12f367af7bd25b6ace08662601a021576794bd6a05209a9c688def825"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\yCvTSfmL1v.png",
+            "sha256": "0e31f53d86342426dcc1d22ab8c19f9d5fea1d7c86750df8fe4ea6b7a2ab78d4"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\yGcXqUxL1K.png",
+            "sha256": "4cd543352c184dbc3703fedcc8ac662273ddd85abdf167c044ad868d9a60c548"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\Ykl1ITbA8N.png",
+            "sha256": "55294fc122829db40095d3df2546925b1a5e986311206dbcfd611695b46491eb"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\yL1h2kKH70.png",
+            "sha256": "c2d95b217703c2b1c86ad9d3556ff51212235457999f5111d481b41fce61954c"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\zct6L1l9Oy.png",
+            "sha256": "057bce99c54840b9ee19c4b8903dbe291061d69d350ebdb62f932d67b014f407"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\zi4EQL1kfN.png",
+            "sha256": "a1b40e459a35cc8c368780fbce969486015ab3054298a6922eb61eb03f137e3d"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\ZL1G30hYzH.png",
+            "sha256": "a722950e1c69f80000b7409beb99c52bec846b96e28a1dafb52d002fce936597"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\zlgl1soWWX.png",
+            "sha256": "5ac25b8aff930d9a72791a2e5cab9fc519a314e220adc4cc37d3eba33708653a"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Fast_Scattering\\zSkhFKil1B.png",
+            "sha256": "01cd18ff9348e7a46c55edd4530fc801b2acc837ddcb1821804aa115fd24291d"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Koi_Fish\\0D1ftJml1b.png",
+            "sha256": "d36ebc179b380dc835c567040b5cab12cc63c8114fa895e8f8c9832ca4ba72e5"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Koi_Fish\\1Ywr53YL1X.png",
+            "sha256": "bf9ac167489d30f7a80c7acf7c946e2cfe25ed224dbfa5ebd70cfe829aca1192"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Koi_Fish\\2um4v17L1y.png",
+            "sha256": "878b093c96d1a810ba10a09e015c3defa6754f4c2164bd587f5624f5840f40ba"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Koi_Fish\\3hfAD1L1Nd.png",
+            "sha256": "2c2bcbfe19a52180bbbd834ca9fa8b8c16d4a2dbef72c7fcebafc1596a3afa9a"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Koi_Fish\\3ukL1vMQ8o.png",
+            "sha256": "d6a9141cc361f677dfcac75a60b16db349af4284469b3546db9cd9d9bfa53157"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Koi_Fish\\7YAiXL1ZYX.png",
+            "sha256": "575e515051cbf95081049c5ba585fa157a7bb122b202ea880cd0c96157e93c87"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Koi_Fish\\aUL1ytkEP2.png",
+            "sha256": "d3781307b606a798c5e1a3cd652dcad371ea73a79c8129391a2348ebb36ed8e6"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Koi_Fish\\cL1KJwsouV.png",
+            "sha256": "a3812f89c497cd28d581bcfec80b1b1007a06738e8eb4d4650d945561ac78e2e"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Koi_Fish\\cssGwuC0l1.png",
+            "sha256": "5626b4d89af34ad18569054b88d1acdc5b03c08c5ebbb1a8ed8cba325b355aac"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Koi_Fish\\DL1E4avtWd.png",
+            "sha256": "5af598eb74dc15661599635b09a67f3322ade00994976f4318a9c17197d83073"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Koi_Fish\\El1cWIU808.png",
+            "sha256": "24b1ec9010f3a41d0df554b5f7abaa772c5aed0d419ad16319d78c7c04f760d1"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Koi_Fish\\IEzTl1CNVW.png",
+            "sha256": "79d3925efe8053e9fc14d2e4653bce4821624fda8ece45f153bfa6e3b55ae5f8"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Koi_Fish\\L1lKEVDdWv.png",
+            "sha256": "3150ad3fe63b9d59aa300a8ab7a57f42568910e4cfa9c6e374bce95af20c91a6"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Koi_Fish\\qcL1l4eKaU.png",
+            "sha256": "5f0940620fea0f46bbe7d27fc9bcf39da55c8d010913cc15e9802127a4b77f9a"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Koi_Fish\\QL1loocIo6.png",
+            "sha256": "cdd0d8304a454975077b16255fecc9e0f29a23900f6c4717966c32d7dd78bcf5"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Koi_Fish\\QvYxxl1Q7E.png",
+            "sha256": "5ef68bb50eb3374fa580faf94243492abac06ccbd3293bee06b5277b2751488e"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Koi_Fish\\sFlL1lk9Pp.png",
+            "sha256": "5838600e6495f2793bf1118af708a3c4ee3fba32da093fa8c80dd39a2acc3fb8"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Koi_Fish\\SjL1zurQdA.png",
+            "sha256": "2d6e68b86166aba6c8355978f6c7b609fdbc80bc58811f2974a0adc72be2125b"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Koi_Fish\\szyS9xL1ln.png",
+            "sha256": "23e5d1d8150d01ad581c9d894edcbbd7a94bde933e303cb389db1fffcbb9bc67"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Koi_Fish\\tZnbL1M9B4.png",
+            "sha256": "9f421e4207a8d91a05a4b6e6959df2f4c0cce826e5497af2ef399b27da0e0eba"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Koi_Fish\\wL19K3p01w.png",
+            "sha256": "577469e63a3a38afada9a7e245d18c4534095194ecabe3aad653e6edf89bc5ec"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Koi_Fish\\xcJiCl1SSh.png",
+            "sha256": "1ceaa4e9f489a72670fab1da4ca551f5436e6efbdea7afdc490bdf42ff1423da"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Koi_Fish\\xGl10jYwkc.png",
+            "sha256": "ee05cffdc4fe2217b5e3351c08562f421a7ace9948c525849c05e2dd8c8d4287"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Light_Modulation\\FDPpg4Etl1.png",
+            "sha256": "c10ca4c54ae20dd90deb92dfa4c4a2e51e510424cedb637f2a2cf186bf5a248d"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Burst\\1Ozmql1zLl.png",
+            "sha256": "551c3916e50c40c9d09eb426bf3c9ba91cb3cf490d2c0339100dc6e1cb50e953"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Burst\\3rhhl1VYiP.png",
+            "sha256": "8f6a57427b0a609ce2ea9dd657faf20282656d9b5e5be1370264f639f0c8a13d"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Burst\\8RWHI0X3l1.png",
+            "sha256": "8f64daed40d92b715609b5ae946b9a79f19b9916f7e5839e4e6a4bc8d594dd22"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Burst\\Bl1naSwJQy.png",
+            "sha256": "48f68237067d61be6be67e620b13178044a08c42c07c69cc2925fc31deb833fe"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Burst\\eL1sC4ApK3.png",
+            "sha256": "4805482906dad31fd35ab24b16eb97954ec154fb74a5ed7f0f92850a14d3fbed"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Burst\\HL18u5s0ax.png",
+            "sha256": "b7f2b1e43aba88323761525f0f87d3cae1442d3830f2455dd2620d3863bf3b04"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Burst\\In585r6l1Z.png",
+            "sha256": "01f6b94a59aa640c6fe257017f3b31ae593679e6548608b0bc38077d37781291"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Burst\\Ipsl18GkUD.png",
+            "sha256": "e79cc35f58ecb1c36b57c2045a19df169e9c4291c7fb5f5ff9feb38f35dc43eb"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Burst\\kBvjzal1Qn.png",
+            "sha256": "4a9e1e7de31704e5fe34043bfe725b42d113064f02e7cbabc388fcae6410c34b"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Burst\\L1pYX10qmy.png",
+            "sha256": "e7a1e692429568c4986d934a14057a4c0fbf5aa70c045f30af1640d1bd9d6189"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Burst\\L1sIdk7o91.png",
+            "sha256": "f9946204ec70d9dde43e3fbbcc863dee78407ae7ba6e61108d8d50f6e6474915"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Burst\\LBnl1ZhHL2.png",
+            "sha256": "22117b9a9b9ca9b47b0b6f86767b7da07e583117eebd6b6320d87390b26edcb4"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Burst\\ndL1IKbL5S.png",
+            "sha256": "5d39ded2ad00f5a4fd683bd0b703a3ba5abf0354bb9385b0ec4cedd9b0e1e15e"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Burst\\pWRL1nfgkr.png",
+            "sha256": "9b8bc5360e5cd660f2bed6b27b5585dbfb2e2cfcefc3d13ee55d481066231b7f"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Burst\\Qc8G8Um4l1.png",
+            "sha256": "e3c40a34147f53d39550769e0f8be80a04c0c9ec39f43f33a3fe48e92f0c97c5"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Burst\\XL1G7mKmRN.png",
+            "sha256": "370c2c16d0f7892bde5146b8a6e4017486f46a31165665d6d9a166316da55654"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Burst\\YCCrEMAL1r.png",
+            "sha256": "cea9b727cdf58db8625598017a437c49a31d4aaa2bf2bd4c75618a528c56fad0"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Burst\\zll17FC0dx.png",
+            "sha256": "e42fc7d97e84f27aafbe75cdfa6a9293b3adf1d73190394d8f57dc09c7d5cb7e"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Lines\\16Ld3T0kl1.png",
+            "sha256": "6b57c0929e8617d66a99d6eae7a85932e1568e95fb94fe80c352d42a7c20d648"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Lines\\1wWL1VBY8O.png",
+            "sha256": "8c480d98bbdc50c5f570de076b42bc92db3672909c3e7e7a3cf1fed00c39cff9"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Lines\\2AWL0pDL1f.png",
+            "sha256": "9122ad84c6eb72eef65824e3bb634802a016af1319799b17d5bffe4242e7f7f9"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Lines\\32L1nRZPt0.png",
+            "sha256": "7317127ef37a6ee9a8a87af5b4a4910dc8dea9d99d6348b1df3f224e5fc0dd2e"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Lines\\5JYEJKL11C.png",
+            "sha256": "aebb96889458754f81027e0aa4e63ce2379764ff80c8bf570e15fd0c81e339e8"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Lines\\6Il17o0EAT.png",
+            "sha256": "23e528f813d3dfbc82095b219190d51187d0e99ff59b66e43cce6e16839d9a22"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Lines\\7l1jrOCdQC.png",
+            "sha256": "b94e7a7b5add7f2778fed8c994f8b1bdca1e66fb81f2e81e1785992234347850"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Lines\\8m1jl13Xqf.png",
+            "sha256": "4ea5ca52b6f650c5f8571b9f8f6f4ffe181db6139d60c30cbe5aa783ddfc139b"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Lines\\AcL1jP1lOK.png",
+            "sha256": "ff6aa08efb27034583d387f36671a75a1cce8c7e19bb0b0c458e6cf56d37a8e2"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Lines\\ajpKl1VfGr.png",
+            "sha256": "4587be7253f036ec11f7a0b257e9d05dd6e6e3446f311f8324e6f56fcd31e494"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Lines\\aZhXUL1KiF.png",
+            "sha256": "13c2d609f85ded1c25fb1a061f2fd9c374a52e8b18458db99518bbd349ae757b"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Lines\\BB7ZqCPl1y.png",
+            "sha256": "6b602b46e52197a5bb2a3fa8698f9d01668f0aeef1a052904e7d355e6cf69f4d"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Lines\\cgOyIwl1zk.png",
+            "sha256": "12eebd1d782c4c7aa5a7c7e4fda1fda2d47da470ae8ef8ac2b029c078e7d6567"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Lines\\Cl5s4UQl1t.png",
+            "sha256": "451ce41d39c09713c1709116f98f3dfc6434d5df004b424e306ac90d24704d3e"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Lines\\CssfiADML1.png",
+            "sha256": "6b53b95368903239b6b08928d2fec5938546feadc85c9cb8d5f7fcac9791b7fa"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Lines\\DfK46dWl1z.png",
+            "sha256": "8ced04362b55ef72a7251389cb6ba527c76d91207c19d47a2e3aa2d397e9823d"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Lines\\e8l1t6C0Kr.png",
+            "sha256": "dacddef80de4bec4a2a3b4a55ff0ed4a7249e7e58d9cf802db8389d431036ae4"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Lines\\EDc5Ok9kL1.png",
+            "sha256": "970339aeb8b1219e98eff17de43291c6a84e0d0be2935e81c618c60b94a4c85d"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Lines\\eZnL1MXac1.png",
+            "sha256": "442dc2f8e22000c1418039fee386360bff0cd52f538f3a6fdad4c11a1f22615f"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Lines\\fbF2dOpl1w.png",
+            "sha256": "a3fd928a4cc1e487011fe8d3d3722b77a1be4990240ad49e1bed5724ccec0bca"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Lines\\FL1Bxpn9l7.png",
+            "sha256": "83a80cf63125fb25aa8acc8ab3890c3329990684bfbdf3f2ef06a6ebb0fed94e"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Lines\\GL1m0oBheM.png",
+            "sha256": "b8c2e81aaef5bb2c5ad10ce94e5d77d1e4f8e804c6509bd64e1310cce022a623"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Lines\\GUJr8Hqxl1.png",
+            "sha256": "ba1a53d54e9c87f12614c0473062550e8e472591d222f8b7cbe44b2e9a461257"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Lines\\GUULhXUaL1.png",
+            "sha256": "c63b06e8c87e4ff26e200ac716bec83816a171a5b52fbeb360d0a0f0c0a063a2"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Lines\\HtVL1vG5GD.png",
+            "sha256": "e9586a76d6f76f62236316dcd22f6fcbc485a925fc888f872aa7bfa561a8d0ab"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Lines\\I8L1SJ2d78.png",
+            "sha256": "e04decc4ab757b6695c14914dd39f456fd6ed86821eb2c2a4f9623fe229d3fd2"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Lines\\IJK8L1o3wS.png",
+            "sha256": "56d07489e0dd92e59dc02935f0f78f07287a49780e191e15bea6df346a94379b"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Lines\\IklxL1dWd5.png",
+            "sha256": "0907d9d1b3bcf6b3b3d27f34201e739db508c693eee896c4c04ef18d3ab01158"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Lines\\iKUpkl4L1r.png",
+            "sha256": "7a8acdcd23c611d5e26e667931dce32b7c8edfe24f1141a0c1ae292c51dad964"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Lines\\JyVuRWL1mq.png",
+            "sha256": "7c0c75fc60045bb1c765348700010a88270b6333136ef3dc5b01afb2812e8c78"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Lines\\KIl1pUo54N.png",
+            "sha256": "5745f3fef34276b19f01d2e3d8f598a26d04a3ef0e0b88da77d1b0ab621f449c"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Lines\\kJXYnML1rF.png",
+            "sha256": "120731daa207af902d3ba64b90a42193fe1303bd1e1a301744770d62f9c04127"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Lines\\l15r9k1gmJ.png",
+            "sha256": "1c0ac3f71d9035a70f48e24cc7207aad273560b01d1017296a984aacf3970151"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Lines\\L1hg03YPhj.png",
+            "sha256": "4ab74e0a64380eb9e037f3352834a9b90ea28878b07a2bb17ab44c237e316699"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Lines\\L1WE8KqgYx.png",
+            "sha256": "55d604c64cf651ca98bb52acfaec766cfbddeef964e0df990fc00f643c8912e1"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Lines\\lW0kCzyL1S.png",
+            "sha256": "272dacae2eb59928a16b3c4b666478c1e52c69b4f564d2f08689ac274848123d"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Lines\\mdoGJfObL1.png",
+            "sha256": "65982899035f72bce12afcbf92dd1027a0def0eff5313fe3deae13274cb6b581"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Lines\\MeLZYl1CeS.png",
+            "sha256": "e4af9cfa30095dd46ac42950d8a5c706237a2e146a90eca57eecfa8101766ee8"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Lines\\MtatTL1Z0y.png",
+            "sha256": "883a663f3f41f651fdb9795da0a08b78266c2bebcc155d7270298ef70bf045bb"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Lines\\N5VCj25BL1.png",
+            "sha256": "25c7dfd6efb926fd0f6e59be4acfcdea8234f53a2b6ce60c56a70f0451a9fdb5"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Lines\\OkKFHIKL17.png",
+            "sha256": "d6f37df76c99878a7154f5ec31ffb6e11b6028efa676574501e793048b060c92"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Lines\\OSUul1tjJC.png",
+            "sha256": "ae6481731ba8a79d73d1104c737ff6e7dcba9addb305072b2994dfc678f33317"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Lines\\paaGofl1SG.png",
+            "sha256": "b377ca7f0cc2b27854ec9d5bbf6359c8f5ebbb8b03cc2968d8a1573c73230008"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Lines\\Q7gasL1FJs.png",
+            "sha256": "caaf9ffb3372e4387cc59155f7aa12f3887519e664eb36e253af2d07fba97879"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Lines\\qLWiDeOnl1.png",
+            "sha256": "f2f387c3e03c83c6fb69ce0d37d0969857cd7aa88e47d226c93781d479090d5a"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Lines\\R02vkL1Fb2.png",
+            "sha256": "8afc75b69bcb82941435ff9aeaca18d7d01b1f227467964e83bf93ed0f37c519"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Lines\\rsmZL13OUs.png",
+            "sha256": "75e142afd6e96b4352a6f0a6169e765642a0ad97c05de953c736032cc38e2269"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Lines\\ru3ztcll1X.png",
+            "sha256": "218fe0edb327c9bc543201bdac261f17159fd38eb629b41a261111d8d24a4924"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Lines\\rxl1SQSB6z.png",
+            "sha256": "e8970db91bcf1aee6c1404d6abc8fd8fefa092d0de4487d75f6a9ca55d434d36"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Lines\\S7VMEOVl1S.png",
+            "sha256": "c84afaa2e385db443dc41fcb50071bdb19a2cacec778924841656bc18f947b10"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Lines\\SNL19RZHiK.png",
+            "sha256": "1335b9791b3b3f36c56e5f55f50754e51321e6fb1dd5527c5bb5bf68456d83ef"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Lines\\ul1Ng1WCBF.png",
+            "sha256": "9fcc07c0e3db8c3c950ecf9789c2156bd2369e495ede461e3082e49982b18b6d"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Lines\\UMdl1v43zF.png",
+            "sha256": "f54b21ed72b9bc11342af0b13aa2e2d26cf7c4c9a80d40e3d1fc3691717ff72d"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Lines\\UxXOcL1SzB.png",
+            "sha256": "5149a1fa0bfa187a5abb2924c71d289ca4ef30641959d44366cfdcc89813b1c0"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Lines\\xWL1FmvWa1.png",
+            "sha256": "4cfc24452250b7093c0e5fd697b548113cfb1ebde4e4fbb1df48ad6be2c854a1"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Lines\\xYv6cL17z6.png",
+            "sha256": "64370a5c9998075f6a350d067717dec9e7a8b196095dfcf66721a631ee26fa24"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Lines\\yq0e7ML16H.png",
+            "sha256": "05f9e64968781f3d052fb43831ab8964e2490f3e9a902b0dc7c7fe6c197aca03"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Lines\\Z440uYl1zn.png",
+            "sha256": "3db5e34d8f9420ae1668f4f0aaf714f2dbf87e76ef9dc175ece20522b829a52d"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Low_Frequency_Lines\\Zyg9IBel1c.png",
+            "sha256": "fb647f4ced4b9b06bddd66d842f406077b0531a495b6dce443709cef8738a804"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\No_Glitch\\37x2eL1doW.png",
+            "sha256": "ded2364ffec1e7b89770a2eef720f9de8a42593c58ce653007f9aaff1ad06666"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\No_Glitch\\90FhL1bIhs.png",
+            "sha256": "bba98269a2ec1b37972f4292b673ead520da393709af540d1ebf89b4ca601acd"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\No_Glitch\\BqPszAqKL1.png",
+            "sha256": "ba2d1e4406d595b19e53a63973b7cd9b4353b49676781b9b6b4d9be71b6e2894"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\No_Glitch\\EWL1XEMbe5.png",
+            "sha256": "e42d5eabb1cc7f7a6311d50dca49db7356395b371b15c083b5eb9b44e9c7f26a"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\No_Glitch\\HU4C4Jl1zC.png",
+            "sha256": "36d8c0bac303859090d58e871d81c8d65a116bdb4fda12191959ebb57677b380"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\No_Glitch\\Io4K4LL1Nl.png",
+            "sha256": "b34406b9c0b8f5455dc79ae14ea2ddc015f38531fffe0f42e6fb515aa7d2f5e3"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\No_Glitch\\IVsOUq5L17.png",
+            "sha256": "55c66b018177754cacbf2aaf8125f149f0b1984e031eca57fec1da2ad062a005"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\No_Glitch\\L195OKoOyC.png",
+            "sha256": "572636c15c24aae1e3ea8461e7e777545ba37fa0ce9c2849c09adb2d624bf54d"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\No_Glitch\\mWSL1RNaHL.png",
+            "sha256": "b44b2c487aba07fcd5969d7e8295f1e38a5017cbdec0b0ab1c45b014a71f38d4"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\No_Glitch\\nIpnJl1M8Q.png",
+            "sha256": "b817bb61cf4aa9c1643392b9eb8877a5b5aef222629f0878bc0dfe8e65aa6282"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\No_Glitch\\uf4O9pDEl1.png",
+            "sha256": "abc11c925e2316e03b1c0ddd36a2cd232122b62b75d227d6ff5b58d4a8cfe3ea"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Paired_Doves\\3g06Yl1iQE.png",
+            "sha256": "06e5ffa7f57faa48baa222f45378bb90f24d4c0f66bc09a2843734f27ca1f77a"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Paired_Doves\\4cl1B7Wfkf.png",
+            "sha256": "9a76d9f37e65f2105fbc7a2fd4c21d78300ebe0709edea849bbb752d207ec8a0"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Paired_Doves\\6R4pll1JPS.png",
+            "sha256": "21976bcc880af70e0e0deddb517839e2eccaf1b8afbf6a517584c2949532d165"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Paired_Doves\\HXlxL1F5Ya.png",
+            "sha256": "0eb5677589bcf2724685eb9cbd19e0bd98c823c1f34af8a51b315004f9126398"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Paired_Doves\\L1iTQAmYEz.png",
+            "sha256": "e4fd92763acc0d5c6dad3c52d7540256b98c9b1fcb575bafb5a704f7099ea9b5"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Paired_Doves\\l1QC4N6AVO.png",
+            "sha256": "191f59cee62dada81e32ca1e1626d777c4320c7ba0aabdd2d7cb81afea1e93c3"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Paired_Doves\\OmeL164jYv.png",
+            "sha256": "d2f857f998aec104ecbcfdfbcd9717323d63c4e9457615f8f9886cbb8d1c344d"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Paired_Doves\\PdL1i2KWFS.png",
+            "sha256": "9ed75d25ede10d00dc982f1e1687fc47ad8c3fc1fe02ce245f29a208bb241064"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Paired_Doves\\Xq9AqI8l1s.png",
+            "sha256": "08c2988b29b8031f98dbd2f20155f9416cf9a204ceb896bfa9c9b7c74d4bd0d7"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Paired_Doves\\Yr5JL1PnPn.png",
+            "sha256": "ae3b40376dfd6b9b1937cfe832139b311dd660f6f030bbc68581d1d173ed8fa9"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Power_Line\\4h083l18Sq.png",
+            "sha256": "1d83889381d634a21ab604049aba035306e646b4d5769cef39d2dc6e9747dbe2"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Power_Line\\k1rnl1cNIz.png",
+            "sha256": "3dad50f456ff13f3ceffb09ec1c157b654e20dfb53576ea96700ca435295e35d"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Power_Line\\KXniL1tcMe.png",
+            "sha256": "8b61eb47a30bf61e19e73ec1eed088900907654e62673f6612d5adff298f70d2"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Power_Line\\zP1Ebl1ykj.png",
+            "sha256": "9f98c026f74a75c2dcad67944912e1cdf6b8e7f7a43a0462872325c41967dfba"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Repeating_Blips\\8bYLL1jVxf.png",
+            "sha256": "f559d1d60e7dd4f320bcad185a5976f52bd2525f80aadf5e62c18c13cb1692ca"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Repeating_Blips\\aaz1QL1kiA.png",
+            "sha256": "87519811c9672f02ff5ce79a8706b10e07f5c3588b003d0f8fa80ee48981d890"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Repeating_Blips\\EA9YBdL15M.png",
+            "sha256": "8d099c0d2604abfd62f7758eb793fb7c7f16f8fbf5a90069197cd9dcf453b50f"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Repeating_Blips\\iPLPKcCl1E.png",
+            "sha256": "9f9fce941d0a71f5ced31adff629485b37ee3bf20801379a039ca79777423007"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Repeating_Blips\\rs7wcd6ul1.png",
+            "sha256": "0ed7b41fdb5cb11c87f5c2ed61964a67e2a1059bdd920c5fbf434d4a05a74e53"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Repeating_Blips\\TvKGL1PHvy.png",
+            "sha256": "38c3bfe7f451321fb0666d14c8fb1aa8a6acd5bccd79acf103457220acf373c7"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\09twBHRl1W.png",
+            "sha256": "b0b8ac5419e9559f3ba092b17b01e8141eb7c9d415c2fd83fa7f48fa2e4b80b2"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\0CL1zVopKO.png",
+            "sha256": "c59ff00046ddd8f98476c10aa2355bc18e1c4e1a79eec000924cd92e37b3e2e3"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\189TSwyl1E.png",
+            "sha256": "3d1da51532a282b6b8ba368490bc23c7390773649ee319606a9b8d87f370acda"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\1l1YVbfw1r.png",
+            "sha256": "c71cf5e5e8db5f032b1522af90f7e92056192b704d25d7402ef6b6d271da56ad"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\1mfFWZo3l1.png",
+            "sha256": "c0c8b48a60ad9d6f10ee0949847253f24cdae74a66a1c64782010b7fb8155f7a"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\26MqbBSL1u.png",
+            "sha256": "2243aa510bfcca637283a49aaf1dc050fffad1d1fe64ce095ae59fa5a4047af8"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\2L1S0hB83Q.png",
+            "sha256": "b802a302391f6cd5dd42a5b9b9a59b085aed751ccae89747109714c3dedeed2c"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\2PsrYL1JeY.png",
+            "sha256": "f0385e37bf3c014e6fb6a2db1bb06cd2c6de1356f027157ba0542b36d884ca6b"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\2rl1xuhedp.png",
+            "sha256": "83dff8fd8bd40a6cc8a53df3643762ccb3768e67b899db344951e5a95c7c1ca4"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\2ruzxnkL16.png",
+            "sha256": "6717d699390f04664372d2d6a0b2d587fee0ad4e7450fc48ec77ee61d3be3fbf"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\2YdkIil1Tf.png",
+            "sha256": "cdc717b4591a30e00c7cb750f9a692448e2919372237b09a6088f7ae62f43761"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\3Gwl1Nqqj5.png",
+            "sha256": "f21128bbdbc2b14da1f3dd25729fa8ae13fcce67bec83fc51d015789505236fc"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\3L1tisSjw3.png",
+            "sha256": "7a149ea2fa3f046e95c6f3de3474be45368e808df37e24e1f7b1e441ee2fd240"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\3oNvdJVl1e.png",
+            "sha256": "bdbe89966b5484d9f768eb18aa6e493a70c667de8226ca4c73889e6a8f8b3540"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\3s0St1Tl1k.png",
+            "sha256": "617ca369ff209f632668918d6fab6508e42b087c5f90a0fdbef38002d3f3b7fb"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\41xYxAwSl1.png",
+            "sha256": "24b736fa7c9110e331ccdc4e12c5b8eae51fd0113603e4eb147e1511db65e003"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\4dMbRL1NFp.png",
+            "sha256": "9125c29cf58ddaf524a338978f70e521dc05161ba61e96ff511c4131a617c196"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\4IIKvtKpl1.png",
+            "sha256": "943f0be1b1fa6c20dff28f31eb1d7ff42a2ba35c582c1de70d562e546aff20f9"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\4l1RTVQ2ik.png",
+            "sha256": "8e91b28198fc526224dd0584bb0c59db82f1bb96c84d8d28766e0e934ab7b2bf"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\4qL1ZxCyjb.png",
+            "sha256": "12c64d96f717c4a9c4ce419b080df356dddc0c153f9aff773e15bca33360f74a"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\56E9L1AVch.png",
+            "sha256": "3a772a62f4982d9bf1d5da090bab20bd77602c77bfa5adec10038e64d1bd1b9b"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\59y3STnL1X.png",
+            "sha256": "385fb2a63c08e7da90170d63c20c43f675a218e3fc3a7ef8a99d957a2e709e56"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\5HvwYeqL18.png",
+            "sha256": "5bbe57efcef68ad37c4874bf673402328b8acf33569bb632758d070f5e138801"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\5k6onpWkl1.png",
+            "sha256": "1fe795cc51036c85ccaae5e54c974267ee8795ff5410c407b88aef37d9e83375"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\5tl1fCjMrA.png",
+            "sha256": "487376715eff28591bdf0f211064bc6b4b6f2c2c73f21f998a3c1b268b90268f"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\5YelJWL1nH.png",
+            "sha256": "42dd86c59140c020abaad66cb94d746c19a5630882aa692b210da5d08085a4cf"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\5zl1pgIMYS.png",
+            "sha256": "269e0d6394ad40fe137d16c382e2b75b50ff1ea891afbc00a5ffe9d0f4af8f02"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\6BdL1Tlr2e.png",
+            "sha256": "88267d28c795b2c14514e79107061b135ae14098802193cc4b9d348328f92a9b"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\6c9WrL1rvi.png",
+            "sha256": "37964bb7587731ca2b26e11dcfdb7487e6cf5f2c0d58769feaa01028efc62e89"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\6CaCtsl1Ct.png",
+            "sha256": "10e35ac33bb7ee338f4ca2a38587520d430bac6fdaa52943ac911032726917dd"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\7dL1UKdBDG.png",
+            "sha256": "af17b650af477bdcc05e51f6913309587f30d5c17af7f83f22c5ece551cfd115"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\7L1fXMkjHj.png",
+            "sha256": "d0764b2e6304868b2f0a872c6a4d7299921edf4ae9b6bf118b7d69fa9ffcb3cd"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\7lUp4z7l1W.png",
+            "sha256": "5bda1778a4328bba3efd0c19009c8618843cd7be14c1eef7f08c74a5e079546e"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\7pAHE9AoL1.png",
+            "sha256": "44640207c8819a39cf6405c64973f56a47bb829ef7ad1536c9365b12551b852e"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\7RHL1YoWqs.png",
+            "sha256": "f9d4ac3ca592791d2929532822a7314a32cfb12b4825ab54809006d8bc894fdd"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\8Mol1fUWA9.png",
+            "sha256": "ad96395419137f79a811f979eb7d7fdb44c55aace96463d5fd0cf20e5918e87c"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\8uiU5iL1Xi.png",
+            "sha256": "ea9ce3ebc2754efa7feb41755f50fa89caa517bfad50c8828664ea3b43f6a046"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\92P9J4L1uH.png",
+            "sha256": "4c6cc597c7d2237ceb697cf1bdd9ffb0b6debf76452a82b989f56f41c43e4348"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\9jLtqqMl1A.png",
+            "sha256": "be16ac106cff4441af03022c0513594d8942f42692c6e06e9de3558177092c52"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\9l18YaRvDa.png",
+            "sha256": "157291178b95e020e2906f2adeff201248564fcc9b4450610a3c615f6b974921"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\9R4VL1CRhh.png",
+            "sha256": "5920310c8172165d13d633620dc81411c84efc2826642d589438e15e7f2c164c"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\a15jpqHHl1.png",
+            "sha256": "e436119ae97ff5410b35d70006f98ec9496fb3110aa75f360a98e63ef3879c0f"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\a7BDtTAL1Y.png",
+            "sha256": "3bfda93e09942b4511c2865685bb0512d3ae22dc05d53334fda6f2a0c35d9e56"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\AB9G9L17FW.png",
+            "sha256": "978d1a5c2fb684f5605b1593b16ff79b965875e60621b2b31e2b95172a8d734b"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\Acxu1L1rrF.png",
+            "sha256": "5eec49387bf21c0e4d39de8058440a5c24c5cb318580c16f9130e93c658841ca"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\AdbxbL1FwB.png",
+            "sha256": "e9152c94bb720592313e7207cf6528e5efba736c12571ac2ccadbcf471bef9a1"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\aeEKl1sba5.png",
+            "sha256": "121dd7f15824fcdedc7c15df6498a3ec7e1fdff4dee26ab9d3adc3c8faf25f93"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\AF4ptRL156.png",
+            "sha256": "577f5bcb06ccc98f5649b2a3b44f20d17454dc31139ea047649eff447178cd35"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\agQL1G6uf6.png",
+            "sha256": "4e0ff0b066b4ce5ed63385ce256c6581fce7e5ca3e67812492faae030814118b"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\amKaDl1JUj.png",
+            "sha256": "a80ee62caf0bab8f284dec5408dd84451504af3f79622b678b5dac288ae3bf44"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\amRxESL1LA.png",
+            "sha256": "cc828553e722c272ec2210d4018a8b83baa390a13b379727e78ed053ee61ed34"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\aP1xcjGhl1.png",
+            "sha256": "ec92a679aa78205ab7d84e836c93cb5325e015fe33974f34da72335e6a326fe0"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\bbeQYSVL1T.png",
+            "sha256": "9e56092600f3542b1d34a7e3b04a0703c86d0a54d6b805ea3d393b455a2311ab"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\BGL18K8Br6.png",
+            "sha256": "32f131870e81a5639229e955d535b95493a611961ff83662ec0482a54a0b3f07"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\bl1DkrkVqs.png",
+            "sha256": "dc8ae1ba9e301a4f72c7f9f0847873032e3fb3d2eb15ba1aca753fab9ce1d00d"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\BPLewL1iev.png",
+            "sha256": "f4f574daee775818e51e3b41107b8832a4d223dd7b0cab713208ed2cfac62e3f"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\c2z7l1bUfw.png",
+            "sha256": "39b52212d9f13e6df4d98fa7cb0c8dcbfa649379f4f14cdead3e804860a72cdb"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\cjOhUPVJL1.png",
+            "sha256": "636758a602b23e2a57e5c4a256ab02721725ea72538911908923207fb3c33a54"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\CL1eb4SHmU.png",
+            "sha256": "a76f26662b4dbd62c36b4c78a1ed859e0540df1e1bfca8fe1536c688e401293a"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\cl1u5EotjL.png",
+            "sha256": "c899b68573f86165419a2b8f912e57783d7b37e7ff484c585ae8f9cf659d0251"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\Csl1fPheza.png",
+            "sha256": "5133e13f30e4fc2d1c2356aaa3f6537347c4a0deb788a632bcfd0cdff12b4535"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\DAONrl1oky.png",
+            "sha256": "61588921903ee2d21c4dcff08710028f3433c3d4d987afd64fb6582c39725068"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\dfsmevDl1k.png",
+            "sha256": "5098a0cb68ac9ed9828ff05e3635f7bfc682c46967f719ed1bd346b6a5580bf1"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\Dl14auliNa.png",
+            "sha256": "b1cd2a30624aeb170376b1d4c6cc2544825410f052a5ec988bf87d6dd661af09"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\Dl1Bj4waab.png",
+            "sha256": "3901b1ceefa97a70321de433f7a59ba6bb197ff10f0b233e39d37d38f563294d"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\dL1dvmBmM2.png",
+            "sha256": "d84e4e775883fcaf9ca1d4ace33c3530d719e698052ccb02e80187abc6d93ce1"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\dL1yUSY8wE.png",
+            "sha256": "ab379185c0a9621d65ba675b3f0b1b0c5f7638b0cbda9d36d2e9932d2ca6f69f"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\duYNhqyIl1.png",
+            "sha256": "04bd5825af76a781b334aad637e608d81bbc2bdaeb1e3a22604e1eb0863f102b"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\dxlZPMLl1w.png",
+            "sha256": "52895a191e4be072be3c9353deeddea5bfe490a870f9faf3b041e915084c2342"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\e2kl1AONkk.png",
+            "sha256": "2d013d16ae7d0f41290ad014a62bcbf828f68bef72019e2f1409690e57538d73"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\E42IAnOgl1.png",
+            "sha256": "9994ec3ab414c5582e1d3e421792bbca804d45ea1e75b6a6f2dc72db83db804e"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\EdpFzLql1d.png",
+            "sha256": "efa07b7f7d2638581dae77bb6758d41845e98aae9e8eaac49d8ccdf3b4de02f5"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\ekPslxYl1W.png",
+            "sha256": "c3bd7e3bea5a5c2d2a1775f7c05d977f3813a79590a649f74a997f76cc42f758"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\EL1TVUBvBD.png",
+            "sha256": "8b0e65ceef8d39b19afc61531d95d8c6de31b9a800c11e723f9e0f7b071c979f"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\el1yvPulPS.png",
+            "sha256": "409439ab49d19fc87ce0afa8fcd42c509695708f35515c856126052358abf9db"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\ElL1abEFMD.png",
+            "sha256": "60dd57c92d9478655d5464ec74d3ddb7fa46999fdfa3bdd7da56c426bb2c5849"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\elW39U9ml1.png",
+            "sha256": "97034445eb22706d1a0a2d4ce26fc3f28a998e8c7bbfbbefe13ea65dc3a4a404"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\ersHpCzl1r.png",
+            "sha256": "fe8b9b6ea1771b63f835fcbc8baf5ea17258204b74a887c853a66caf65ebf673"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\etyHkSel12.png",
+            "sha256": "e15e7071f975113abbef535b541b8b401be19b5f1aa0cab0c81b0e6f78c110da"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\EunL1gwBDv.png",
+            "sha256": "953c4da99e9d12a18d62c7d4722a4768ba2519ebfd0dd923d7dcf526a1028264"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\EZ04JoLpL1.png",
+            "sha256": "463d272b902e2d0f7ae1234458312735dad1ff76fe6840200991f6a13ef7cd2c"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\F8gaL1ZqOF.png",
+            "sha256": "c7476c3a4a7fe9a4fa4cc5729347846ecef2e6953467f558b0dab728a9d12707"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\FbVRgl1Jk6.png",
+            "sha256": "51c1b940c2f7d715b3bba4906a9cdcf96d1662058ce4bbfb7bdd5ebd7635a0de"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\Fcnqzxdl1s.png",
+            "sha256": "af0d6e57f8d85855b1ebe544887d7f5e400d742ed930aa6dc2d985668e1c322d"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\FkYQL11F8i.png",
+            "sha256": "ae81b87266ee11cb6903c1f408dcf4e5a6d14ded005af485f91bf967cd09aee7"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\FL18mZIfBy.png",
+            "sha256": "c396de692ec14aa5a01aaac4ae3798a343f8283150f416d434c0c567b62b209d"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\FL1CQMYTxs.png",
+            "sha256": "089a3083cfc4d51f9d73689f078d421e1c75b357654f60b49bba8a0bc56144e5"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\FL1Kkt1Ohc.png",
+            "sha256": "622179e345fdd8dac1df7ea6d582fe2744476427f9fd5b50f4bb1d5828851dcd"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\fnl1Rrxm3b.png",
+            "sha256": "76750ad3993c3d4003b5d624bffa3275616702e685622ba61c3a832b38de2732"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\gaqh5JRKl1.png",
+            "sha256": "9a323b42d270f024d9f294b0b0fde020285cff4d75c3ff754139beccc04f8902"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\GiMel1MS9A.png",
+            "sha256": "7d2868fea44fa2d4c6ce34b9029a3798fb2efd563b42fdb94d05d4e0862dbb14"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\GIsjl1Vo3p.png",
+            "sha256": "a177a6c6cb7d9b50d15e79aafb98e3c2c4920e90382f514f667819aa0b1239f2"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\gL143a7m1B.png",
+            "sha256": "dfacc05b683af91a19d04723cc118d4396ec7adc58dcfd9f99bc21a5d120d71b"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\GL1AYdnRDH.png",
+            "sha256": "9ff1d3ae3c23bbea147b565daa1be4082fdcd055ca5f16d0b0c122e50b314f72"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\gmovnLl1FT.png",
+            "sha256": "974507c50f30cde627047436ef0e717c4cd8a2183f87ab7bd04f928c415d8b34"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\gnIkl1jfIi.png",
+            "sha256": "1c52dea9ceba706f57043e068c7fbd6692bb4147f3a23ff0eb3bfd21482f7ffa"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\gNJeSEvL15.png",
+            "sha256": "87b6d76f9c51de65d43e53f32a1264f032286bc783620ab0761c36f44f1da7f7"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\gqJDDl15h5.png",
+            "sha256": "7a90b03d6d5785b0ffafc68d0b8e19332e8b1c401f4d631d1c19343fe701f30c"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\GrTIL1nudd.png",
+            "sha256": "bf9d12f989376fa8fab42f8272c46dc72f22afde47e5a5be43e392517e2344e8"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\h4r4ZUL11u.png",
+            "sha256": "69eb39cb1612df8c88035cc6feca8221a43d84707bb20679c5a61bdc6790a057"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\H9L1qObhFj.png",
+            "sha256": "7bdfd3d44a574b2132c8593660f9dce7ef46d45f08a782e3a63facd9ebfe5595"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\hch0JLL1m7.png",
+            "sha256": "f1ef192bf17c361e8cb2cd8b001abec3393b733dfbbf56c3b774fc8c9933f6ab"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\HeDl1vD3Ef.png",
+            "sha256": "dc86ddc39f3ed28d0990464e80efab9df2628e33f864b72e9a93199aeb064e87"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\Hl112q6J8k.png",
+            "sha256": "9b10bc9c2c8507d5a8fdb03f0dab8307bf4149e081c4378e9d5face33ee6ffad"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\HmUPjX4l1N.png",
+            "sha256": "f7cf932f4af6b9773b522480da00684285acf22080bceaffa48330c74828a04a"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\hpznL130RX.png",
+            "sha256": "24b7b889ebe705bdae9a65bed4002186afdf9c223691507ff50297d7044219f0"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\hu3FTL121g.png",
+            "sha256": "9101bb76080784d3878073b5d1a20706a7bbd31cf32e1e7b4fbd79142d98938b"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\IFGOgl18pN.png",
+            "sha256": "7845b49b7b5949380ef0736993d9b49fee4b3e56286d8e00c8b7e39a39901459"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\IjLL1fMtWy.png",
+            "sha256": "37e6aec89df9e61a58883151aeb3aba8ce5ebaf522c9eac9704ef42ed7c1be88"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\iojZL1jXK4.png",
+            "sha256": "3795638d154dc7235e15ebb8c8a2f05c2ecaadffed87d7d893fda9aeddab4996"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\iOL1jo7dEH.png",
+            "sha256": "b9edc2eb2dc6c5f8e37c1c025c9252a8cd52c1899738d423ad2e98e9cb7e8b01"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\iwvDqdl1ct.png",
+            "sha256": "d6130c1868171ed735b3658511730e822747f21468fec05b3beb5e7dbe5f5283"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\IXbn8FL1Cm.png",
+            "sha256": "e742d0b3d46c94b3730ee44a5d1727e291f49e512f805f2476e7e80187989e9f"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\IXl1id9mUz.png",
+            "sha256": "e55502e3a976003c927aebf787b656399dee98831468477124a64e2558354271"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\JANBkEL1Zw.png",
+            "sha256": "8f24f12917f08bf9c78d8f3a23b463a4b9ee644d19df2e65493061ef0610ee3a"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\JF7l1zMCkW.png",
+            "sha256": "44a1f8b1becb9e9bdbf6c50c5a50e54ed0100ec1de2fd73e9506f3c291d6e37c"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\JiwTs7L17N.png",
+            "sha256": "5c7d3a81861e3cd34e60efb400597a57828f598b2d819c01a75f7a2eb32f1e99"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\JKcecVl1ib.png",
+            "sha256": "c471d4adb797dfd8e498c4dc82fde05d7bb8ca1b38f14f43e242eb365d9d82f1"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\JL1GfCbCwP.png",
+            "sha256": "5c75955600d2113f75efe86342edf7dc5a1474e6bc95c367b10160100fbb2a6e"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\Jl1Rda1pnT.png",
+            "sha256": "b0280e051f8f26133f27fb7920b9e1980e72ddc49d587015cc636cdd59b6d7b3"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\JLl1YaMWvk.png",
+            "sha256": "5a4d50ef9f40cf8997bd532234c9c6478fe07df5d687a4a9bb47b1b7bd56d33a"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\jpaaqmG5l1.png",
+            "sha256": "3df7a67baa0d37b68560ed2be9c7975ab1f4ff2606cf5adec90d8a37a258e62e"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\jXPsL1z702.png",
+            "sha256": "290056c5481134c986a5e6d1d275ec9eee834fb1a9fe36ed081d748cb8f7954c"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\jZol1uOGmI.png",
+            "sha256": "2395f799f7d5a45dfceb8361a6446f6a21d17c3373f391be720c708d4463e6a4"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\K5l1EpTRo8.png",
+            "sha256": "4945465d20120864e353ef785a5aed639fc27ae60d5e1874b3d83598b6009be2"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\KBC1l1hyyW.png",
+            "sha256": "076e638275f69cb0d1c1bf040f85e6ad759bb7299510ac00605815eef6e0d437"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\KJaAoJl166.png",
+            "sha256": "88ba68d003f115c2be467eec15bdb92fa475cd53f4dadbbdbf494bdd0bb25996"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\koDAXl1xdm.png",
+            "sha256": "ea68a7856ae5c6d53b9a593a505e49587798ed7e6503eb507035ccaabc722873"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\kpsL1mjVMz.png",
+            "sha256": "c5d95d8cd01a03e26ea8b9b54d5ef22a7856faacbbff77e3f33f2963baa062b0"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\Ksl17VP5SE.png",
+            "sha256": "723241e74bb03bad85bda896a631706302068c98a253ba3a44bb2adcadb439e6"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\l10gKq15fz.png",
+            "sha256": "2efc76634329353de30eafbaeeea95f969af5c5adf9d84b6533d7cf1a39424f0"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\l13kYRHlpv.png",
+            "sha256": "7511543d7b92533f7a303f29e4775b13d1baf1bcef63eec3ec4d92a8507705c9"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\L14JNhSc97.png",
+            "sha256": "766160175ef0c3b1636d9af52de4f760369dca654d25073347b00cde51a4a071"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\l15wcby6bJ.png",
+            "sha256": "02b5551bdad371cfbfd8298a414cad76c215f9ba3af16d265f99532dc6d60cbf"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\l18NrMXaXl.png",
+            "sha256": "aa039846224a78b4ab8b60c7f0536eb2a2652bc65836473f2433de70baa8851a"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\l1a0HaZAqX.png",
+            "sha256": "733f46c3a0ae3c3bb5c07a56075baae84d2d178b9b023492b61fe148067b2b6b"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\L1aHWLLdkD.png",
+            "sha256": "0e996897551bd8d542de938437fe3b8327980e649936f90f2cd469f5496b58d6"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\l1AMBX0VSz.png",
+            "sha256": "0f0af5552476204692283130f90acea3b6cbf77a5b646b8f9ca0a7e26085e269"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\L1AxRNVEpd.png",
+            "sha256": "0023579e20c655266596cee809f37e01a4cfc685b68ef3c0d89922009a6d5b03"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\l1CBsjGdK7.png",
+            "sha256": "26ff39a6cd783ac31f0167acdee00d40163fbc116d07178c6a1ecefa6a5ec31b"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\l1eAkxN3tg.png",
+            "sha256": "666c46d3b26bdb5adfdb444c6d8c4553dc383f698c0d3c368044f91ff8575bc5"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\L1euqR5DbA.png",
+            "sha256": "e895ef332af9623f2823f1645215ec919ff30946aa1d249be12d27466ec436b3"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\L1h6gQPqP6.png",
+            "sha256": "ca624ce975f332cedb803019af38a2b68e616a7585b11dd3ee93abd1813731c1"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\l1hBQ7ExfH.png",
+            "sha256": "ce2fa590940951439efa905f504cf21011eed5fa8922fbb32c81f54fb5186277"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\l1hfHualvR.png",
+            "sha256": "f004153a217ad1e06f2762a9b105d3526dfa430b80e8a609f8e4f4095c641d0f"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\L1J0GMda7L.png",
+            "sha256": "2db0b0fdf9575b131be66bb7f0ed30cc80c70e0b7535bc810d78696ad9b160dd"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\L1LJ0jqnjw.png",
+            "sha256": "938594ee09c124db4a202025130ad6dbc3a7b8048711176b4055bca1cc35f3ce"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\L1MGlVaMmU.png",
+            "sha256": "7e1a01845439903c615db0e2ff1093bb7f570e53edea80da6f10a6df4f52d5f7"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\l1qBRFofle.png",
+            "sha256": "79faff3129b9fc9a2d7af35d109a04ea8ddceba02623eb9349c0e827bf1fa7ac"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\l1RrsYSahi.png",
+            "sha256": "b39dd2c8e54844a613f9f4e4334cf6286a71f91a08718be382c9c0cdaaa38b3b"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\L1sJhEx6j4.png",
+            "sha256": "1cdb62df1b6f24347da030a8d2a5c93aec0caa5aa6ee90027cb822cdfa703340"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\l1Swed5mvI.png",
+            "sha256": "9b49ce474a26c0272d7ffb35de326d170e21d9c43e9784a7889e1922d152f032"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\l1yf8w4MVB.png",
+            "sha256": "6fc0991bfcebdd3b86d75845aa83356d4ed51c6e4191ed3a16fe79a30c5db360"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\l8LTgL1oXG.png",
+            "sha256": "6bfe9d8a6abf1e369d857174e4ff0127f6c028761dd0fc0bab36c9f2550f5dee"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\lHlJ8oL1hn.png",
+            "sha256": "960ef6bc1f06afd27bb82001010de7778ab6c57438d9e1e12cec33a5d223ebfc"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\lk5JUYL1lv.png",
+            "sha256": "560aa7224b276ed3cb5209b671f2bb5ddcc2afd60dc439a60b446f255e133ec5"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\lL1ovly2dx.png",
+            "sha256": "cfab0ccda064d2e0ef83d13ffba36a60f4e77fa5861511bec9a4c7905babeea7"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\LnEuDUJl1k.png",
+            "sha256": "6e9a9d0bcdb9fb97085e090a981abf9a18b19f7303b1d80e7cf5391f39f347f3"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\lPweppkiL1.png",
+            "sha256": "4a731276e43a347ce62a76038bfdcba9db43b7b782a5e195ccd4784cb3da7dd9"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\lqBaHAeL10.png",
+            "sha256": "87c6885f6e59392abcde1966947e9da1a9b61363c7a30ed65fbce8ad853c0c5d"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\m4I9PL19md.png",
+            "sha256": "0d79483f6028237dcaff1e925a53417fe57c97e5076b7ead159bc67edc5e4aa8"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\m6vAmKl1Jm.png",
+            "sha256": "b681c004de2dc358d5f00d190e2e14040689d6fb25398fec1f0c9a4fae820d98"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\McjFE08l11.png",
+            "sha256": "455b53399233bbc3d42dc74748c9aee756fe3eac87aa63836f364acc19bedb11"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\MDjG20L1ZM.png",
+            "sha256": "49be9de8a1e92dde65a13c651b0cd1d9f8285c643554f3ecec3fdf94721e982d"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\MEvBwgldl1.png",
+            "sha256": "d11c93dd38c35889e65a41cc3cde3deccf8a7d99e9f0993774a76ad7fab9be94"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\ML1N8xf7VA.png",
+            "sha256": "250e44f0bb226e4298806f01e2391fb5026a2878fe240846dc8368fb1621b05c"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\mL1NZi6FFW.png",
+            "sha256": "b459f28e04c918bb306f79e77020ff74f37ff1693a150d751db36fd06730902c"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\ML1zdGcfok.png",
+            "sha256": "723587dd73c497436046578203c83b17f3d7afed712df93db5aed49e9e467c28"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\mLEmI19L15.png",
+            "sha256": "69bf824ff92b331179169118d8d1b8b89e0815257dd2729aef08d3d6e8205978"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\MNVpTK4l10.png",
+            "sha256": "4f440583b7653707a34b9dff9b6faec8e1e6555d4f03b8f5288bcfff3e41e04d"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\n3Vel1dHym.png",
+            "sha256": "59f2eacbcf63939f4520b5414b49303670ce8b8383b28df16326c407555642a0"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\N5L1AtsLQ1.png",
+            "sha256": "229210725cd5d6c549b0954e3163247a65e227c446b32d8aeca314c82410bc66"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\NamoL1amF6.png",
+            "sha256": "737ef9e052bf7a7809298a783683065a3528dbc8f86645d79997c0828efe0468"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\ndL1xQ52Lq.png",
+            "sha256": "7eaca59c51f5e3339ff9d01dbee0e47021f84f27c501d7de94dd8f38a68dc4d2"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\Nf7Xhyl14I.png",
+            "sha256": "fce6b31cc45371ecbcfa52256644ed396630bbaaceda8dee25362938875ac1d6"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\Nl10sT5xYW.png",
+            "sha256": "23e0d9bb698ad5de4b7bf3e76c1ea6ae0ab5b74cb9ba4740307ce5442ec61b72"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\NL119sFowC.png",
+            "sha256": "eb911dc64a328ee0e91ac98979805a2f1172aa2d56af71c85c534377a0d457b3"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\NmlE3L1NaL.png",
+            "sha256": "f15a9e3e28848f559644baf448e7c9b1bfdeef8b95035ebc5ecab479c4474036"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\nSHEia8L1n.png",
+            "sha256": "4eba128271f7a60f30bec06b1b4725080bee51d96c566cd3acafead7e3492691"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\NxcvajdQl1.png",
+            "sha256": "e74953d897a54cc343535a9005b15f4d62c58d7ffb2e58b290ec22bc208c1f81"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\NYkl19u78D.png",
+            "sha256": "dd8a810ee017f783160509f92b2031bb2f53091df6db5e061b0314496f492b79"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\NZFTtS2Ql1.png",
+            "sha256": "0063a84230b1d69e9d11457bb738c52fa6f9bd4296f5f4eb8cc0e831105ecf9b"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\o0b7ZL1O0O.png",
+            "sha256": "77c6bdfec90434635fb8ea3cc22dedb67881581382d8c58160141ae431d2a41e"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\O4IL1GZOE0.png",
+            "sha256": "c7cb077026572f869ebf3f7a0ec4f895ff417dd1b8c8325b0a18676c265a7769"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\OCq2kxiOL1.png",
+            "sha256": "9114ffefbb7266aeb6237ac330caf3dc93bbccefbcba3fce728c4cd566b1b8ec"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\oCuJL1IFFL.png",
+            "sha256": "fa9f4bb2cd59696731e64d874554932ab9713e2e9f5e3a3db51eaa42c47596ee"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\OEEl126A5a.png",
+            "sha256": "2e0c2c066237a37007bbb49dbf3b53dcd26fac131baeee0a90d5fc2d5aa59501"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\OIL1jLOs9c.png",
+            "sha256": "ee93d2e00ea735e79a0b9d763c1fea45b0d3ad5b3ae4f6907ddca9aa4a66d9e2"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\Olil1ghU2I.png",
+            "sha256": "d150ba190a62cc6c6d978d4ed3b64a9d625af51128ce92e1e6732fb637dd3179"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\oReAYH4Tl1.png",
+            "sha256": "7ee94cf301980fa0ff7a3cbfdb8306c194318e170a32d27d1e677e108b2b3c63"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\OyAZbx77L1.png",
+            "sha256": "c5f5f10652acdb481671515b70d95cc63c7483e96e8faf0d55bd4b6240157598"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\PBcfWhf9L1.png",
+            "sha256": "56748eb03dda3863a910dbb716ce7f5bd7f34127323735bfdcc732cdad2f60aa"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\PeAs0Vl1a5.png",
+            "sha256": "3bc68376d413afd25244ee757fe60d08f139e5772482a1371b954518d53a1ff6"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\pfKEaGdL1T.png",
+            "sha256": "e559c9bba8fae551c600cf08d0e6944075c8b18c05b81cb941616ef580cb7d6e"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\Pl1fNgKrty.png",
+            "sha256": "d97cb397f2436a8a62610576f793e43397c13e97c641ed2ae6efa058cd74303f"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\pL1PwfHm0S.png",
+            "sha256": "3d459338d13021c106eea4db26705ce46c27ed0346d8bc070209e2360b3136e2"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\pmZvL1Y3M6.png",
+            "sha256": "c0ba2cf178e38816e5eec71dc67aa699f2e1a2a3ee90a2f4dca80fa795ec1c73"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\PomFVLxl1l.png",
+            "sha256": "ff7c228e8222d5e2ff7bf5882e261f3e87771ee0607d79def2ebf4e6e605d422"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\ptV2QrL1sY.png",
+            "sha256": "9284d0c88b0c81d582f33c8856ee9820e7daab377b2f71ced6b3e53991ae1ef5"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\QgFrl19TI4.png",
+            "sha256": "20021d79087494db311eeafaf6f62fba845e537e5f1df927dcbe59085eced0ca"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\QhfL1VZNby.png",
+            "sha256": "359473215b3f31092475775695d96a740c418892746625286e5bd20e2d78f2ed"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\QsL1neWeVp.png",
+            "sha256": "3af88fec550ccfc7c02a4d0fc618a4f85299b3d9f7b64670e6f599983fb908dc"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\R4bzpQnl1y.png",
+            "sha256": "7d901e98ab05a84921134ba1e07b65b8eb66cee8657aa516c7c6956fe7f20b05"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\R8L18fHHLf.png",
+            "sha256": "88b6441f7c9fd9ea73b4fa2e9f8d1bcacf767c8c5323c9b7ee79be33741500cb"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\rl1SgDLXQy.png",
+            "sha256": "5b0d9d342a2281a7e46780ffff4a9e4e6a9e51d57273e33955441745cd3289c8"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\RL1txgbxUK.png",
+            "sha256": "826d6d8224f57f98150e818d108982da6dd9794ed3addfa7a008c08c22a30b84"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\Rq52fVGl1D.png",
+            "sha256": "368033e16fc1e39511724a5eba724b4a22a6f5e95764b2265e3186d5455368e0"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\ruls6GL1bW.png",
+            "sha256": "b332bff29bab04f54a78f75189a4d3afcad04b9c1f7bdf07066fdb50757dcbda"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\rxKl1CQnEr.png",
+            "sha256": "507214e3376cf02b47be419df1bef32bf7bed2378e35222d72cf873660e9bf83"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\rYL1i6AAFi.png",
+            "sha256": "81b6400e9db5a48d6a8581ab262088909835f5e7a93a816e9cf1087bba44f898"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\S6w41L1BDR.png",
+            "sha256": "591773a8621c0d4e8449d5133d820151eddab5589d3683b7f28ef82db216c185"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\SECl1rGmQz.png",
+            "sha256": "041c1bd3b94b39ab79d406a541a062893c61b902649e44f4b9b654a0b62acb16"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\Sl1CvXN0dN.png",
+            "sha256": "c335cc3d1bd54e95df6430c30b8fe32aa18c77d48f9b7947e30c65668f216473"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\SOPbw7l1Ve.png",
+            "sha256": "1f4045cdec2608fec291724576043145208eb4199893b666ce32186bf7b99717"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\tCHw4IL1fJ.png",
+            "sha256": "5c30cbf4d756ea00722aac4b7b87a93cd32987f511a3a17978efd68635d4f456"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\TdLZnfPl1H.png",
+            "sha256": "4db5471d75a7164ce35d8787b8d1e3a5154321cb318d5d424be533ec5cebed90"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\TL1U4DAhdI.png",
+            "sha256": "ce2e57c7a78bc8988773162d3f43eb699b3b3e8a1cf333847153647c796e033d"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\TR6hRdX4l1.png",
+            "sha256": "8b6a49166ed3d8ffbf8865444e4c37101d0d7b39dea591afa382902b7c4299fe"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\ucrRl1ZIMO.png",
+            "sha256": "40fdce8089ee41fc5dce96318dc3ceafa0ac37d0e11c67ecc22458b265edc86c"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\ugnl1SU069.png",
+            "sha256": "b0dff8ee2d7c256695b0fe2fc30e12d04deac22647e98685fcb2e0b90fab926f"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\uk8GL1g5B4.png",
+            "sha256": "fa6939be49aa076780690f192114f7a0d26a82401c8bf91d92038fe630e91332"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\uMu8fl1lTF.png",
+            "sha256": "6e1cd94a9b356b4c731f9c4ad589c4927072c62f7e929ec82969359e795b3ffa"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\v6oL1XVEFQ.png",
+            "sha256": "93a00789dfe0b4637e7b9a9335b9b44e2782f0bd4099f7028c5dba626c6e1a82"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\vfl1MKzYqG.png",
+            "sha256": "13cd84358ab653ae0e4366c9d287783a016f1d900367ccfdb0b0a7e475ceaae6"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\VnfAL1LkXE.png",
+            "sha256": "f5fcc1147778d8dadab9cfcd6f839c003b836003ff5f91c6db5c2fff920671cd"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\Vnl1lFzMHA.png",
+            "sha256": "7203c6ea67525c3ca6dc29c2789fb78063b77b9b4ca2e9ea1a4d0f8149b4fa83"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\vsMyl1m9nY.png",
+            "sha256": "2df63cd1adc6fafe24398c831300c63cb99fd35dca6c40355a5eb390f560d507"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\vvCxl14QF4.png",
+            "sha256": "015a4663a92cb15859ce4e30e6800264c2dcf23817d4fb3097c40a2f4ea77ec4"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\w0hIhL1AlS.png",
+            "sha256": "99644bfa3de17e269446b2b5162b2086f07cf3af485772ef407220ff843835ad"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\w8SCFng1l1.png",
+            "sha256": "9ed46b84ed4e565f2faa66dc2db1d1cdd860c4a6b736bdcc24513eff2e7fedb0"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\WaJicVyL1z.png",
+            "sha256": "2d41a5e7b50584d2bb2d1eb8a9cc5a69b140647d6f3e6273ebe319b064d7cb99"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\wAl1D6la5B.png",
+            "sha256": "e7e8fd36328e0ef7edfaf8a99c7dca623c0a282baadad611dd460e3f3a314615"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\wB3hcL1S0t.png",
+            "sha256": "9c8a9aa7af9937bdc6e5c571628ebe80b9f2ccf58bda0cb1171a4d4306398c29"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\WFUpvL15R5.png",
+            "sha256": "7eb643f5fe7b3ded9afa904a59563ca7e9cd6d5ae67b798ec467c8b5fedd5ede"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\WFwPXL1s2t.png",
+            "sha256": "2f63b0ef6003e90180e349e123bbc09be03264db35051c5963f3d9537b31e2dd"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\wL1kCZLTn0.png",
+            "sha256": "8544dc769897c2b2f07c50e43e67d816a311816e4c45eb4decfed1d0a2688c0a"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\WtEfAl1BXy.png",
+            "sha256": "a329f39d4d5442f87cf5ca14f829af4db80838f14da347cd456dc673f0355746"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\X6L1O6GaUz.png",
+            "sha256": "84c2fd6424747f3b672a66fc3ef62602e09e85376e1d3d2b5b007044a74f5d3e"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\Xel1WBPZDV.png",
+            "sha256": "52b57d30a2a1f1538a88a5af4e87194c0cffd294447c911bc7c57b19d9e8db58"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\xfEVL1wnBU.png",
+            "sha256": "02afc77b2a5378746928f056ce017739238c3529ffe39dbb49f492e82323e04f"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\xjEkMl1jRA.png",
+            "sha256": "0350fba74d13c6921e688d0028c7ca39c44001b175f0d9ca41f281d37c70a948"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\XY7k3y5l1D.png",
+            "sha256": "f9fd1ce96f501b5aa84e017089d9f63722bbab4362124e5ab13b2bc79c8b505a"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\y8SL1LW1rQ.png",
+            "sha256": "1c9ab386793742c66f1b6de62931942d74373c00f1e67fa629baa5f3b0d44dcc"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\Ydzl1Tb0Vz.png",
+            "sha256": "bc97a5943f33d7452865ab3ae6e7b18b8ee82a3d57b9fba7b31a62bda97d6f4c"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\yGSrKXyl1I.png",
+            "sha256": "37b6149ec5e6c07cd8626639f5021e07a19e9963b258c7e2f4ce62f121759865"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\YX6jHcPl1t.png",
+            "sha256": "cfc2d83b1f4f62cdfb56d0c67d049070707cb2fc70240b2f48a06dd80b1950d9"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\ZchUJ93l1G.png",
+            "sha256": "1a9154f9371370b21687d63fff9c0ec50c926283fdbcef9e6790fb93ffe22c01"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\ZF53Ly2oL1.png",
+            "sha256": "f88f74a8b0d37dacdbc806d87adb89cd83cd3204769fd6332aa51ff5af32216c"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\ZfL1hg8YL9.png",
+            "sha256": "7ddcb25d8b49ea31c739e822faeb86dba2c123b54580efeabd83ff533e4a08c7"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\ziwL13nKwX.png",
+            "sha256": "284a311d9cf96e7290ad10eafbd8b6068f7a4c175637d6066b0d6cb9fdb531be"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Scattered_Light\\zL1c0cghlm.png",
+            "sha256": "42583a4e6ec8b53a23caf534c8ec15d3ad1b2569c78b2ea014b6ce52d13c4b63"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\0lvL1j8wDz.png",
+            "sha256": "09d77006153ed5e807d793ad2190d83950edb0a0c3361941ad1566cc988edce8"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\15eL1I0kwp.png",
+            "sha256": "25b4aa340e010d21c62438dc25d3fe9014dd03f6e5fc876242214fe9a7bf6b71"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\1GZFXjyCL1.png",
+            "sha256": "40915f16b0bc609b12ce2643f77e0ac21ec442a89664160d4080decfac790f05"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\1l14toK6Oh.png",
+            "sha256": "c930bd1678dfa2f676b6649052d53db798ed578b57830d353de2f295f950f227"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\1L1MXy92hu.png",
+            "sha256": "59bc7ec1bde186e340312d0fb56f346242ec5b1038ecd7bfbb84b8b69caffa4b"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\1rE40ojYL1.png",
+            "sha256": "0a8418d67130cfc94c2eed11f7ba3d9a626d1afe28fee7100b31d4862c835d77"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\1xtl1lCvLJ.png",
+            "sha256": "b432d1fcede2705b9870233828315e674cc4fc6c7121401ae9bb739d052fc72e"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\2QQmgsl1l1.png",
+            "sha256": "8141adac6f48d48d9732fc10a9651298bc3e2d29037d4c637cc6148e37db206c"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\37FXL14JTJ.png",
+            "sha256": "5d9bc0f558d69b2cf9c9d6a81e95b1f90d45ce90b6707e865fb2df55f108df32"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\3bhAZj0L1Y.png",
+            "sha256": "b6fd51f81a7d4626dcc4163e54fa3fca4e699118bb3cb0456a0c9eaada93119b"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\3l1GMyoJx1.png",
+            "sha256": "49b1078cb25b480e685f69d786bd90a295b459068d1c0f8f082fc1c1c2c9cc18"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\3z0gs7l13t.png",
+            "sha256": "782df2df6f44bf4053e40d398c17892436877e459fab072b93a0c613e6deb792"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\47Qzl1yRvB.png",
+            "sha256": "32dfca08a67efd10adbd02f359aa7ab81a3bd7152aa0d958d4da87603140a4de"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\4gL1ai7DvI.png",
+            "sha256": "e5a77044149dddfbdcae111c9ca9015dc137f247b423e2aa9cec1109a9cacf50"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\4pL1lQd5rg.png",
+            "sha256": "0f8cee6747e4422b48f0ea126cae667d7c526128139476be452f56e957cee6e0"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\54UxL1tH8r.png",
+            "sha256": "160cc9d3f496576e05805051f9a92628411f88a74cc8a9e83931b507f40db4c0"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\5FriChl12S.png",
+            "sha256": "ddf33acd39c99c021ccdde41dc24a52d866ba49dfb3c9e60809f8a09902ab19c"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\5Wl1AZe8Zg.png",
+            "sha256": "e7e8529cd3192d917eb2e604bdd785d67914b2f15a58f614201733246127ef7d"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\62eFG9L1NJ.png",
+            "sha256": "97fde925bd9db75cb9c9ac7094a7dcbb3e764b39d5dde90a996989b28be061a8"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\6jcwpPeSl1.png",
+            "sha256": "9ceba90e7c71861ca4c704e936b7839389c937104097511b29739ab393a2d07c"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\7WL1npJ8A4.png",
+            "sha256": "56b1d760b4bb2410c0c4d9ad15e4154bce298e543b9a4d25306d98c4089ac52c"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\8B25L14u1x.png",
+            "sha256": "6326d6747cc6ca0e73b122444032fee97cba6cce16d06c77e99b2297feabaf5d"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\8L1C9vXDN5.png",
+            "sha256": "da16341456de13e336edfeecbc85ab4b028f096f50ce18e456dd6f79d52d1cf2"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\9l1p9zP523.png",
+            "sha256": "137be604e83ed45d821406f7e890dc460961e74dc3bb6d8da73cc517648e4c05"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\9Rl1Hnwl2n.png",
+            "sha256": "fed1142c55a1125afb92529a5e4c1d4c1ff4f95f13e358be7d780556b48a9830"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\A8neL1X28Z.png",
+            "sha256": "7b0a70af16b0c84ec6e5bcbb13bbac1b9e72d7f3c39e7f37c8f675c3dc56cb96"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\Al1Y4zIpPt.png",
+            "sha256": "32a632359b01faa7e6a494d8c5c4d865b2851dd1361f6655ebea79307bc54061"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\awBFtx6HL1.png",
+            "sha256": "ca703415c4bb20826ac7ba71b7bdfed92b70752b6f0e22db88757a88a177c270"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\B2J7j49mL1.png",
+            "sha256": "4705b764221d21afd953282d1c32603b04758d0bd53e258e5a40931960988a10"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\bfjc5VFmL1.png",
+            "sha256": "cefec6070c483184c27a48b444b9e5659c26edb453eee388ac1474d33d49a3b9"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\bkL1zf1uSW.png",
+            "sha256": "3eaa006ee13159f096292d577f8790b1f80c93cdc3e9bba244a9d37b7517a91e"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\Bl1d2cdF2g.png",
+            "sha256": "5594f93d3983e69bedadceb93ad6e06338741c7804eea41e8d8b046dda8d2a49"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\bL1hy3NdKi.png",
+            "sha256": "bbc8db986e9a5292ab125350189be9ef02d85a482e50b86ab4b493233398946e"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\BL1uaekqHg.png",
+            "sha256": "506527fda1b94ab9fd45ccad199d446a29b39debb27ce6bcf6527c324fb7f37a"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\Bx84wwl1ug.png",
+            "sha256": "198f3220ddf4924bd9cdbbb4477c7bfd3a20b0619d4a98f8bc0124dba0b14df3"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\cxL1M1vLYR.png",
+            "sha256": "c65e9a3d2d0202bfb48283f3615e1b2a72f00c3da695f4f942b0204f736494ef"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\d7l1YO4dX6.png",
+            "sha256": "7f5b962ee70936b3a5470cb6bc3c471af87546e6bb86b6dcf0c320b610ef0356"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\DvzPL149GK.png",
+            "sha256": "a8ce31617c8b1e624c4d4f72179352f6fd2dc658ada44972822203d7fbe8039e"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\DY5fhl110b.png",
+            "sha256": "0a381798d183e2d4b1a2cbbd88fd2ade2ac27832a57dd10d268db860767d8586"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\EHJKL1D4To.png",
+            "sha256": "543492c0b34c7918eaa4680cf2f220298b4a0aba598c28a4711a16f92b5043d2"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\El19plL0O1.png",
+            "sha256": "69864c9e22cf78c3a75e5564a127b7dfc9c175d00a947156067ee4839429b6bd"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\F6vXL1EOBe.png",
+            "sha256": "3b95012f21c2640121ab9506cb785b2b9111f9eaac44b66f3b8e04a65c6c0a49"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\f83jRL1AAN.png",
+            "sha256": "dc9276e1ea12b37e28c171a03ec861fcbc99c51517e16e7826e2e561768088fb"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\fI65l1ZopD.png",
+            "sha256": "81f986ec155d465f640e1666506f43b77875e6729995d0c0270e96a1c4405e47"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\fl1OZfkmEp.png",
+            "sha256": "693585a8e943e606609ffadc9f27e7366a032713accf404d42120c1fc69df478"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\FN0WEzLL1D.png",
+            "sha256": "0f066de276b19abf995564b7c0006f49571100701552c086d01c63cfcbc682c9"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\FQJ4Hejvl1.png",
+            "sha256": "870299360e34d70d455f1692bf655c4cdb26872032bb9d8ed86ee3f77acbc4d4"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\ful1EMFqmf.png",
+            "sha256": "40f08823f235a26cd94f4c2c6a49e69004b966bb5a57c60c9a069a20ae3279f0"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\fYpnkg5L1M.png",
+            "sha256": "4d2605aa98e5152f13d992daf73799cb44dedd2d70a9b0e265486a98bfc4b5fd"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\h24L14VY7o.png",
+            "sha256": "490331b60dd940335425bde7ae09169757e50d403a1c86f5c959d3532f706fd3"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\h6l19gSYCW.png",
+            "sha256": "9518ddc6bdbf39b9b59927464efd90b8ccf97f63eccac620c929a8139c15bac7"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\hl1A2TlHDt.png",
+            "sha256": "e36417186347cbb2bde3c0bed7572f115741ff44b98f92167a540c2b73798a69"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\hL1uSwZCNf.png",
+            "sha256": "3f8c87741b6381fef3c016f0139c65d8339b2340037dc873cf8e5c1b39f1692d"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\Hvt8qL19Nw.png",
+            "sha256": "62ff0b30c338826f9dc6c5016fa428c3d1c18142e28b23262b367c1ee13990c1"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\hx2i7ElL1t.png",
+            "sha256": "cb1cf7551d158fb929fff0dfa45bb155774859c7ac05a23f21a01e1c6ff321c7"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\Il1ejGEwzN.png",
+            "sha256": "a5248bafb86b4865d55b389474d0774f89dd63ef3b42e0b3f6045751aa3996e3"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\iSZqpS8L1o.png",
+            "sha256": "de79ae67d711ba3ecbd8834fff8b82837161faec10a582b11267f829f2686128"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\IUsKO7JMl1.png",
+            "sha256": "4b5796a7e0e8057396c171c965bf0fc4eae56ac9d931dfe040ca1f1b1c71b1db"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\IUUL1u81C9.png",
+            "sha256": "012efc42fa30542e5f4f5a718b0d50686fb02332d1eeb132778ea364d9cb6dd8"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\J40iofl1Ow.png",
+            "sha256": "a03f5cdddcc4f2294a83454ce1f8715ce05132ae02dd85a9d340def08db00884"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\jo1Cmll1wN.png",
+            "sha256": "b2b3e1c6f66ab923ca82bf8c52835e6f0a15f7a8e31f6eadca44e84735ddc06e"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\KL1ZWD6EFk.png",
+            "sha256": "a204c08300b5b50762e59d15e57a65e49648b22f92b86483690089efc38c96fd"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\KuCCqiml1r.png",
+            "sha256": "4fee692e1ed44e1a1cea8e8823ae7905449aed598937f633ba31c8375bb5a405"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\kZecP0Hl15.png",
+            "sha256": "e6dfc09419457af415f329bac08a37a0e2ea9ff310de768a2b2b9c863a4cf45d"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\l1aBoTRLzF.png",
+            "sha256": "5f36a6b62c080b8f4480dc460c6d48e017f832f0bbced3e2bb8fcda2a07f873f"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\L1cABDmoDo.png",
+            "sha256": "dd4b4d89d6238a3ca35027d13bbb577819d42edcd054058e6ee90d9592ccfa45"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\l1e7QUZroY.png",
+            "sha256": "02f01cd5ecd8f175fc9aea7d695476d688e6227f0131f2ce995211c7169b1c27"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\L1Gk9jdxv0.png",
+            "sha256": "6d383a14ce5182237a712a355b2f7048facba4692ee1e3ca16ab2dda8839e465"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\L1UzJbigKw.png",
+            "sha256": "96f7fb3006d1db379730fd09019174d359d55b9e69204d18413d938b991c1370"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\L1wdq18AI8.png",
+            "sha256": "e5eeb4739bf02f5916cd9e434e00c0b9856cb29d774097bffc1ed602ad925cf0"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\l1xOxG5eO1.png",
+            "sha256": "3d3f74b8aaed33128c6cf345635c813bca40b6c864abfdfc7a7a133bab8a4fbb"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\l9gZL1VZAW.png",
+            "sha256": "063194d5f4c1818e1f152471122ea5ae6f99d65ee559e227b44092d0ef3a6973"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\LoL11lkMKb.png",
+            "sha256": "89f771adcfa43d8c81fd8fe40115327c5165694378cbec3756dfa6774927eaef"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\LoL1QP2oKT.png",
+            "sha256": "972f03853741da17c03b74c25ed30d9d1e7de081dad574621a6f03a9a4e7219b"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\LuxFnL1sBu.png",
+            "sha256": "6a396ca007fa6805de2d645f13ac701ce99eb10ac17e9bdf0ccb888f312c5408"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\m3sBIl1UvJ.png",
+            "sha256": "fbfea1b9ab83d16ce667994f5d4e046e32cef2b63cc0f4aa93fa88c7b710e82a"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\m6mL1071WN.png",
+            "sha256": "b3c09e736a4aa3723ca2257533430e6606f91470287644155e61fd4ec960d088"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\mHl1xe5fDa.png",
+            "sha256": "1f692e647368859e6d63ec565c9360cd8a3d7b0defd630f4fa6d813cab63512c"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\mKL1OxpvPK.png",
+            "sha256": "be5b745690b410ff1abbf719ae120c8d52965f29bd940f7c063d927542e245dc"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\moINTl1Y5t.png",
+            "sha256": "acfaed3725c97eef53c7fea3d753564684b1337da196de2d023999ebeada4c1a"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\n1pqTBL1hy.png",
+            "sha256": "68370be097455ed6eefb4f0836328b7d90d4bbab587a5f1b695997d30ff17a95"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\n2zIC5l1M5.png",
+            "sha256": "ae8bc5eb08d877b7a38354a536b0810acbb56d1d91c27f099eaf6c9323ade714"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\nL1xVY0cqH.png",
+            "sha256": "18c9018a3bc9d025faa801a74d9557e9858912140b77d9e2b483ea5fdc1a5e73"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\nqRy1T3L1N.png",
+            "sha256": "27c298f1346f0667a5504bf41b5b21551364ea21f1fc9991ad28f5d35756d33d"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\nxl11UYPw1.png",
+            "sha256": "41c97b34648515dc99bdecce6f30e59c6cbbf04bf0e02fde325860c50d3f0a9e"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\NXQZ8gXl1R.png",
+            "sha256": "7c68a2cd3c7dcf6fbc50705cb24f7d76ab87381513c3335ec96c002db1ef508d"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\oOQAlakL1j.png",
+            "sha256": "5d9db12ac2086cf63f8812af477c0f202b118f66c836817a37a2d5b607b0796c"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\OSiIwl1RAG.png",
+            "sha256": "3e56b31378355d7e307311db85c297cc832042448e3583dbe6e886468da3c0e6"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\p7L1vAuHNx.png",
+            "sha256": "279f84b8b3b2d2b14c98325562fc6780fd657882511c2c3fafad65845c7f7737"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\pEg4hl1TIG.png",
+            "sha256": "74e2d1a775417dbe0a6c3d33441424a69866ad0308773f98504d7ddc9d861f0a"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\PkQEL1IMAx.png",
+            "sha256": "c724c77cecf6596058212a6280396e8020104e5b1ada3a9bac9ce2c091c3fd89"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\pL2AcL1wvg.png",
+            "sha256": "ddfdbb9e2ffb06756824fe4f7d3e62ace983686b01d1afd3175d19d755341963"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\PTL1bUebWY.png",
+            "sha256": "8e486d9c5ba045532d33535668cd8e48386e0554361c32b6195ea69c4fe8659c"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\Q9ll1ugakJ.png",
+            "sha256": "bc6916a1ce41848995efc85c4a2b9549b9d9180671213535a8543f9297b9567e"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\qCDL10V58z.png",
+            "sha256": "1a3ab6316be628fd9594a068746150e55325a51b5dd63739e4099808bb5fcabe"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\QFZ4CCcDl1.png",
+            "sha256": "edbe00f38a42f33ca4b99690cd3eec51feb823447eab8cf286d40ee361bdda76"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\qml1hTiGIU.png",
+            "sha256": "cdf56636555893b2756dabe59a25b9c0100ae76041e6b6c15b123fb4d3ba5c3e"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\r41jbTcGL1.png",
+            "sha256": "aca9a78ab242b76a824f9922cb651a7d857dd0c049ded1cfa856754172f1ba3a"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\rL16GBxUOb.png",
+            "sha256": "b4e39f1dbb082f71e5c436f63f8378ef8d11370179dd38bb9c76ca0231cd5f8c"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\RL1HSdGnHq.png",
+            "sha256": "542638a7457ca89f6f223aa55fef1e1e364f2e55926d25264c93fe2bb1362240"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\RtgazcVeL1.png",
+            "sha256": "e5b42fb93aeda1ef2da033c8c8495e1c76cce5d4c465be9eea1acd9f414bee36"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\sL1LvUc6wt.png",
+            "sha256": "852bcc83622a347350c5096d99a4d75fccd9d2582198c013234698ff398e1906"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\SZ8Vijil1X.png",
+            "sha256": "a523ef9861556018f41aeb1d94a03ac563a72c9d2a3bf5df6c0e6e0c2569a271"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\T1oOOhl17Y.png",
+            "sha256": "bfa6de4f5ba51dbd9ae096241a975d4177fd15a377142770a4dff1c2d6b1df37"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\tQz23bJl16.png",
+            "sha256": "11debdb3d303bdcc2abbfb89fa7f28bff5488a3da326e4fefb5254ec41bb6857"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\TzMl1qTmcC.png",
+            "sha256": "baecf10099578805d1c0723279b25cd555178fa7d1469ead2df654839e89e933"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\UEj5mL1cYf.png",
+            "sha256": "a9599b59e13cce27655a0e5d56e66c861d2c722ab3d1dcdf07131c632b4ebae6"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\UGuL1KqkLh.png",
+            "sha256": "92b6559dab5003089898a7bc17ac8ad3b33304ab770ffde7daaf7d7a0f8bae91"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\ul1lBCARLT.png",
+            "sha256": "930306432ca149fe3be3940d630575653d54eee4ca4f56761626fe02c89664d4"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\US1L1RqrhN.png",
+            "sha256": "0eca0fc30a6a95f79af7fe8d6e5b5b2b35390993e80c585577be96d3bd4e5f2c"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\v904lyfl1O.png",
+            "sha256": "183b9bf39ac3a58595a2344b8d8e0dbe6735b8d190e51c86bcf5531230d5f0e8"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\v9aLYTA4L1.png",
+            "sha256": "08b0c60365e8251b42fcaa248252d71d34f3b4696ccb2e17b637f002a23ca340"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\vb30qQ39l1.png",
+            "sha256": "e45da0fe522c145d4ca8734c2e1ea64a9068bf2146c1f520a85e37663fa37c8d"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\Vutkl1gHBD.png",
+            "sha256": "0eb791d06f54970f2e8149f748bc2bc07f8faae5f98772cecf5b7e1bce09e0bf"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\W0sIdL1Bbd.png",
+            "sha256": "a1a88409702ffb9caf49d00eb3400d006da38b4dcfd9d51e89cecf440eeac010"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\yEXtJaL10S.png",
+            "sha256": "9f76fc2c084ec477102ba7f2a196f989f8b11e0f4506174c732ddee236047cbd"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\ZhdmCL1cYF.png",
+            "sha256": "d547528c1cc8b431550a2007c0a32c07acb304c3a975d8fe4e70fafbcb7ab513"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\Zl1FGoXday.png",
+            "sha256": "3047161ab7914ac71f40c758b1fb7cde36a6fb6dbd465aca68580b9370804831"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Tomte\\Zl1Mbtw20F.png",
+            "sha256": "c1657a7a84bcd908034e32866dc922ead85e0bec176b30b17820a057dcd82b0a"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Violin_Mode\\Jl10fm2WQq.png",
+            "sha256": "79d9850f73bc6a686ebd39cb8a2a4cd270c0472912c41f1062549cd1ab83cbe0"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Violin_Mode\\PN97ZL1GtR.png",
+            "sha256": "33f62ddedd69dea98a22c52059ddffb9d0268c3d3003d439c46f14c4216189f7"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Violin_Mode\\X8l1hQjVBo.png",
+            "sha256": "79d9850f73bc6a686ebd39cb8a2a4cd270c0472912c41f1062549cd1ab83cbe0"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Whistle\\2A1iuleL1Y.png",
+            "sha256": "597124f5d5a2f52f9ff600c185ce89fdf1c6c1226ed474c1cfd9be4ac649d767"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Whistle\\31VDqnY1L1.png",
+            "sha256": "b5686664a45ee03273d526c7bffca0504cd1a4994e5e754bccc1ab354bce13b5"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Whistle\\9cLjGZyl1S.png",
+            "sha256": "72bbb3b7e40ba43a3a41dbba3e3902797db28f0ca75be9abcacd44a20fbbdfad"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Whistle\\9nl1AWxzQo.png",
+            "sha256": "c7396d7c3d2753cfea48bb34512130efc06a8a363d3d2b81005f5ca79f8bbee1"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Whistle\\As9m11ZL12.png",
+            "sha256": "26a8e6555076ab1a519328bac8fc282227fea3b12387e25ca881f5bfc9b495b8"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Whistle\\CBsLUXL17S.png",
+            "sha256": "3320754182c444c6dcdb9d740ec86c0cb15d4531a544145c54c2dc899accfdc3"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Whistle\\CL1EwgcZlL.png",
+            "sha256": "b6f3e9c74196de8101df772948367ca654b4cd7a414c185720e1f2db7f79d1a3"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Whistle\\KjZwyL1OM3.png",
+            "sha256": "92e22efb9e40685456837ae1128ca8c105ffff13f6814b91e522704ab421ac74"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Whistle\\L1aGVIwnSB.png",
+            "sha256": "1f8022a8f4ce5d35c5fd02fb72453fd37ed8cdacc6f35feb0bebf5491ec5336d"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Whistle\\l1Am4ytEgp.png",
+            "sha256": "383bec6ba36adf414206253542bf699447379a58d7035107941736d5ca5ba4a3"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Whistle\\L1FQlWc59A.png",
+            "sha256": "68c6722c6c1eca78eb93f8c998757a65bd2d2fa371f17d1477f4b407d2934d82"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Whistle\\l1Ngz2HBMM.png",
+            "sha256": "504f0afd2d82fc503e87d5cb23fb092c9b00acd7f9286b291b583c66a6dfed40"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Whistle\\l1ogCxGO2a.png",
+            "sha256": "d5bc6c38cf4ce75a3133efc9f04e42bcc478a94d0fe06e8389050ea37d30e13a"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Whistle\\L6MA3L1LJW.png",
+            "sha256": "101f0fd3e60439b0bf3497ab3c3db4680d0b00905c531415c51022a13bbbcfae"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Whistle\\L7l1PnpsbZ.png",
+            "sha256": "c859050d7adc7e48b1d0b8322273febedd1822055eba8ca0a358bd7c9c4ca8e0"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Whistle\\nwdy1ML1o6.png",
+            "sha256": "41406e9ae27038745c69bed85a1a95195371833c3d9a9e424e4049eeab242533"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Whistle\\nWicl16sZx.png",
+            "sha256": "5be395a731db31db5852a12be113477b58f02c70e4111773a7fff8fdd8cbb7f4"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Whistle\\otyl32l1fY.png",
+            "sha256": "5444485efeea0458b1b10ed9e1459308755cbbf6a523f184124813b22ed3070c"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Whistle\\Pj9l1aDo2p.png",
+            "sha256": "499c495d14a4a93c5841df4a51d9881e4d1edcb4c140ad3e47b1eb21e418f07e"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Whistle\\ql1ZbQXGCw.png",
+            "sha256": "8ee855f1bd754a1af14d9e64d5079ea0926718fabe94e749543654c63348d1d9"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Whistle\\r7JL1lBJhX.png",
+            "sha256": "00e3f0f4cf479bb9d32da8e6bcdff6a8f2ee4b052315dd4fcdfcbc3577ff26c4"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Whistle\\S1kgdyXL10.png",
+            "sha256": "8a6c9d2fe8b25be1ca3af9b8d42e8b2f260a80c2bfb81ce3b11730a928107a5a"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Whistle\\UmOL1Q4321.png",
+            "sha256": "fa206c326e6037ab14e4080a385eec5353628cba9fbf8923489e2894777fcd81"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Whistle\\vETXsVPl1y.png",
+            "sha256": "21105b0876584a3219f237fee4325ab9e4b675321b8d811e8089a749592bd738"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Whistle\\vXnUrmL1hP.png",
+            "sha256": "5a546995b0caf66eeadb319a7139870153e183c669e2940391f3034e9d9f5c96"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Whistle\\Yl1rQuJk3S.png",
+            "sha256": "b01c60e50b029e77ca042d2304c2c4fa97415d43391f4c556a97507cf3ec545f"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Whistle\\YoDil15YL3.png",
+            "sha256": "90ef398f62656219642f1045c7587b38622c01688360c50f2cd78d064819960f"
+        },
+        {
+            "path": "Observatory_Archive\\L1_Full_Glitch_Database\\train\\Whistle\\ysWL1EPECG.png",
+            "sha256": "637063929d87d4ac5bf43fac6cab79d9f38a4c34964d99e656f9cbe6c6699df4"
+        },
+        {
+            "path": "scripts\\train_L1_v12.py",
+            "sha256": "b9f16bca3cfbfb02e72b158f6c364409c8e71c39c95dfa9767eb6f0f9eb90b0a"
+        }
+    ]
+}
