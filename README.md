@@ -1,29 +1,29 @@
-# GGWB-Cartographer V12 (Milestone Release)
+ï»¿# GGWB-Cartographer V12 - H1: 91.67% Accuracy (Verified: 2026-02-08)
 
-##  Projekt Áttekintés
-Ez a verzió a gravitációs hullám csillagászat zajszûrési folyamatait (glitch detection) emeli kutatási szintre. A rendszer megfelel a nemzetközi reviewer elvárásoknak, különös tekintettel a reprodukálhatóságra és az adatkezelés tisztaságára.
+##  Projekt ÃttekintÃ©s
+Ez a verziÃ³ a gravitÃ¡ciÃ³s hullÃ¡m csillagÃ¡szat zajszÅ±rÃ©si folyamatait (glitch detection) emeli kutatÃ¡si szintre. A rendszer megfelel a nemzetkÃ¶zi reviewer elvÃ¡rÃ¡soknak, kÃ¼lÃ¶nÃ¶s tekintettel a reprodukÃ¡lhatÃ³sÃ¡gra Ã©s az adatkezelÃ©s tisztasÃ¡gÃ¡ra.
 
-##  Reviewer-Ready Bizonyítékok (Checklist)
+##  Reviewer-Ready BizonyÃ­tÃ©kok (Checklist)
 
-### 1. Reprodukálhatóság (1.1 & 1.2)
-- **Determinisztikus futtatás:** Rögzített seed (42) minden modulban.
-- **Konfiguráció:** Központi configs/default.yaml fájl vezérli a rendszert.
-- **Szigorú struktúra:** Elkülönített mappaszerkezet az adatok, logok és modellek számára.
+### 1. ReprodukÃ¡lhatÃ³sÃ¡g (1.1 & 1.2)
+- **Determinisztikus futtatÃ¡s:** RÃ¶gzÃ­tett seed (42) minden modulban.
+- **KonfigurÃ¡ciÃ³:** KÃ¶zponti configs/default.yaml fÃ¡jl vezÃ©rli a rendszert.
+- **SzigorÃº struktÃºra:** ElkÃ¼lÃ¶nÃ­tett mappaszerkezet az adatok, logok Ã©s modellek szÃ¡mÃ¡ra.
 
-### 2. Adatkezelés (2.1 & 2.2)
-- **Time-Series Split:** Nincs adatszivárgás (leakage). Szigorú idõalapú Train (70%), Val (15%), Blind Test (15%) felosztás.
-- **Detektor-specifikáció:** H1 és L1 adatok külön kezelése a környezeti zajkülönbségek miatt.
+### 2. AdatkezelÃ©s (2.1 & 2.2)
+- **Time-Series Split:** Nincs adatszivÃ¡rgÃ¡s (leakage). SzigorÃº idÅ‘alapÃº Train (70%), Val (15%), Blind Test (15%) felosztÃ¡s.
+- **Detektor-specifikÃ¡ciÃ³:** H1 Ã©s L1 adatok kÃ¼lÃ¶n kezelÃ©se a kÃ¶rnyezeti zajkÃ¼lÃ¶nbsÃ©gek miatt.
 
-### 3. Tudományos Eredmények (3.1 - 4.2)
-- **Baseline:** Random Forest viszonyítási alap rögzítve (ROC-AUC: 0.5532).
-- **V12 Pontosság:** A Blind Test során elért pontosság: 91.67%.
-- **Overfitting Kontroll:** A tanulási görbék alapján a generalizációs rés minimális (0.0681).
+### 3. TudomÃ¡nyos EredmÃ©nyek (3.1 - 4.2)
+- **Baseline:** Random Forest viszonyÃ­tÃ¡si alap rÃ¶gzÃ­tve (ROC-AUC: 0.5532).
+- **V12 PontossÃ¡g:** A Blind Test sorÃ¡n elÃ©rt pontossÃ¡g: 91.67%.
+- **Overfitting Kontroll:** A tanulÃ¡si gÃ¶rbÃ©k alapjÃ¡n a generalizÃ¡ciÃ³s rÃ©s minimÃ¡lis (0.0681).
 
-##  Mellékelt Grafikonok (Bizonyítékok a logs/ mappában)
-1. **Tanulási Görbék:** learning_curves_v12.png
-2. **Konfúziós Mátrix:** blind_test_matrix_v12.png
+##  MellÃ©kelt Grafikonok (BizonyÃ­tÃ©kok a logs/ mappÃ¡ban)
+1. **TanulÃ¡si GÃ¶rbÃ©k:** learning_curves_v12.png
+2. **KonfÃºziÃ³s MÃ¡trix:** blind_test_matrix_v12.png
 
-##  Futtatási Sorrend
+##  FuttatÃ¡si Sorrend
 1. python scripts/data_manager.py
 2. python scripts/baseline_model.py
 3. python scripts/train_v12.py
