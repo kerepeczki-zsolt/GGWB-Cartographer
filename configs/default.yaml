@@ -1,0 +1,20 @@
+project_name: "GGWB-Cartographer"
+version: "V12"
+
+# 1.2 Determinisztikus futtatás
+reproducibility:
+  seed: 42
+
+# 1.1 Elérési utak (Nincs több hard-coded path a kódokban!)
+paths:
+  base_dir: "C:/Users/vivob/Desktop/GGWB_FINAL_V12"
+  raw_data: "data/raw"
+  processed_data: "data/processed"
+  splits: "data/splits"
+  models: "models"
+  logs: "logs"
+
+# 2.2 L1 vs H1 eltérés kezelése
+data_settings:
+  detectors: ["H1", "L1"]
+  normalization: "detector-specific"
